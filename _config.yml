@@ -1,11 +1,11 @@
 name: Ha Lab
 description: Ha lab at the Fred Hutch
-url: http://gavinha.github.io
+url: http://GavinHaLab.github.io
 
 markdown: kramdown
 permalink: /:categories/:title/
 future: true
-repository: gavinha
+repository: GavinHaLab
 
 
 redcarpet:
