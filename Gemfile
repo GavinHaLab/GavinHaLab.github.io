@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # jekyll
 gem "jekyll", "3.1.1"
-gem "redcarpet"
+gem "github-pages", group: :jekyll_plugins
 
 # compiling less
 gem 'therubyracer'
