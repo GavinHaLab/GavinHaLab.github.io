@@ -1,0 +1,47 @@
+---
+layout: default
+title: Ha Lab - Papers
+categories: 
+ - papers
+years: 
+ - 2012
+ - 2013
+ - 2014
+ - 2017
+ - 2018
+---
+
+{% for year in page.years reversed %}
+	{% assign rows = year %}
+	<div class="bighead">
+		{{ year }}
+	</div>
+	<div class="spacer"></div>
+	{% for paper in site.categories.papers %}
+		{% cycle rows: '<div class="row">', '', '' %}
+		{% if paper.year == year %}			
+			<div class="col-md-6 paperbox">
+				<div class="media">
+					<a class="pull-left" href="{{ paper.url }}">
+						<img width=100 class="media-object" src="{{ paper.image }}">
+					</a>
+					<div class="media-body">
+						<div class="smallhead media-heading">
+							<a href="{{ paper.url }}" class="off">{{ paper.title }}</a>
+						</div>
+						<p class="note">
+							{{ paper.authorshort }}<br>
+							<em>{{ paper.journal }}</em>
+							<strong>{{ paper.vol }}</strong>,
+							{{ paper.page }}
+							({{ paper.year }})				
+						</p>
+					</div>
+				</div>
+				<div class="bigspacer"></div>
+				<div class="spacer"></div>
+			</div>
+		{% endif %}
+		{% cycle rows: '', '', '</div>' %} 		
+	{% endfor %}
+{% endfor %}

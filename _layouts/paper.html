@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="media">
+			{% if page.image %}
+			<img class="pull-left pad-right media-object" src="{{ page.image }}">
+			{% endif %}
+			<div class="media-body titlebox">
+				<div class="bighead media-heading">
+					{{ page.title }}
+				</div>
+				<p>
+				<div class="smallhead">
+					{{ page.authors }}
+				</div>
+				<div class="smallhead">
+					<em>{{ page.journal }}</em>
+					<strong>{{ page.vol }}</strong>,
+					{{ page.page }}
+					({{ page.year }}).					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="bigspacer"></div>
+		<div class="glyphbox note">
+			{% if page.doi %}
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<script type="text/javascript" src="//d39af2mgp1pqhg.cloudfront.net/widget-popup.js"></script>
+				<a href="https://plu.mx/plum/a/?doi={{ page.doi }}" class="plumx-plum-print-popup"></a>
+			</div>
+			{% endif %}
+			{% if page.pdf %}
+			<div class="smallhead">
+				PDF
+			</div>
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<i class="fa fa-file-text-o fa-fw"></i>
+				<a class="off" href="{{ page.pdf }}" target="_blank">{{ page.pdf | split: '/' | last }}</a>
+			</div>
+			<div class="bigspacer"></div>
+			{% endif %}
+			{% if page.supplement %}
+			<div class="smallhead">
+				Supplement
+			</div>
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<i class="fa fa-paperclip fa-fw"></i>
+				<a class="off" href="{{ page.supplement }}" target="_blank">{{ page.supplement | split: '/' | last }}</a>
+			</div>
+			<div class="bigspacer"></div>
+			{% endif %}
+			{% if page.doi %}
+			<div class="smallhead">
+				DOI
+			</div>
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<i class="fa fa-external-link fa-fw"></i>
+				<a class="off" href="http://dx.doi.org/{{ page.doi }}" target="_blank">{{ page.doi }}</a>
+			</div>
+			<div class="bigspacer"></div>
+			{% endif %}
+			{% if page.github %}
+			<div class="smallhead">
+				GitHub
+			</div>
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<i class="fa fa-github-alt fa-fw"></i>
+				<a class="off" href="{{ page.github }}" target="_blank">{{ page.github | remove: 'http://github.com/' | remove: 'https://github.com/' }}</a>
+			</div>
+			<div class="bigspacer"></div>
+			{% endif %}
+			<div class="smallhead">
+				Twitter
+			</div>
+			<div class="pad-left note">
+				<i class="fa fa-twitter fa-fw"></i>
+				<a class="off" href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" target="_blank">Tweet this page</a>
+				<div class="bigspacer"></div>
+			</div>
+			{% if page.altmetric_id %}
+			<div class="smallhead subtle">
+				Altmetrics
+			</div>	
+			<div class="pad-left note">
+				<div class="smallspacer"></div>
+				<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+				<div class="altmetric-embed" data-badge-popover="right" data-doi={{ page.doi }} data-badge-type="donut" data-altmetric-id={{ page.altmetric_id }} data-hide-no-mentions="true">
+				</div>
+			</div>
+			<div class="bigspacer"></div>			
+			{% endif %}
+
+		</div>
+	</div>
+	<div class="col-md-8">
+		<div class="post">
+			{{ content }}
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>
