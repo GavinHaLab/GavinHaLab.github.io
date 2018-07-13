@@ -1,4 +1,6 @@
-# bedford lab research
+# Gavin Ha Lab Website
+
+The Ha Lab website is based off of Trevor Bedford's website [bedford.io](bedford.io). Below are his README.md instructions to build the site.
 
 ## Build site
 
