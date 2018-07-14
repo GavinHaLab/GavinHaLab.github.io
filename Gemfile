@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 # jekyll
-gem "jekyll", "3.1.1"
 gem "github-pages", group: :jekyll_plugins
 
 # compiling less
@@ -14,3 +13,5 @@ gem 'jekyll-press'
 # octokit
 gem 'octokit'
 gem 'netrc'
+
+gem 'rake'
