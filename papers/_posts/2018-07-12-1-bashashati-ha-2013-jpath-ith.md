@@ -4,7 +4,7 @@ title: "Distinct evolutionary trajectories of primary high-grade serous ovarian 
 image: /images/papers/Bashashati-phylo.png
 authors: Ali Bashashati, Gavin Ha, Alicia Tone, Jiarui Ding, Leah M Prentice, Andrew Roth, Jamie Rosner, Karey Shumansky, Steve Kalloger, Janine Senz, Winnie Yang, Melissa McConechy, Nataliya Melnyk, Michael Anglesio, Margaret TY Luk, Kane Tse, Thomas Zeng, Richard Moore, Yongjun Zhao, Marco A Marra, Blake Gilks, Stephen Yip, David G Huntsman, Jessica N McAlpine,  Sohrab P Shah.
 year: 2013
-authorshort: Bashashati A*, <strong>Ha G*</strong>, Tone A*, et al. (2013) J Pathol. 
+authorshort: Bashashati A*, <strong>Ha G*</strong>, Tone A*, et al. 
 journal: J Pathol.
 vol: 231
 page: 21-34
