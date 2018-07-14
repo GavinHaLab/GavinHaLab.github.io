@@ -1,0 +1,89 @@
+---
+- repo: broadinstitute/ichorCNA
+  title: ichorCNA
+  owner: broadinstitute
+  description: Estimating tumor fraction in cell-free DNA from ultra-low-pass whole
+    genome sequencing.
+  url: "/projects/ichorCNA/"
+  contributors:
+  - login: gavinha
+    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
+    url: https://github.com/gavinha
+  - login: jurhoades
+    avatar: https://avatars3.githubusercontent.com/u/15793246?v=4&s=50
+    url: https://github.com/jurhoades
+  commits:
+  - date: 2018-07-10 21:06:46.000000000 Z
+    message: 'Added additional bin sizes for hg38 wig files #10'
+    url: https://github.com/broadinstitute/ichorCNA/commit/8021afa5b72f34e8fce3c30efe0bcae9f735122d
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-05-11 20:42:45.000000000 Z
+    message: 'intersects tumour_copy with panel before normalizing, fixes #24'
+    url: https://github.com/broadinstitute/ichorCNA/commit/92c8bd1e54a1221c55d590c27a91c994da62577a
+    author_login: jurhoades
+    author_url: https://github.com/jurhoades
+  - date: 2018-05-11 19:25:40.000000000 Z
+    message: now with mappability filter
+    url: https://github.com/broadinstitute/ichorCNA/commit/d56208baba59256689d44dd60e60aa79e60bd14b
+    author_login: jurhoades
+    author_url: https://github.com/jurhoades
+  - date: 2018-05-09 13:55:17.000000000 Z
+    message: 'hg38 mappability files; thanks to @leraman #22 [ci skip]'
+    url: https://github.com/broadinstitute/ichorCNA/commit/760ce1e619f262dac82f1beee3b359b0f201de5e
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-04-03 13:31:52.000000000 Z
+    message: 'fixes typo for #17'
+    url: https://github.com/broadinstitute/ichorCNA/commit/05519bf02d4ae6c949b89551152cb107f86fdcb2
+    author_login: jurhoades
+    author_url: https://github.com/jurhoades
+- repo: gavinha/TitanCNA
+  title: TitanCNA
+  owner: gavinha
+  description: Analysis of subclonal copy number alterations (CNA) and loss of heterozygosity
+    (LOH) in cancer
+  url: "/projects/TitanCNA/"
+  contributors:
+  - login: gavinha
+    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
+    url: https://github.com/gavinha
+  - login: lbeltrame
+    avatar: https://avatars0.githubusercontent.com/u/25192?v=4&s=50
+    url: https://github.com/lbeltrame
+  - login: dtenenba
+    avatar: https://avatars0.githubusercontent.com/u/2286826?v=4&s=50
+    url: https://github.com/dtenenba
+  - login: hpages
+    avatar: https://avatars1.githubusercontent.com/u/8810451?v=4&s=50
+    url: https://github.com/hpages
+  - login: mrjc42
+    avatar: https://avatars3.githubusercontent.com/u/2029097?v=4&s=50
+    url: https://github.com/mrjc42
+  commits:
+  - date: 2018-06-26 15:12:27.000000000 Z
+    message: 'fixed bug in getSubcloneProfiles when sample has no CNA or too noisy
+      #22'
+    url: https://github.com/gavinha/TitanCNA/commit/e46683c75d28961668d10882294ea0ab53975685
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-05-24 15:27:14.000000000 Z
+    message: fixed bug in selectSolution.R [ci skip]
+    url: https://github.com/gavinha/TitanCNA/commit/d2687ea377ba2c59005b66fca5fc4fd6a9dec4c6
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-04-11 18:06:09.000000000 Z
+    message: version bump v1.17.2
+    url: https://github.com/gavinha/TitanCNA/commit/1b0d954293435c0fdd51fce769eba01b3164928c
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-04-11 18:04:34.000000000 Z
+    message: include function getHaplotypesFromVCF [ci skip]
+    url: https://github.com/gavinha/TitanCNA/commit/7fc4fcc3192aa975a480ed360db0db36d46a6ae6
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-04-05 16:57:06.000000000 Z
+    message: remove redundant ichorCNA options [ci skip]
+    url: https://github.com/gavinha/TitanCNA/commit/635e89acd2fa1b75adca3c7438aa71c8ef0e8586
+    author_login: gavinha
+    author_url: https://github.com/gavinha
