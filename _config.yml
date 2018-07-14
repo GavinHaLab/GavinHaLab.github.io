@@ -1,7 +1,7 @@
 title: Ha Lab
 description: Ha lab at the Fred Hutch
 url: https://GavinHaLab.github.io
-baseurl: ""
+baseurl: "/"
 
 markdown: kramdown
 permalink: /:categories/:title/

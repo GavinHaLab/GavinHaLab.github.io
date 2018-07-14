@@ -10,8 +10,8 @@
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/assets/style.css" rel="stylesheet" media="screen">
-    <link href="/assets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href={{ "/assets/style.css" | relative_url }} rel="stylesheet" media="screen">
+    <link href={{ "/assets/bootstrap.min.css" | relative_url }} rel="stylesheet" media="screen">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
 	<!-- Typekit -->
 	<script>
@@ -41,9 +41,9 @@
 	
 	<!-- Bootstrap -->
 	<!link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
-	<script src="/js/less.min.js" ></script>
+	<script src={{ "/js/transition.js" | relative_url }}></script>
+	<script src={{ "/js/collapse.js" | relative_url }}></script>
+	<script src={{ "/js/less.min.js" | relative_url }}></script>
 	
 </head>
 
