@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "/css/bootstrap/bootstrap.less";
+@import "/assets/bootstrap/bootstrap.less";
 @import "/css/bootstrap/carousel.less";
 @import "/css/bootstrap/glyphicons.less";
 @brand-primary: #DD2D2D;

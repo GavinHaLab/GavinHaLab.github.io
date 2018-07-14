@@ -10,9 +10,10 @@
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href={{ "/assets/style.css" | relative_url }} rel="stylesheet" media="screen">
     <link href={{ "/assets/bootstrap.min.css" | relative_url }} rel="stylesheet" media="screen">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+	<link href={{ "/assets/style.css" | relative_url }} rel="stylesheet" media="screen">
+	<link href={{ "/assets/carousel.css" | relative_url }} rel="stylesheet" median="screen">
 	<!-- Typekit -->
 	<script>
 	  (function(d) {
@@ -37,7 +38,7 @@
 	</script>
 	
 	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
+	<script src={{ "/js/jquery.min.js" | relative_url }}></script>
 	
 	<!-- Bootstrap -->
 	<!link href="css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +61,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!object class="logo navbar-brand" data="/images/logo.svg" type="image/svg+xml"><!/object>
-					<a class="navbar-brand" href="/">Ha Lab</a>										
+					<a class="nav navbar-brand" href="/">{{ site.title }}</a>										
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-collapse-element">
 					<ul class="nav navbar-nav navbar-right">
