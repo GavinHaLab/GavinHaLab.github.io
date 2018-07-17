@@ -11,10 +11,10 @@
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->        
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-	<link href={{ "/assets/style.css" | relative_url }} rel="stylesheet" media="screen">
 	<link href={{ "/assets/solarized.css" | relative_url }} rel="stylesheet" median="screen">
 	<link href={{ "/assets/carousel.css" | relative_url }} rel="stylesheet" median="screen">
 	<link href={{ "/assets/bootstrap.min.css" | relative_url }} rel="stylesheet" media="screen">
+	<link href={{ "/assets/style.css" | relative_url }} rel="stylesheet" media="screen">
 	
 	<!-- Typekit -->
 	<script>
@@ -135,7 +135,7 @@
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-				<!object class="logofooter navbar-brand" data="/images/fhcrc-logo.png" type="image/png"><!/object>
+				<object class="logofooter navbar-brand" data="/images/fhcrc-logo.png" type="image/png"></object>
 				<div class="collapse navbar-collapse" id="navbar-collapse-element">
 					<ul class="nav navbar-nav navbar-right navbar-tiny">
 					{% for page in site.categories.misc %}
