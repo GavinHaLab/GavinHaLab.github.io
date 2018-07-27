@@ -50,5 +50,6 @@ exclude:
   - "Gemfile.lock"
  
 projects:
+  - gavinha/TitanCNA_10X_snakemake
   - gavinha/TitanCNA
   - broadinstitute/ichorCNA
