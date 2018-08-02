@@ -8,10 +8,11 @@ authorshort: Viswanathan S*, <strong>Ha G*</strong>, Hoff A*, et al.
 journal: Cell
 vol: 174
 page: 433-447
-pdf: /pdfs/papers/viswanathan-ha-2018-cell-crpc-10x.pdf
 doi: 10.1016/j.cell.2018.05.036
 altmetric_id: 
 ---
+
+Use this link for free access to article <a href="https://authors.elsevier.com/a/1XNJfL7PXUhUo" target="_blank">https://authors.elsevier.com/a/1XNJfL7PXUhUo</a>
 
 # Abstract
 
