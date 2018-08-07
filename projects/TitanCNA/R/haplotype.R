@@ -53,10 +53,12 @@ loadReadCountsFromBed <- function(counts, chrs = c(1:22, "X", "Y"), gc = NULL, m
 	
 	# remove centromeres
 	if (!is.null(centromere)){ 
+		centromere$Chr <- setGenomeStyle(centromere$Chr, genomeStyle)
 		counts <- excludeCentromere(counts, centromere, flankLength = flankLength)
 	}
 	# keep targeted sequences
 	if (!is.null(targetedSequences)){
+		targetedSequences[,1] <- setGenomeStyle(targetedSequences[,1], genomeStyle)
 		countsExons <- filterByTargetedSequences(counts, targetedSequences)
 		counts <- counts[countsExons$ix,]
 	}
@@ -246,7 +248,7 @@ getHaplotypesFromVCF <- function(vcfFile, chrs = c(1:22, "X"), build = "hg19", g
   message("  by chromsomes")
   # keep specified chromosomes
   seqlevelsStyle(chrs) <- genomeStyle
-  vcf <- keepSeqlevels(vcf, chrs)
+  vcf <- keepSeqlevels(vcf, chrs, pruning.mode="coarse")
   # keep by filter flags
   indFILTER <- rowRanges(vcf)$FILTER %in% filterFlags
   # keep SNPs - ref and alt have length of 1 and only a single allele for ref/alt
@@ -296,7 +298,7 @@ getHaplotypesFromVCF <- function(vcfFile, chrs = c(1:22, "X"), build = "hg19", g
                            DataFrame(GT = as.character(geno(vcf)$GT), PS = as.character(geno(vcf)$PS)))
   HT <- getPhasedAllele(geno.gr)
   values(geno.gr) <- cbind(values(geno.gr), DataFrame(HT1 = HT$h1, HT2 = HT$h2))
-  geno.gr <- keepSeqlevels(geno.gr, chrs)
+  geno.gr <- keepSeqlevels(geno.gr, chrs, pruning.mode="coarse")
   
   return(list(vcf.filtered = vcf, geno = geno.gr))
 }

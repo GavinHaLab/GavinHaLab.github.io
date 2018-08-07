@@ -51,5 +51,7 @@ exclude:
  
 projects:
   - gavinha/TitanCNA_10X_snakemake
+  - gavinha/SV_10X_analysis
   - gavinha/TitanCNA
   - broadinstitute/ichorCNA
+
