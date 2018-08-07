@@ -38,12 +38,12 @@ Date: August 7, 2018
 # Files in the workflow
 ### Scripts used by the workflow
 The following scripts are used by this snakemake workflow:
- - [getMoleculeCoverage.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getMoleculeCoverage.R) Normalizing/correcting molecule-level coverage
- - [getPhasedHETSitesFromLLRVCF.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getPhasedHETSitesFromLLRVCF.R) - Extracts phased germline heterozygous SNP sites from the Long Ranger analysis of the normal sample
- - [getTumourAlleleCountsAtHETSites.py](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getTumourAlleleCountsAtHETSites.py) - Extracts allelic counts from the tumor sample at the germline heterozygous SNP sites
- - [titanCNA_v1.15.0_TenX.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/titanCNA_v1.15.0_TenX.R) - Main R script to run TitanCNA
- - [selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) - R script to select optimal solution for each sample
- - [combineTITAN-ichor.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/combineTITAN-ichor.R) - R script to merge autosomes and chrX results, plus post-processing steps including adjusting max copy values.
+ - [getMoleculeCoverage.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getMoleculeCoverage.R) Normalizing/correcting molecule-level coverage
+ - [getPhasedHETSitesFromLLRVCF.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getPhasedHETSitesFromLLRVCF.R) - Extracts phased germline heterozygous SNP sites from the Long Ranger analysis of the normal sample
+ - [getTumourAlleleCountsAtHETSites.py](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getTumourAlleleCountsAtHETSites.py) - Extracts allelic counts from the tumor sample at the germline heterozygous SNP sites
+ - [titanCNA_v1.15.0_TenX.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/titanCNA_v1.15.0_TenX.R) - Main R script to run TitanCNA
+ - [selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) - R script to select optimal solution for each sample
+ - [combineTITAN-ichor.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/combineTITAN-ichor.R) - R script to merge autosomes and chrX results, plus post-processing steps including adjusting max copy values.
 
 ### Tumour-Normal sample list [config/samples.yaml](config/samples.yaml)
 The list of tumour-normal paired samples should be defined in a YAML file. In particular, the [Long Ranger](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/what-is-long-ranger) (v2.2.2) analysis directory is listed under samples.  See [config/samples.yaml](config/samples.yaml) for an example.  Both fields `samples` and `pairings` must to be provided.  `pairings` key must match the tumour sample while the value must match the normal sample.
@@ -210,7 +210,7 @@ het_minMapQuality:  20
 ### 11. [TitanCNA.snakefile](TitanCNA.snakefile) settings
 Most settings can be left as default.  
 - `TitanCNA_maxNumClonalClusters` specifies the maximum number of clonal clusters to consider. For example, if set to 5, then 5 solutions are generated, each one considering a different number of cluster(s).  
-- `TitanCNA_maxPloidy` specifies the maximum ploidy to initialize. This be set to either `2` (only considers diploid solutions), `3` (considers diploid and triploid, and usually accounts for tetraploid), or `4` (for diploid, triploid, tetraploid or higher ploidies). Usually, `3` is suitable for most samples unless you know that your samples are tetraploid or even higher. For example, if set to `3`, then solutions for diploid and triploid will be generated. [code/selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) will try to select the optimal solution; however, users should inspect to make sure results are accurate.  
+- `TitanCNA_maxPloidy` specifies the maximum ploidy to initialize. This be set to either `2` (only considers diploid solutions), `3` (considers diploid and triploid, and usually accounts for tetraploid), or `4` (for diploid, triploid, tetraploid or higher ploidies). Usually, `3` is suitable for most samples unless you know that your samples are tetraploid or even higher. For example, if set to `3`, then solutions for diploid and triploid will be generated. [code/selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) will try to select the optimal solution; however, users should inspect to make sure results are accurate.  
 - `TitanCNA_numCores` specifies the number of cores to use on a single machine. `TitanCNA_pe` should also be set as to be consistent.
 ```
 TitanCNA_maxNumClonalClusters: 2

@@ -1,4 +1,34 @@
 ---
+- repo: gavinha/SV_10X_analysis
+  title: SV_10X_analysis
+  owner: gavinha
+  description: Structural variation analysis of 10X Genomics linked-read data
+  url: "/projects/SV_10X_analysis/"
+  contributors:
+  - login: gavinha
+    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
+    url: https://github.com/gavinha
+  commits:
+  - date: 2018-08-07 19:03:13.000000000 Z
+    message: formatting
+    url: https://github.com/gavinha/SV_10X_analysis/commit/7a1d8b20f6403a24f391c608d754db0c87468ea1
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-08-07 18:58:40.000000000 Z
+    message: initial commit
+    url: https://github.com/gavinha/SV_10X_analysis/commit/8d8df71a117e040c48f2be2ee0fe93741debef0f
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-08-07 18:58:08.000000000 Z
+    message: initial commit
+    url: https://github.com/gavinha/SV_10X_analysis/commit/dd5ab7121aa04e76c76565d07bdf6f9321a20971
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-08-03 18:47:06.000000000 Z
+    message: Initial commit
+    url: https://github.com/gavinha/SV_10X_analysis/commit/c2b163c9f93faf4e6d4de8d3d4d49229beb0dbf5
+    author_login: gavinha
+    author_url: https://github.com/gavinha
 - repo: gavinha/TitanCNA_10X_snakemake
   title: TitanCNA_10X_snakemake
   owner: gavinha
@@ -9,24 +39,29 @@
     avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
     url: https://github.com/gavinha
   commits:
-  - date: 2018-07-27 02:06:19.000000000 Z
-    message: added contact
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/5eb0ce82c715ee32e751c0daf3e36d52427dec2f
+  - date: 2018-08-07 18:25:59.000000000 Z
+    message: formating
+    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/04abb7928f2a710401aea118aa1acfbfc65725c7
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-27 01:52:14.000000000 Z
-    message: Update README.md
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/fbc8816c496ee1f7b1cbcc5cd8e5e4bf3e350c33
+  - date: 2018-08-07 18:18:23.000000000 Z
+    message: config instructions
+    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/a48a1cf0fe15a21ae29f7a7a8e2c292108e7da6b
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-27 01:50:36.000000000 Z
-    message: initial commit
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/d9a17fee6199111f1840d14ab3c73867a17706e7
+  - date: 2018-08-07 17:32:36.000000000 Z
+    message: instructions for each snakefile
+    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/e908825be33f262e78eea3ef5884aa0a3bfb46fe
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-18 22:46:01.000000000 Z
-    message: Initial commit
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/29c2dfdb130ddf7bd250503c515a3945633e2336
+  - date: 2018-08-07 17:05:44.000000000 Z
+    message: update snakemake instructions
+    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/316292af9257cb043b377553bc2436530136eb76
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-08-07 15:59:15.000000000 Z
+    message: mem/time setting updates; sex params
+    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/3d557f83c899b1b941413e8bc0be79c5b5a9a250
     author_login: gavinha
     author_url: https://github.com/gavinha
 - repo: gavinha/TitanCNA
@@ -52,29 +87,29 @@
     avatar: https://avatars3.githubusercontent.com/u/2029097?v=4&s=50
     url: https://github.com/mrjc42
   commits:
-  - date: 2018-07-27 02:02:36.000000000 Z
-    message: Merge branch 'master' of github.com:gavinha/TitanCNA
-    url: https://github.com/gavinha/TitanCNA/commit/ec721e58f0ce4df584c3a503d31cee184e063050
+  - date: 2018-08-07 00:32:05.000000000 Z
+    message: fix purning.mode listed twice
+    url: https://github.com/gavinha/TitanCNA/commit/5c860e4855a6274dbc9829cb83c802d42b463bb5
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-27 02:02:28.000000000 Z
-    message: hg38 ucsc chr naming support; genomewide plotting chrs
-    url: https://github.com/gavinha/TitanCNA/commit/d69967d52d34cb485b2a134c52e2dba3366cd838
+  - date: 2018-08-03 00:42:39.000000000 Z
+    message: 'read_counter use binSize wildcard in log [ci skip] #26'
+    url: https://github.com/gavinha/TitanCNA/commit/1682cf421b937aed8c38351b770a38c9cf1414fd
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-27 02:00:06.000000000 Z
-    message: updated contact
-    url: https://github.com/gavinha/TitanCNA/commit/ae35cb3d94e51bb21a6ea69030605b1d3133b9db
+  - date: 2018-08-03 00:41:53.000000000 Z
+    message: genomestyle for centromere and targetedSequences
+    url: https://github.com/gavinha/TitanCNA/commit/dae6562fd9adf7726444b6fb13283d1da878e453
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-27 01:58:15.000000000 Z
-    message: update 10X snakemake link
-    url: https://github.com/gavinha/TitanCNA/commit/061cb22d588dc1ab3e626e6eccf84802b482c712
+  - date: 2018-07-31 16:36:53.000000000 Z
+    message: 'set chr column to character type #25'
+    url: https://github.com/gavinha/TitanCNA/commit/7ff2ea9b178d7f216015a22b5e5b311921713c07
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-07-27 01:55:51.000000000 Z
-    message: update 10X snakemake link
-    url: https://github.com/gavinha/TitanCNA/commit/a7fadf956b9756970e89fabd286966de3094ba2d
+  - date: 2018-07-31 16:26:27.000000000 Z
+    message: 'convert chrs to character #25'
+    url: https://github.com/gavinha/TitanCNA/commit/bc1b27446af84a49733a71d10a243c7f51226c28
     author_login: gavinha
     author_url: https://github.com/gavinha
 - repo: broadinstitute/ichorCNA
@@ -91,28 +126,28 @@
     avatar: https://avatars3.githubusercontent.com/u/15793246?v=4&s=50
     url: https://github.com/jurhoades
   commits:
-  - date: 2018-07-10 21:06:46.000000000 Z
-    message: 'Added additional bin sizes for hg38 wig files #10'
-    url: https://github.com/broadinstitute/ichorCNA/commit/8021afa5b72f34e8fce3c30efe0bcae9f735122d
+  - date: 2018-08-03 00:45:08.000000000 Z
+    message: read_counter use binSize wildcard in log [ci skip]
+    url: https://github.com/broadinstitute/ichorCNA/commit/f2dc65795ac32887aa9ff9152cabf62f96f6ea3e
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-05-11 20:42:45.000000000 Z
-    message: 'intersects tumour_copy with panel before normalizing, fixes #24'
-    url: https://github.com/broadinstitute/ichorCNA/commit/92c8bd1e54a1221c55d590c27a91c994da62577a
-    author_login: jurhoades
-    author_url: https://github.com/jurhoades
-  - date: 2018-05-11 19:25:40.000000000 Z
-    message: now with mappability filter
-    url: https://github.com/broadinstitute/ichorCNA/commit/d56208baba59256689d44dd60e60aa79e60bd14b
-    author_login: jurhoades
-    author_url: https://github.com/jurhoades
-  - date: 2018-05-09 13:55:17.000000000 Z
-    message: 'hg38 mappability files; thanks to @leraman #22 [ci skip]'
-    url: https://github.com/broadinstitute/ichorCNA/commit/760ce1e619f262dac82f1beee3b359b0f201de5e
+  - date: 2018-08-01 21:25:18.000000000 Z
+    message: 'update for hg38 and chr naming style #10'
+    url: https://github.com/broadinstitute/ichorCNA/commit/ccd357fae6036d080cbedd16d323f30f0543322a
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-04-03 13:31:52.000000000 Z
-    message: 'fixes typo for #17'
-    url: https://github.com/broadinstitute/ichorCNA/commit/05519bf02d4ae6c949b89551152cb107f86fdcb2
+  - date: 2018-08-01 20:06:00.000000000 Z
+    message: fixes bug where genomeStyle was undefined
+    url: https://github.com/broadinstitute/ichorCNA/commit/108b0bb5d2c52da9f6b87bb06292cb3703da061f
     author_login: jurhoades
     author_url: https://github.com/jurhoades
+  - date: 2018-07-31 16:52:54.000000000 Z
+    message: 'set chrNormalize to same as chrTrain #10'
+    url: https://github.com/broadinstitute/ichorCNA/commit/56ce289320420c59d3fc7d3c7c2b2209208b37a7
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2018-07-31 16:51:55.000000000 Z
+    message: 'some changes to support hg38 #10'
+    url: https://github.com/broadinstitute/ichorCNA/commit/5cb462303e24523d62323a9548b355103ce22f23
+    author_login: gavinha
+    author_url: https://github.com/gavinha
