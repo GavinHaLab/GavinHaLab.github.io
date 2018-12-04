@@ -6,8 +6,7 @@ repo: gavinha/TitanCNA_10X_snakemake
 permalink: /:path/:basename:output_ext
 ---
 
-
-# 2. 10X Genomics Whole Genome Sequencing Analysis
+## 2. 10X Genomics Whole Genome Sequencing Analysis
 R script (`titanCNA_v1.15.0_TenX.R`) for running TitanCNA analysis on sequencing data with haplotype phasing such as 10X Genomics whole genome data
 
 **Input files**  

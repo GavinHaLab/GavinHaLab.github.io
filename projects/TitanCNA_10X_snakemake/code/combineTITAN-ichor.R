@@ -41,6 +41,7 @@ outSegFile <- opt$outSegFile
 outBinFile <- opt$outBinFile
 centromere <- opt$centromere
 libdir <- opt$libdir
+outImageFile <- gsub(".seg.txt", ".RData", outSegFile)
 
 library(TitanCNA)
 library(stringr)
@@ -52,13 +53,16 @@ if (!is.null(libdir) && libdir != "None"){
 }
 
 options(stringsAsFactors=F, width=150, scipen=999)
-
+save.image(outImageFile)
 ## copy number state mappings ##
 ichorCNmap <- list("0"="HOMD", "1"="DLOH", "2"="NEUT", "3"="GAIN", "4"="AMP", "5"="AMP")
 maxichorcn <- 5
 
 ## load segments 
 titan <- fread(titanSeg)
+if (length(titan[["Cellular_Frequency"]] == 0)){
+	setnames(titan, "Cellular_Frequency", "Cellular_Prevalence")
+}
 ichor <- fread(ichorSeg)
 setnames(ichor, c("ID", "chrom", "start", "end", "num.mark", "seg.median.logR", "copy.number", "call"), 
 		c("Sample", "Chromosome", "Start_Position.bp.", "End_Position.bp.", 
@@ -74,11 +78,13 @@ ichor.cn <- cbind(Sample = id, ichor.cn)
 #ichor.cn[, CopyNumber := state - 1]
 ichor.cn[, Position := start]
 setnames(ichor.cn, c("chr", "start", paste0(id,".copy.number"), paste0(id,".event"), paste0(id,".logR"), "end"), 
-		c("Chr", "Start", "Copy_Number", "TITANcall", "LogRatio", "End"))
+		c("Chr", "Start", "CopyNumber", "TITANcall", "LogRatio", "End"))
 
 
 ## get chromosome style
-genomeStyle <- seqlevelsStyle(titan$Chr)
+titan$Chromosome <- as.character(titan$Chromosome)
+titan.cn$Chr <- as.character(titan.cn$Chr)
+genomeStyle <- seqlevelsStyle(titan.cn$Chr)[1]
 chrs <- c(1:22, "X")
 seqlevelsStyle(chrs) <- genomeStyle
 
@@ -132,7 +138,7 @@ cn[is.na(CopyNumber), CopyNumber := MajorCN + MinorCN]
 
 ## correct copy number beyond maximum CN state based on purity and logR
 correctCN <- correctIntegerCN(cn, segs, purity, ploidyT, maxCNtoCorrect.autosomes = NULL, 
-		maxCNtoCorrect.X = NULL, minPurityToCorrect = 0.2, gender = gender, chrs = chrs)
+		maxCNtoCorrect.X = NULL, minPurityToCorrect = 0.05, gender = gender, chrs = chrs)
 segs <- correctCN$segs
 cn <- correctCN$cn
 ## extend segments to remove gaps
@@ -147,5 +153,4 @@ write.table(cn, file = outBinFile, col.names=T, row.names=F, quote=F, sep="\t")
 outSegNoSNPFile <- gsub(".txt", ".noSNPs.txt", outSegFile)
 write.table(segs[, -c("Start.snp", "End.snp")], file = outSegNoSNPFile, col.names=T, row.names=F, quote=F, sep="\t")
 
-outImageFile <- gsub(".segs.txt", ".RData", outSegFile)
 save.image(outImageFile)

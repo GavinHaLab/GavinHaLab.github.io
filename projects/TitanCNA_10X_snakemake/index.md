@@ -10,13 +10,14 @@ permalink: /:path/:basename:output_ext
 
 # Description
 This workflow will run the TITAN copy number analysis for set of tumour-normal pairs, starting from the BAM files aligned using [Long Ranger](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/what-is-long-ranger) software. The analysis includes haplotype-based copy number prediction and post-processing of results. It will also perform model selection at the end of the workflow to choose the optimal ploidy and clonal cluster solutions.  
-Viswanathan SR*, Ha G*, Hoff A*, et al. Structural Alterations Driving Castration-Resistant Prostate Cancer Revealed by Linked-Read Genome Sequencing. *Cell* 174, 433–447.e19 (2018).
+[Viswanathan SR*, Ha G*, Hoff A*, et al. Structural Alterations Driving Castration-Resistant Prostate Cancer Revealed by Linked-Read Genome Sequencing. *Cell* 174, 433–447.e19 (2018).](https://www.cell.com/cell/abstract/S0092-8674(18)30648-2)
 
 # Contact
 Gavin Ha  
 Fred Hutchinson Cancer Research Center  
 contact: <gavinha@gmail.com> or <gha@fredhutch.org>  
 Date: August 7, 2018  
+Website: [GavinHaLab.org](https://gavinhalab.org/)
 
 # Requirements
 ## Software packages or libraries
@@ -38,12 +39,12 @@ Date: August 7, 2018
 # Files in the workflow
 ### Scripts used by the workflow
 The following scripts are used by this snakemake workflow:
- - [getMoleculeCoverage.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getMoleculeCoverage.R) Normalizing/correcting molecule-level coverage
- - [getPhasedHETSitesFromLLRVCF.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getPhasedHETSitesFromLLRVCF.R) - Extracts phased germline heterozygous SNP sites from the Long Ranger analysis of the normal sample
- - [getTumourAlleleCountsAtHETSites.py](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getTumourAlleleCountsAtHETSites.py) - Extracts allelic counts from the tumor sample at the germline heterozygous SNP sites
- - [titanCNA_v1.15.0_TenX.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/titanCNA_v1.15.0_TenX.R) - Main R script to run TitanCNA
- - [selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) - R script to select optimal solution for each sample
- - [combineTITAN-ichor.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/combineTITAN-ichor.R) - R script to merge autosomes and chrX results, plus post-processing steps including adjusting max copy values.
+ - [getMoleculeCoverage.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getMoleculeCoverage.R) Normalizing/correcting molecule-level coverage
+ - [getPhasedHETSitesFromLLRVCF.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getPhasedHETSitesFromLLRVCF.R) - Extracts phased germline heterozygous SNP sites from the Long Ranger analysis of the normal sample
+ - [getTumourAlleleCountsAtHETSites.py](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getTumourAlleleCountsAtHETSites.py) - Extracts allelic counts from the tumor sample at the germline heterozygous SNP sites
+ - [titanCNA_v1.15.0_TenX.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/titanCNA_v1.15.0_TenX.R) - Main R script to run TitanCNA
+ - [selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) - R script to select optimal solution for each sample
+ - [combineTITAN-ichor.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/combineTITAN-ichor.R) - R script to merge autosomes and chrX results, plus post-processing steps including adjusting max copy values.
 
 ### Tumour-Normal sample list [config/samples.yaml](config/samples.yaml)
 The list of tumour-normal paired samples should be defined in a YAML file. In particular, the [Long Ranger](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/what-is-long-ranger) (v2.2.2) analysis directory is listed under samples.  See [config/samples.yaml](config/samples.yaml) for an example.  Both fields `samples` and `pairings` must to be provided.  `pairings` key must match the tumour sample while the value must match the normal sample.
@@ -144,15 +145,16 @@ ichorCNA_libdir:  /path/to/ichorCNA/ ## optional
 
 ### 4. Reference files and settings
 Global reference files used by many of the `snakefiles` and scripts.  
-- `snpVCF`, you can download the HapMap file (used for filtering heterozygous SNPs) here: https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0  
+- `snpVCF` you can download the HapMap file (used for filtering heterozygous SNPs) here: https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0  
 - `genomeStyle` specifies the chromosome naming convention to used for **output** files. Input files can be any convention as long as it is the same genome build. Only use `UCSC` (e.g. chr1) or `NCBI` (e.g. 1). 
+- `sex` set to `male` or `female`, otherwise `None` if both females and males are in sample set.
 ```
 genomeBuild: hg38
 genomeStyle:  UCSC
 snpVCF:  /path/to/hapmap_3.3.hg38.vcf.gz ## optional
 cytobandFile:  data/cytoBand_hg38.txt # only need if hg38
 centromere:  data/GRCh38.GCA_000001405.2_centromere_acen.txt
-sex:  male
+sex:  male   # use None if both females and males are in sample set
 ```
 
 ### 5. Long Ranger filenames
@@ -210,7 +212,7 @@ het_minMapQuality:  20
 ### 11. [TitanCNA.snakefile](TitanCNA.snakefile) settings
 Most settings can be left as default.  
 - `TitanCNA_maxNumClonalClusters` specifies the maximum number of clonal clusters to consider. For example, if set to 5, then 5 solutions are generated, each one considering a different number of cluster(s).  
-- `TitanCNA_maxPloidy` specifies the maximum ploidy to initialize. This be set to either `2` (only considers diploid solutions), `3` (considers diploid and triploid, and usually accounts for tetraploid), or `4` (for diploid, triploid, tetraploid or higher ploidies). Usually, `3` is suitable for most samples unless you know that your samples are tetraploid or even higher. For example, if set to `3`, then solutions for diploid and triploid will be generated. [code/selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) will try to select the optimal solution; however, users should inspect to make sure results are accurate.  
+- `TitanCNA_maxPloidy` specifies the maximum ploidy to initialize. This be set to either `2` (only considers diploid solutions), `3` (considers diploid and triploid, and usually accounts for tetraploid), or `4` (for diploid, triploid, tetraploid or higher ploidies). Usually, `3` is suitable for most samples unless you know that your samples are tetraploid or even higher. For example, if set to `3`, then solutions for diploid and triploid will be generated. [code/selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) will try to select the optimal solution; however, users should inspect to make sure results are accurate.  
 - `TitanCNA_numCores` specifies the number of cores to use on a single machine. `TitanCNA_pe` should also be set as to be consistent.
 ```
 TitanCNA_maxNumClonalClusters: 2

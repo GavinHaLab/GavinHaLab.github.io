@@ -84,6 +84,7 @@ option_list <- list(
             help = "Minimum mappability score threshold to use; float [Default: %default]"),
 	make_option(c("--centromere"), type = "character", default=NULL,
             help = "Centromere gap file. [Default: %default]"),
+    make_option(c("--cytobandFile"), type = "character", default = "None", help = "Cytoband file should be provided only if reference genome is hg38 and genomeStyle is UCSC."),
 	make_option(c("--libdir"), type = "character", default=NULL,
             help = "Directory containing source code. Specify if changes have been made to source code and want to over-ride package code. [Default: %default]"),
 	make_option(c("--outFile"), type = "character", default = NULL,
@@ -107,12 +108,12 @@ opt <- parse_args(parseobj)
 options(bitmapType='cairo', scipen=0)
 
 libdir <- opt$libdir
-if (!is.null(libdir) & libdir != "None"){
-  source(paste0(libdir, "R/plotting.R"))
-  source(paste0(libdir, "R/utils.R"))
-  source(paste0(libdir, "R/hmmClonal.R"))
-  source(paste0(libdir, "R/paramEstimation.R"))
-  source(paste0(libdir, "R/correction.R"))
+if (!is.null(libdir) && libdir != "None"){
+  source(paste0(libdir, "/R/plotting.R"))
+  source(paste0(libdir, "/R/utils.R"))
+  source(paste0(libdir, "/R/hmmClonal.R"))
+  source(paste0(libdir, "/R/paramEstimation.R"))
+  source(paste0(libdir, "/R/correction.R"))
 }
 
 id <- opt$id
@@ -140,6 +141,7 @@ chrs <- as.character(eval(parse(text = opt$chrs)))
 gender <- opt$gender
 genomeStyle <- opt$genomeStyle
 genomeBuild <- opt$genomeBuild
+cytobandFile <- opt$cytobandFile
 mapWig <- opt$mapWig
 centromere <- opt$centromere
 outdir <- opt$outDir
@@ -179,7 +181,12 @@ if (is.null(outplot)){
 dir.create(outplot, showWarnings=verbose)
 outImage <- gsub(".titan.txt", ".RData", outfile)
 
-seqinfo <- Seqinfo(genome=genomeBuild)
+bsg <- paste0("BSgenome.Hsapiens.UCSC.", genomeBuild)
+if (!require(bsg, character.only=TRUE, quietly=TRUE, warn.conflicts=FALSE)) {
+	seqinfo <- Seqinfo(genome=genomeBuild)
+} else {
+	seqinfo <- seqinfo(get(bsg))
+}
 seqlevelsStyle(chrs) <- genomeStyle
 ## exclude chrX if gender==male ##
 if (gender == "male" || gender == "Male" || gender == "MALE"){
@@ -276,18 +283,25 @@ message("Writing results to ", outfile, ", ", outseg, ", ", outparam)
 write.table(results, file = outfile, col.names = TRUE, row.names = FALSE, quote = FALSE, sep = "\t")
 write.table(segs, file = outseg, col.names = TRUE, row.names = FALSE, quote = FALSE, sep = "\t")
 outputModelParameters(convergeParams, results, outparam)
+save.image(file=outImage)
 
 #### PLOT RESULTS ####
 numClustersToPlot <- nrow(convergeParams$s)
 dir.create(outplot, showWarnings=verbose)
 
-if (genomeBuild == "hg38"){
+if (genomeBuild == "hg38" && file.exists(cytobandFile)){
 	cytoband <- fread(cytobandFile)
 	names(cytoband) <- c("chrom", "start", "end", "name", "gieStain")
-	#cytoband$V1 <- setGenomeStyle(cytoband$V1, genomeStyle = genomeStyle)
+	cytoband <- cytoband[chrom %in% chrs]
+	cytoband$chrom <- setGenomeStyle(cytoband$chrom, genomeStyle = genomeStyle)
+	cytoband <- as.data.frame(cytoband)
 }
 for (chr in unique(results$Chr)){
-	outfig <- paste0(outplot, "/", id, "_cluster", numClustersStr, "_chr", chr, ".png")
+	chrStr <- chr
+	if (genomeStyle == "NCBI"){
+		chrStr <- paste0("chr", chr)
+	}
+	outfig <- paste0(outplot, "/", id, "_cluster", numClustersStr, "_", chrStr, ".png")
 	png(outfig,width=1200,height=1200,res=100)
 	if (as.numeric(numClusters) <= 2){
 		par(mfrow=c(5,1))
@@ -306,18 +320,19 @@ for (chr in unique(results$Chr)){
 	plotSegmentMedians(segs, chr=chr, resultType = "LogRatio", plotType = "CopyNumber", 
 				plot.new=TRUE, ylim=c(0,maxCorCN), xlab="", spacing=4, main=paste("Chr ",chr,sep=""))
 	if (as.numeric(numClustersToPlot) <= 2 && as.numeric(numClusters) <= 2){
-		plotSubcloneProfiles(results, chr, cex = 2, spacing=6,
+		plotSubcloneProfiles(results, chr, cex = 2, spacing=6, xlab="",
                                      main=paste("Chr ",chr,sep=""), cex.axis=1.5)
 		ylim <- c(-2,-1)
 		label.y=-4.25
 	}else{
 		ylim <- c(-0.2,-0.1)
-		label.y <- -0.35,
+		label.y <- -0.35
 	}
-	if (genomeBuild == "hg38"){
+	if (genomeBuild == "hg38" && file.exists(cytobandFile)){
+		sl <- seqlengths(seqinfo[chr])
   		pI <- plotIdiogram.hg38(chr, cytoband=cytoband, seqinfo=seqinfo, xlim=c(0, max(sl)), unit="bp", label.y=label.y, new=FALSE, ylim=ylim)	
   	}else{
-  		pI <- plotIdiogram(chr, build="hg19", unit="bp", label.y=-0.35, label.y, new=FALSE, ylim=ylim)	
+		pI <- plotIdiogram(chr, build="hg19", unit="bp", label.y=label.y, new=FALSE, ylim=ylim)
   	}
 
 	dev.off()
@@ -330,7 +345,7 @@ outFile <- paste0(outplot, "/", id, "_cluster", numClustersStr, "_CNA.pdf")
 #png(outFile,width=1000,height=300)
 pdf(outFile,width=20,height=6)
 plotCNlogRByChr(dataIn=results, chr=chrs, segs = segs, ploidy=ploidy,
-                normal = norm, geneAnnot=genes, spacing=4, main=id, xlab="",
+                normal = norm, geneAnnot=NULL, spacing=4, main=id, xlab="",
                 ylim=plotYlim, cex=0.5, cex.axis=1.5, cex.lab=1.5, cex.main=1.5)
 dev.off()
 
@@ -345,7 +360,7 @@ dev.off()
 outFile <- paste0(outplot, "/", id, "_cluster", numClustersStr, "_LOH.pdf")
 #png(outFile,width=1000,height=300)
 pdf(outFile,width=20,height=6)
-plotAllelicRatio(dataIn=results, chr=chrs, geneAnnot=genes, spacing=4,
+plotAllelicRatio(dataIn=results, chr=chrs, geneAnnot=NULL, spacing=4,
                  main=id, xlab="", ylim=c(0,1), cex=0.5, cex.axis=1.5,
                  cex.lab=1.5, cex.main=1.5)
 dev.off()
@@ -361,7 +376,7 @@ dev.off()
 outFile <- paste0(outplot, "/", id, "_cluster", numClustersStr, "_CF.pdf")
 #png(outFile,width=1000,height=300)
 pdf(outFile,width=20,height=6)
-plotClonalFrequency(dataIn=results, chr=NULL, norm, geneAnnot=genes,
+plotClonalFrequency(dataIn=results, chr=chrs, norm, geneAnnot=NULL,
                     spacing=4, main=id, xlab="", ylim=c(0,1), cex.axis=1.5,
                     cex.lab=1.5, cex.main=1.5)
 dev.off()
