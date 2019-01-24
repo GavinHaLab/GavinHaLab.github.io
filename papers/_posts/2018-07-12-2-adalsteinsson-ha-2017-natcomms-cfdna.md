@@ -28,4 +28,5 @@ matched tumor biopsies from 41 patients with ≥10% cfDNA tumor content. In summ
 provide methods to identify patients eligible for comprehensive cfDNA profiling, revealing its
 applicability to many patients, and demonstrate high concordance of cfDNA and metastatic
 tumor whole-exome sequencing.
+
 ![Adalsteinsson V, Ha G, Freeman S, et al. (2017) Nat Commun.](/images/papers/Adalsteinsson-workflow.png)
