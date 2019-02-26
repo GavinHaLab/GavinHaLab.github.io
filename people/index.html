@@ -8,16 +8,16 @@ categories:
 <div class="row">
 	<div class="col-md-12">
 		<div class="title">
-			
+			Lab members
 		</div>
 	</div>
 </div>
 
-<div class="hugespacer"></div>
-
+<div class="bigspacer"></div>
+<div>
 {% for people in site.categories.people reversed %}
-	{% if people.alumni != true %}
-    {% cycle 'add rows': '<div class="row">', nil, nil %}
+		{% if people.alumni != true %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
 		<div class="col-md-4 peoplebox">
 			<div class="media">
   				<a class="pull-left" href="{{ people.url }}">
@@ -31,10 +31,10 @@ categories:
 			<div class="bigspacer"></div>
 			<div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows': nil, nil, '</div>' %}
+    {% cycle 'close rows': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-{% cycle 'close rows': nil, '</div>', '</div>' %}
+</div>
 
 <div class="row">
 	<div class="col-md-12">
