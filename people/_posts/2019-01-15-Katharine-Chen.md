@@ -6,6 +6,7 @@ handle: kychen
 email: kychen@fredhutch.org
 linkedin: katharine-chen-50024877
 github: kychen37
+alumni: true
 image: /images/people/Chen_Katharine.jpg
 ---
 
