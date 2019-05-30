@@ -1,9 +1,11 @@
 ---
 layout: people
 title: Jonathan Reichel
-position: Lead Cell-free DNA Scientist for the Brotman Baty Institute
+position: Research Scientist 
+position2: (Lead Cell-free DNA Scientist for the BBI)
 handle: jreichel
 image: /images/people/Jonathan-Reichel.png
+email: jbreiche@fredhutch.org
 ---
 
 I’m the Lead Cell-free DNA Scientist for the [Brotman Baty Institute (BBI)](https://brotmanbaty.org/){:target="_blank"} of the [University of Washington](https://www.washington.edu/){:target="_blank"}, [Fred Hutch](http://www.fredhutch.org/){:target="_blank"}, and [Seattle Children’s Hospital](https://www.seattlechildrens.org/){:target="_blank"}, where I coordinate and develop research capacity for the Cell-free DNA Working Group and the BBI Clinical Diagnostic Platform, and collaborate scientifically with institutional faculty and staff.  With Dr. Ha, I work on integration of disparate copy number detection methods and development of nucleosome footprinting methods from shallow whole genome cell-free DNA.
