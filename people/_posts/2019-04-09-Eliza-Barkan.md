@@ -3,6 +3,7 @@ layout: people
 title: Eliza Barkan
 position: Graduate Rotation Student
 handle: ebarkan
+alumni: true
 image: /images/people/Eliza_Barkan.jpg
 ---
 
