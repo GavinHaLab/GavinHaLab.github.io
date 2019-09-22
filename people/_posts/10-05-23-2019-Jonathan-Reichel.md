@@ -1,6 +1,7 @@
 ---
 layout: people
 title: Jonathan Reichel
+degree: Ph.D.
 position: Research Scientist 
 position2: (Lead Cell-free DNA Scientist for the BBI)
 handle: jreichel
