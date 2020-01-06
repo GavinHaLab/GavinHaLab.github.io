@@ -5,6 +5,7 @@ position: Graduate Rotation Student
 handle: whannon
 email: wwh22@uw.edu
 image: /images/people/William-Hannon.jpg
+alumni: true
 ---
 
 I  am a rotation student in the University of Washington’s MCB program. Prior to joining the lab, I spent two years at the National Cancer Institute in Bethesda, Maryland studying the role of RNA in maintaining the integrity of the genome. Before that, I earned  my bachelor's degree in Biochemistry from Case Western Reserve University. My undergraduate thesis involved studying the evolution of non-synonymous codon usage in the influenza genome and the resulting change in predicted RNA stability. 
