@@ -50,8 +50,10 @@ exclude:
   - "Gemfile.lock"
  
 projects:
-  - gavinha/TitanCNA_10X_snakemake
-  - gavinha/SV_10X_analysis
+  - GavinHaLab/TitanCNA_10X_snakemake
+  - GavinHaLab/SV_10X_analysis
+  - GavinHaLab/SV_WGS_analysis
+  - GavinHaLab/mutect2_snakemake
   - gavinha/TitanCNA
-  - broadinstitute/ichorCNA
-
+  - GavinHaLab/ichorCNA
+  - GavinHaLab/ichorCNA_offtarget

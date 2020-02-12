@@ -2,7 +2,7 @@
 layout: project
 title: ichorCNA/scripts/
 project: ichorCNA
-repo: broadinstitute/ichorCNA
+repo: GavinHaLab/ichorCNA
 permalink: /:path/:basename:output_ext
 ---
 
@@ -13,7 +13,7 @@ permalink: /:path/:basename:output_ext
 
 ### 2. ichorCNA R script details ###
 
-The main [ichorCNA R script](https://github.com/broadinstitute/ichorCNA/tree/master/scripts/scripts/runIchorCNA.R) can also be run with even more exposed options once WIG files for read counts have been generated.
+The main [ichorCNA R script](https://github.com/GavinHaLab/ichorCNA/tree/master/scripts/scripts/runIchorCNA.R) can also be run with even more exposed options once WIG files for read counts have been generated.
 
 Here is an example of how to launch the R script from the command line:
 ```

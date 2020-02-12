@@ -2,7 +2,7 @@
 layout: project
 title: ichorCNA/scripts/snakemake/
 project: ichorCNA
-repo: broadinstitute/ichorCNA
+repo: GavinHaLab/ichorCNA
 permalink: /:path/:basename:output_ext
 ---
 

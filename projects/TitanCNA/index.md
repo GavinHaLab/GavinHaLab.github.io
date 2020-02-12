@@ -18,7 +18,7 @@ Ha, G., et al. (2014). [TITAN: Inference of copy number architectures in clonal 
 Gavin Ha  
 Fred Hutchinson Cancer Research Center  
 contact: <gavinha@gmail.com> or <gha@fredhutch.org>  
-Date: August 9, 2018  
+Date: May 30, 2019  
 Website: [GavinHaLab.org](https://gavinhalab.org/)
 
 ## Table of Contents
@@ -31,15 +31,19 @@ Website: [GavinHaLab.org](https://gavinhalab.org/)
 * [License](#software-license)
 
 ## Links
-Snakemake Workflow: https://github.com/gavinha/TitanCNA/tree/master/scripts/snakemake  
+**Snakemake Workflow:** https://github.com/gavinha/TitanCNA/tree/master/scripts/snakemake  
 **10X Snakemake Workflow:** https://github.com/gavinha/TitanCNA_10X_snakemake  
 Google Groups: https://groups.google.com/forum/#!forum/titancna  
-TitanCNA website: http://compbio.bccrc.ca/software/titan/  
-KRONOS TITAN Workflow: https://github.com/MO-BCCRC/titan_workflow  
 Publication in Genome Research: http://genome.cshlp.org/content/24/11/1881
 
 ## News
 (See [NEWS](NEWS) for previous version notes)
+
+### May 30, 2019 - TitanCNA version 1.23.1
+Addressed the issue of `RangedData` being deprecated by converting code to use `GRanges` from the `GenomicRanges` package. 
+New or modified functions:  
+	- `wigToGRanges`: to load WIG files and store in `GRanges` object.
+	- `correctIntegerCN()`: performs allelic copy number (major/minor CN) adjustment.
 
 ### August 9, 2018
 Improved parameter inference by handling errors and allowing EM to continue until convergence. This fixes runs that previously would fail because samples had very low tumor content. 
@@ -92,16 +96,17 @@ install_github("gavinha/TitanCNA")
 ### Install TitanCNA from Bioconductor
 From within R-3.3.2 or higher,  
 ```
-source("https://bioconductor.org/biocLite.R")
-biocLite("TitanCNA")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("TitanCNA")
 ```
 
 ### Install other dependencies  
 1. Install the HMMcopy suite
-Please follow instructions on the HMMcopy website <http://compbio.bccrc.ca/software/hmmcopy/>.
+Please follow instructions on the HMMcopy GitHub <https://github.com/shahcompbio/hmmcopy_utils>.
 
-2. [KRONOS](https://github.com/MO-BCCRC/titan_workflow) TITAN Workflow
-The easiest way to generate these files is by using the downloadable pipeline from https://github.com/MO-BCCRC/titan_workflow. 
+2. Install ichorCNA
+Please follow instructions on the ichorCNA GitHub Wiki <https://github.com/broadinstitute/ichorCNA>.
 
 ## Usage
 R scripts are provided to run the R component of the TITAN analysis using the TitanCNA R/Bioconductor package.  

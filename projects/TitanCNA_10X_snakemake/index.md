@@ -2,7 +2,7 @@
 layout: project
 title: TitanCNA_10X_snakemake/
 project: TitanCNA_10X_snakemake
-repo: gavinha/TitanCNA_10X_snakemake
+repo: GavinHaLab/TitanCNA_10X_snakemake
 permalink: /:path/:basename:output_ext
 ---
 
@@ -30,8 +30,8 @@ Website: [GavinHaLab.org](https://gavinhalab.org/)
    - stringr
    - SNPchip
    - doMC
- - Python 3.4 
-   - snakemake-3.12.0
+ - Python 3.5
+   - snakemake-5.2.0
    - PySAM-0.11.2.1
    - PyYAML-3.12
  - [bxtools](https://github.com/walaj/bxtools)
@@ -39,12 +39,12 @@ Website: [GavinHaLab.org](https://gavinhalab.org/)
 # Files in the workflow
 ### Scripts used by the workflow
 The following scripts are used by this snakemake workflow:
- - [getMoleculeCoverage.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getMoleculeCoverage.R) Normalizing/correcting molecule-level coverage
- - [getPhasedHETSitesFromLLRVCF.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getPhasedHETSitesFromLLRVCF.R) - Extracts phased germline heterozygous SNP sites from the Long Ranger analysis of the normal sample
- - [getTumourAlleleCountsAtHETSites.py](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/getTumourAlleleCountsAtHETSites.py) - Extracts allelic counts from the tumor sample at the germline heterozygous SNP sites
- - [titanCNA_v1.15.0_TenX.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/titanCNA_v1.15.0_TenX.R) - Main R script to run TitanCNA
- - [selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) - R script to select optimal solution for each sample
- - [combineTITAN-ichor.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/combineTITAN-ichor.R) - R script to merge autosomes and chrX results, plus post-processing steps including adjusting max copy values.
+ - [getMoleculeCoverage.R](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/getMoleculeCoverage.R) Normalizing/correcting molecule-level coverage
+ - [getPhasedHETSitesFromLLRVCF.R](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/getPhasedHETSitesFromLLRVCF.R) - Extracts phased germline heterozygous SNP sites from the Long Ranger analysis of the normal sample
+ - [getTumourAlleleCountsAtHETSites.py](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/getTumourAlleleCountsAtHETSites.py) - Extracts allelic counts from the tumor sample at the germline heterozygous SNP sites
+ - [titanCNA_v1.15.0_TenX.R](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/titanCNA_v1.15.0_TenX.R) - Main R script to run TitanCNA
+ - [selectSolution.R](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) - R script to select optimal solution for each sample
+ - [combineTITAN-ichor.R](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/combineTITAN-ichor.R) - R script to merge autosomes and chrX results, plus post-processing steps including adjusting max copy values.
 
 ### Tumour-Normal sample list [config/samples.yaml](config/samples.yaml)
 The list of tumour-normal paired samples should be defined in a YAML file. In particular, the [Long Ranger](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/what-is-long-ranger) (v2.2.2) analysis directory is listed under samples.  See [config/samples.yaml](config/samples.yaml) for an example.  Both fields `samples` and `pairings` must to be provided.  `pairings` key must match the tumour sample while the value must match the normal sample.
@@ -68,7 +68,7 @@ See below for details about [config/config.yaml](config/config.yaml)
 
 # Run the analysis
 
-## 1. Invoking the full snakemake workflow for TITAN
+## 1. Invoking the full snakemake workflow for TITAN on a local machine
 This will also run both [moleculeCoverage.snakefile](moleculeCoverage.snakefile) and [getPhasedAlleleCounts.snakefile](getPhasedAlleleCounts.snakefile) which generate the necessary inputs for [TitanCNA.snakefile](TitanCNA.snakefile).
 ```
 # show commands and workflow
@@ -76,17 +76,31 @@ snakemake -s TitanCNA.snakefile -np
 # run the workflow locally using 5 cores
 snakemake -s TitanCNA.snakefile --cores 5
 ```
-Users can launch the snakemake jobs to a cluster.  
-An implementation that works with Broad UGER (qsub) is provided.  
-Parameters for memory, runtime, and parallel environment can be specified directly in the snakemake files; default values for each rule has already been set in `params` within the [config.yaml](config/config.yaml) and the command below can be used as-is.  
-Other cluster parameters can be set directly in [cluster.sh](config/cluster.sh).  
-*Note: users will need to adjust these for use with their cluster-specific settings*
+## 2. Invoking the TITAN snakemake workflow on a cluster
+Here are instructions for running workflow on a cluster using specific resource settings for memory and runtime limits, and parallel environments.  
+There are two cluster configurations provided: `qsub` and `slurm`
+
+#### a. `qsub`
+There are 2 separate files in use for `qsub`, which are provided as a template:
+	`config/cluster_qsub.sh` - This file contains other `qsub` parameters. *Note that these settings are used for the Broad's UGER cluster so users will need to modify this for their own clusters.*  
+	`config/cluster_qsub.yaml` - This file contains the memory, runtime, and number of cores for certain tasks.  
+
+To invoke the snakemake pipeline for `qsub`:
 ```
-snakemake -s TitanCNA.snakefile --cluster-sync "qsub -l h_vmem={params.mem},h_rt={params.runtime} {params.pe}" -j 50 --jobscript config/cluster.sh
+snakemake -s  TitanCNA.snakefile --jobscript config/cluster_qsub.sh --cluster-config config/cluster_qsub.yaml --cluster-sync "qsub -l h_vmem={cluster.h_vmem},h_rt={cluster.h_rt} -pe {cluster.pe} -binding {cluster.binding}" -j 100
+```
+Here, the `h_vmem` (max memory), `h_rt` (max runtime) are used. For `runTitanCNA` task, the default setting is to use 1 core but additional number of cpus (per task) can help to speed up the analysis. This can be set with `-pe` and `-binding`. Your SGE settings may be different and users should adjust accordingly.
+
+#### b. `slurm`
+There is only one file in use for `slurm`:
+	`config/cluster_slurm.yaml` - This file contains the memory, runtime, and number of cores for certain tasks. 
+To invoke the snakemake pipeline for `qsub`:
+```
+snakemake -s  TitanCNA.snakefile --cluster-config config/cluster_slurm.yaml --cluster "sbatch -p {cluster.partition} --mem={cluster.mem} -t {cluster.time} -c {cluster.ncpus} -n {cluster.ntasks} -o {cluster.output}" -j 50
 ```
 
 
-## 2. Invoking individual steps in the workflow
+## 3. Invoking individual steps in the workflow
 Users can run the snakemake files individually. This can be helpful for testing each step or if you only wish to generate results for a particular step. The snakefiles need to be run in this same order since input files are generated by the previous steps.
   ### a. [moleculeCoverage.snakefile](moleculeCoverage.snakefile)
   i.   Run [bxtools](https://github.com/walaj/bxtools) to compute counts of unique molecules in each window.  
@@ -96,18 +110,22 @@ Users can run the snakemake files individually. This can be helpful for testing 
   snakemake -s moleculeCoverage.snakefile -np
   snakemake -s moleculeCoverage.snakefile --cores 5
   # OR
-  snakemake -s moleculeCoverage.snakefile --cluster-sync "qsub -l h_vmem={params.mem},h_rt={params.runtime} {params.pe}" -j 50 --jobscript config/cluster.sh
+  snakemake -s  moleculeCoverage.snakefile --cluster-config config/cluster_slurm.yaml --cluster "sbatch -p {cluster.partition} --mem={cluster.mem} -t {cluster.time} -c {cluster.ncpus} -n {cluster.ntasks} -o {cluster.output}" -j 50
+  # OR
+  snakemake -s moleculeCoverage.snakefile --jobscript config/cluster_qsub.sh --cluster-config config/cluster_qsub.yaml --cluster-sync "qsub -l h_vmem={cluster.h_vmem},h_rt={cluster.h_rt} -pe {cluster.pe} -binding {cluster.binding}" -j 100
   ```
   
   ### b. [getPhasedAlleleCounts.snakefile](getPhasedAlleleCounts.snakefile) 
-  i.   Read the Long Ranger output file `phased_variants.vcf.gz` and extract heterozygous SNP sites (that overlap a SNP database, e.g. [hapmap_3.3.hg38.vcf.gz](https://storage.cloud.google.com/genomics-public-data/resources/broad/hg38/v0/hapmap_3.3.hg38.vcf.gz?_ga=2.110868357.-1633399588.1531762721)).
-  i.   Extract the allelic read counts from the Long Ranger tumor bam file `phased_possorted_bam.bam` for each chromosome.  
+  i.   Read the Long Ranger output file `phased_variants.vcf.gz` and extract heterozygous SNP sites (that overlap a SNP database, e.g. [hapmap_3.3.hg38.vcf.gz](https://storage.cloud.google.com/genomics-public-data/resources/broad/hg38/v0/hapmap_3.3.hg38.vcf.gz?_ga=2.110868357.-1633399588.1531762721)).  
+  ii.   Extract the allelic read counts from the Long Ranger tumor bam file `phased_possorted_bam.bam` for each chromosome.  
   iii. Cat the allelic read counts from each chromosome file into a single counts file.
   ```
   snakemake -s getPhasedAlleleCounts.snakefile -np
   snakemake -s getPhasedAlleleCounts.snakefile --cores 5
   # OR
-  snakemake -s getPhasedAlleleCounts.snakefile --cluster-sync "qsub -l h_vmem={params.mem},h_rt={params.runtime} {params.pe}" -j 50 --jobscript config/cluster.sh
+   snakemake -s getPhasedAlleleCounts.snakefile --cluster-config config/cluster_slurm.yaml --cluster "sbatch -p {cluster.partition} --mem={cluster.mem} -t {cluster.time} -c {cluster.ncpus} -n {cluster.ntasks} -o {cluster.output}" -j 50
+   # OR
+   snakemake -s getPhasedAlleleCounts.snakefile --jobscript config/cluster_qsub.sh --cluster-config config/cluster_qsub.yaml --cluster-sync "qsub -l h_vmem={cluster.h_vmem},h_rt={cluster.h_rt} -pe {cluster.pe} -binding {cluster.binding}" -j 100
   ``` 
   ### c. [TitanCNA.snakefile](TitanCNA.snakefile)
   i.   Run the [TitanCNA](https://github.com/gavinha/TitanCNA) analysis and generates solutions for different ploidy initializations and each clonal cluster.  
@@ -164,24 +182,13 @@ bamFileName:  phased_possorted_bam.bam
 phaseVariantFileName:  phased_variants.vcf.gz
 ```
 
-### 6. Cluster resource parameter settings
-If you are using a cluster, then these are resource settings for memory and runtime limits, and parallel environments.  
-These are the default settings for all tasks that do not have rule-specific resources.  
-*Note that these settings are used for the Broad's UGER cluster so users will need to modify this for their own clusters.*
-```
-# invoke using: snakemake -s TitanCNA.snakefile --cluster-sync "qsub -l h_vmem={params.mem},h_rt={params.runtime} {params.pe}" -j 200 --jobscript config/cluster.sh
-std_mem:  4G # memory limit
-std_runtime:  "03:00:00" # runtime limit
-std_numCores:  -pe smp 1 -binding linear:1  # use one core 
-```
-
-### 7. bxtools settings
+### 6. bxtools settings
 ```
 bx_mapQual:  60  # mapping quality threshold
 bx_bedFileRoot:  data/10kb_hg38/10kb_hg38  # bed files to specify intervals for analysis
 ``` 
 
-### 8. [moleculeCoverage.snakefile](moleculeCoverage.snakefile) settings
+### 7. [moleculeCoverage.snakefile](moleculeCoverage.snakefile) settings
 Settings for the analysis of molecule coverage.  
 - `molCov_minReadsPerBX` specify the minimum number of reads required for a barcode to be counted in the coverage.  
 - `molCov_chrs` specifies the chromosomes to analyze; users do not need to be concerned about chromosome naming convention here as the code will handle it based on the `genomeStyle` set in the reference settings above.  
@@ -194,7 +201,7 @@ molCov_mapWig:  data/map_hg38_10kb.wig
 molCov_maxCN:  8
 ```
 
-### 9. [getPhasedAlleleCounts.snakefile](getPhasedAlleleCounts.snakefile) settings: Heterozygous SNP 
+### 8. [getPhasedAlleleCounts.snakefile](getPhasedAlleleCounts.snakefile) settings: Heterozygous SNP 
 Minimum thresholds used when determining heterozygous SNP sites from the Long Ranger `phased_variants.vcf.gz` file for the matched normal sample.
 ```
 het_minVCFQuality:  100
@@ -202,17 +209,17 @@ het_minDepth:  10
 het_minVAF:  0.25
 ```
 
-### 10. [getPhasedAlleleCounts.snakefile](getPhasedAlleleCounts.snakefile) settings: Tumor allelic counts 
+### 9. [getPhasedAlleleCounts.snakefile](getPhasedAlleleCounts.snakefile) settings: Tumor allelic counts 
 Minimum thresholds to use for extracting allelic read counts from the tumor sample.
 ```
 het_minBaseQuality:  10
 het_minMapQuality:  20
 ```
 
-### 11. [TitanCNA.snakefile](TitanCNA.snakefile) settings
+### 10. [TitanCNA.snakefile](TitanCNA.snakefile) settings
 Most settings can be left as default.  
 - `TitanCNA_maxNumClonalClusters` specifies the maximum number of clonal clusters to consider. For example, if set to 5, then 5 solutions are generated, each one considering a different number of cluster(s).  
-- `TitanCNA_maxPloidy` specifies the maximum ploidy to initialize. This be set to either `2` (only considers diploid solutions), `3` (considers diploid and triploid, and usually accounts for tetraploid), or `4` (for diploid, triploid, tetraploid or higher ploidies). Usually, `3` is suitable for most samples unless you know that your samples are tetraploid or even higher. For example, if set to `3`, then solutions for diploid and triploid will be generated. [code/selectSolution.R](https://github.com/gavinha/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) will try to select the optimal solution; however, users should inspect to make sure results are accurate.  
+- `TitanCNA_maxPloidy` specifies the maximum ploidy to initialize. This be set to either `2` (only considers diploid solutions), `3` (considers diploid and triploid, and usually accounts for tetraploid), or `4` (for diploid, triploid, tetraploid or higher ploidies). Usually, `3` is suitable for most samples unless you know that your samples are tetraploid or even higher. For example, if set to `3`, then solutions for diploid and triploid will be generated. [code/selectSolution.R](https://github.com/GavinHaLab/TitanCNA_10X_snakemake/tree/master/code/selectSolution.R) will try to select the optimal solution; however, users should inspect to make sure results are accurate.  
 - `TitanCNA_numCores` specifies the number of cores to use on a single machine. `TitanCNA_pe` should also be set as to be consistent.
 ```
 TitanCNA_maxNumClonalClusters: 2
@@ -228,7 +235,7 @@ TitanCNA_alphaR:  5000
 TitanCNA_txnExpLen: 1e15
 TitanCNA_plotYlim:  c(-2,4)
 TitanCNA_solutionThreshold: 0.05
-TitanCNA_numCores:  1
+TitanCNA_numCores:  1  #must match the settings for number of cpus for cluster settings
 ```
 
   

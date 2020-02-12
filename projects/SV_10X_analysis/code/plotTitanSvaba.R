@@ -29,8 +29,9 @@ option_list <- list(
   make_option(c("--plotCNAtype"), type="character", default = "titan", help = "titan or ichor; if titan, then will also plot haplotype fraction. [Default: %default]."),
   make_option(c("--plotYlim"), type = "character", default = "c(-2,6)", help = "Y limits for plotting log ratio. [Default: %default]."),
   make_option(c("--plotSize"), type = "character", default = "c(8,4)", help = "width and height in inches. [Default: %default]."),
-  make_option(c("--plotFormat"), type = "character", default = "png", help = "File format of plot. E.g. pdf or png. [Default: %default]."),
-  make_option(c("--outDir"), type="character", help="Path to output directory.")
+  #make_option(c("--plotFormat"), type = "character", default = "png", help = "File format of plot. E.g. pdf or png. [Default: %default]."),
+  make_option(c("--outPlotFile"), type="character", help="Path to output figure file.")
+  #make_option(c("--outDir"), type="character", help="Path to output directory.")
 )
 
 parseobj <- OptionParser(option_list=option_list, usage = "usage: Rscript %prog [options]")
@@ -49,9 +50,10 @@ library(diagram)
 library(tools)
 library(SNPchip)
 library(VariantAnnotation)
+library(BSgenome.Hsapiens.UCSC.hg38)
 
 source(paste0(opt$titan_libdir, "/R/haplotype.R"))
-source(opt$tenX_funcs)
+#source(opt$tenX_funcs)
 source(opt$svaba_funcs)
 source(opt$plot_funcs)
 
@@ -61,7 +63,7 @@ svFile <- opt$svFile
 cnFile <- opt$titanBinFile
 segFile <- opt$titanSegFile
 paramFile <- opt$titanParamFile
-chrStr <- as.character(eval(parse(text = opt$chrs)))
+chrStr <- as.character(eval(parse(text = "c(opt$chrs)")))
 startPos <- opt$start
 endPos <- opt$end
 zoom <- opt$zoom
@@ -73,8 +75,10 @@ cytobandFile <- opt$cytobandFile
 altSVFile <- opt$customSVFile
 plotType <- opt$plotCNAtype
 plotSize <- eval(parse(text=opt$plotSize))
-plotFormat <- opt$plotFormat
-outDir <- opt$outDir
+#plotFormat <- opt$plotFormat
+#outDir <- opt$outDir
+outPlotFile <- opt$outPlotFile
+plotFormat <- tools::file_ext(outPlotFile)
 width <- plotSize[1]  #6 8 
 height <- plotSize[2]  #3 3.5 #4 
 spacing <- 3
@@ -90,38 +94,52 @@ offset.factor <- 1.15 # sv drawn outside of plot
 lcol <- NULL
 arr.col <- NULL
 svabaCol <- "black"
-rescueCol <- "blue"
-lrCol <- "black"
-grocCol <- "black"
-manualCol <- "purple"
-seqinfo <- Seqinfo(genome=genomeBuild)
+rescueCol <- "purple"
+lrCol <- "lightgrey"
+grocCol <- "blue"
+manualCol <- "blue"
+#seqinfo <- Seqinfo(genome=genomeBuild)
+bsg <- paste0("BSgenome.Hsapiens.UCSC.", genomeBuild)
+if (!require(bsg, character.only=TRUE, quietly=TRUE, warn.conflicts=FALSE)) {
+	seqinfo <- Seqinfo(genome=genomeBuild)
+} else {
+	seqinfo <- seqinfo(get(bsg))
+}
+
+
 if (zoom){
   xlim <- c(startPos, endPos)
-  cex <- 0.5
+  startTitle <- paste0(format(round(startPos/1e6,2), nsmall=2))
+  endTitle <- paste0(format(round(endPos/1e6,2),nsmall=2), "Mb")
+  cex <- 0.75
   cytoBand <- F
   xaxt <- "s"
   plotAtCentre <- FALSE
   cnColor <- FALSE
   plotIdio <- FALSE
+  exclude.na.snp <- FALSE
 }else{
   xlim <- NULL
   cex <- 0.25
   cytoBand <- T
   xaxt <- "n"
-  #yaxis <- "logratio"
+  yaxis <- "logratio"
   plotAtCentre <- FALSE
   cnColor <- FALSE
   plotIdio <- TRUE
   plotSegs <- FALSE
+  exclude.na.snp <- TRUE
 }
-if (chrStr == "0" || is.null(chrStr) || chrStr != "None"){
+if (chrStr == "0" || is.null(chrStr) || chrStr == "None"){
   chrStr <- as.character(c(1:22, "X"))
-  seqlevelsStyle(chrStr) <- genomeStyle
 }
+seqlevelsStyle(chrStr) <- genomeStyle
+
 if (plotType == "titan"){
 	cnColor <- TRUE
 	plotHaplotypeFrac <- TRUE
 	height <- height * 1.5
+	cex.hap <- 0.5
 }
 
 if (!cnColor){
@@ -142,16 +160,19 @@ if (!is.null(geneList) && geneList != "None"){
 }else{
   genes <- NULL
 }
+colnames(genes) <- c("Gene", "Chr", "Start", "End")
+seqlevelsStyle(genes$Chr) <- genomeStyle
 
 if (genomeBuild == "hg38" && file.exists(cytobandFile)){
   cytoband <- as.data.frame(fread(cytobandFile))
   names(cytoband) <- c("chrom", "start", "end", "name", "gieStain")
 }
 
-outPlotDir <- outDir
-dir.create(outPlotDir)
-outImage <- paste0(outDir, "/", id, ".RData")
-save.image(file=outImage)
+#outPlotDir <- outDir
+#dir.create(outPlotDir)
+#outImage <- paste0(outDir, "/", id, ".RData")
+outImage <- gsub(plotFormat, "RData", outPlotFile)
+#save.image(file=outImage)
 
 message("Analyzing ", id)
 ulp <- fread(cnFile)
@@ -177,13 +198,23 @@ if (yaxis == "integer"){
 # exclude data points not analyzed by titan
 if (plotType == "titan"){
 	ulp <- ulp[!is.na(Corrected_Call)]
+}else{
+  ulp[is.na(Corrected_Call), Corrected_Call := "NEUT"]
 }
+ulp <- ulp[Chr %in% chrStr]
 ulp$Chr <- factor(ulp$Chr, levels = chrStr)
-ulp <- ulp[order(Chr)]
+ulp <- ulp[order(Chr, Start)]
+
+## for plotting full chromosomes, exclude rows where it is not a SNP
+# usually, these rows are ichorCNA bins and can contain noisy data
+# for zoom, we leave some of these in to avoid gaps in the plots
+if (exclude.na.snp){
+	ulp <- ulp[!is.na(Position)]
+}
 
 ############# load Combined SV (SVABA, GROC, LongRanger) ##############
 sv <- fread(svFile)
-save.image(file=outImage)
+#save.image(file=outImage)
 
 #####################################
 ########## PLOT CHR RESULTS #########
@@ -192,24 +223,30 @@ for (j in 1:length(chrStr)){
   message("Plotting ", chrStr[j])
   ###################################
   ### SNOWMAN + BARCODE RESCUE ######
-  outPlot <- paste0(outPlotDir, "/", id, "_CNA-SV-BX_",plotType,"_",chrStr[j],".",plotFormat)
-  plotTitle <- paste0(id, " (", chrStr[j],")")
+  if (genomeStyle == "NCBI"){
+  	chrTitle <- paste0("chr", chrStr[j])
+  }else{
+  	chrTitle <- chrStr[j]
+  }
+  
+  #outPlot <- paste0(outPlotDir, "/", id, "_CNA-SV-BX_",plotType,"_",chrTitle,".",plotFormat)
+  plotTitle <- paste0(id, " (", chrTitle,")")
   if (zoom){
-    ylimMax <- ulp[Chr==chrStr[j] & Start >= xlim[1] & Start <= xlim[2], max(LogRatio, na.rm=T)] + 1
-    outPlot <- paste0(outPlotDir, "/", id, "_CNA-SV-BX_",plotType,"_chr",chrStr[j],"-",startPos,"-",endPos,".pdf")
-    plotTitle <- paste0(id, " (chr", chrStr[j],":",format(round(startPos/1e6,2), nsmall=2),"Mb-",format(round(endPos/1e6,2),nsmall=2),"Mb)")
+    ylimMax <- ulp[Chr==chrStr[j] & Start >= xlim[1] & Start <= xlim[2], max(get(colName), na.rm=T)] + 1
+    #outPlot <- paste0(outPlotDir, "/", id, "_CNA-SV-BX_",plotType,"_",chrTitle,"-",startTitle,"-",endTitle,".",plotFormat)
+    plotTitle <- paste0(id, " (",chrTitle,":",startTitle,"-",endTitle, ")")
   }else{
     xlim <- c(1, seqlengths(seqinfo)[chrStr[j]])
-    ylimMax <- ulp[, max(LogRatio, na.rm=T)] + 1
+    ylimMax <- ulp[, max(get(colName), na.rm=T)] + 1
   }    
   ylim[2] <- min(max(ylim[2], ceiling(ylimMax)), 10)
   ylimSV <- ylim
   ylimSV[2] <- ylimSV[2] - 0.5
   
   if (plotFormat == "png"){
-  	png(outPlot, width = width*100, height=height*100)
+  	png(outPlotFile, width = width*100, height=height*100)
   }else{
-  	pdf(outPlot, width = width, height=height)
+  	pdf(outPlotFile, width = width, height=height)
 	}
   if (plotHaplotypeFrac){ par(mfrow=c(2,1)); spacing <- 0  }
 	
@@ -217,7 +254,7 @@ for (j in 1:length(chrStr)){
   
   if (grepl("X", chrStr[j])) { cnCol <- rep("#000000", 30) }
   message("Plotting read depth CN")
-  plotTitanIchorCNA(as.data.frame(ulp), segs=segsToPlot, chr=chrStr[j], colName=colName, 
+  plotTitanIchorCNA(ulp, segs=segsToPlot, chr=chrStr[j], colName=colName, 
       cytoBand=FALSE, geneAnnot=genes, purity = purity, ploidyT = NULL, yaxis=yaxis, cnCol = cnCol,
       yrange=ylim, xlim=xlim, spacing=spacing, xaxt=xaxt, cex = cex, gene.cex = 1,
       plot.title = plotTitle)
@@ -227,7 +264,7 @@ for (j in 1:length(chrStr)){
     
     if (yaxis == "integer"){
    		normCN <- ifelse(grepl("X", chrStr[j]), 1, 2) 
-    	ylimMax.int <- ulp[, max(LogRatio, na.rm=T)] + 1
+    	ylimMax.int <- ulp[Chr == chrStr[j], max(get(colName), na.rm=T)] * 0.75
     	ylimSV[2] <- min(ylimMax.int, 10)
     	ylimSV[1] <- 2
     	centreLine <- ifelse(grepl("X", chrStr[j]), 0, 1)
@@ -286,12 +323,13 @@ for (j in 1:length(chrStr)){
   if (plotHaplotypeFrac){
     message("Plotting haplotype fraction")
     plotHaplotypeFraction(ulp[,-1], chrStr[j], resultType = "HaplotypeRatio", colType = "Haplotypes", 
-	  xlab="", ylim=c(0,1), xlim=xlim, cex=0.25, cex.axis=1.5, cex.lab=1.5, spacing = 4)
-	  par(xpd=NA)
+	  xlab="", ylim=c(0,1), xlim=xlim, cex=cex.hap, cex.axis=1.5, cex.lab=1.5, spacing = 6)
+	
+	par(xpd=NA)
     
     if (genomeBuild == "hg38" && file.exists(cytobandFile)){
       sl <- seqlengths(seqinfo[chrStr[j]])
-      pI <- plotIdiogram.hg38(chrStr[j], cytoband=cytoband, seqinfo=seqinfo, xlim=c(0, max(sl)), unit="bp", label.y=-0.35, new=FALSE, ylim=c(-0.3,-0.15))	
+      pI <- plotIdiogram.hg38(chrStr[j], cytoband=cytoband, seqinfo=seqinfo, xlim=c(0, max(sl)), unit="bp", label.y=-0.425, new=FALSE, ylim=c(-0.3,-0.15))	
     }else{
       pI <- plotIdiogram(chrStr[j], build="hg19", unit="bp", label.y=-0.6, new=FALSE, ylim=c(-0.3,-0.15))
     }

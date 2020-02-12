@@ -2,7 +2,7 @@
 layout: project
 title: TitanCNA_10X_snakemake/code/
 project: TitanCNA_10X_snakemake
-repo: gavinha/TitanCNA_10X_snakemake
+repo: GavinHaLab/TitanCNA_10X_snakemake
 permalink: /:path/:basename:output_ext
 ---
 

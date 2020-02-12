@@ -2,11 +2,11 @@
 layout: project
 title: ichorCNA/
 project: ichorCNA
-repo: broadinstitute/ichorCNA
+repo: GavinHaLab/ichorCNA
 permalink: /:path/:basename:output_ext
 ---
 
-[![Build Status](https://travis-ci.org/broadinstitute/ichorCNA.svg?branch=master)](https://travis-ci.org/broadinstitute/ichorCNA)
+[![Build Status](https://travis-ci.com/broadinstitute/ichorCNA.svg?branch=master)](https://travis-ci.com/broadinstitute/ichorCNA)
 
 # *ichorCNA*
 ichorCNA is a tool for estimating the fraction of tumor in cell-free DNA from ultra-low-pass whole genome sequencing (ULP-WGS, 0.1x coverage). 
