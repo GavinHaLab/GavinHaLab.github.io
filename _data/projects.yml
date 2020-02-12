@@ -1,4 +1,117 @@
 ---
+- repo: GavinHaLab/SV_WGS_analysis
+  title: SV_WGS_analysis
+  owner: GavinHaLab
+  description: Structural variation analysis pipeline for cancer genomes
+  url: "/projects/SV_WGS_analysis/"
+  contributors:
+  - login: gavinha
+    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
+    url: https://github.com/gavinha
+  - login: annahoge
+    avatar: https://avatars0.githubusercontent.com/u/36393555?v=4&s=50
+    url: https://github.com/annahoge
+  commits:
+  - date: 2020-02-03 18:33:54.000000000 Z
+    message: Update combineSVABAandTITAN.R
+    url: https://github.com/GavinHaLab/SV_WGS_analysis/commit/3c7c04d0237070a763139a1f77610b823feb1bf4
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-05-15 17:40:19.000000000 Z
+    message: custom zoom plots, readme docs
+    url: https://github.com/GavinHaLab/SV_WGS_analysis/commit/c2e94c694db03b26d8742410c17a4517b18a8085
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-05-10 22:06:05.000000000 Z
+    message: combine svaba and titan results and plots
+    url: https://github.com/GavinHaLab/SV_WGS_analysis/commit/c93d72633721e8515566692d4e728d861533182f
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-05-07 18:56:23.000000000 Z
+    message: initial code
+    url: https://github.com/GavinHaLab/SV_WGS_analysis/commit/fca2617bb9de2d7a552f5cb2b52ec6f7d56f36e7
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-01-02 19:36:35.000000000 Z
+    message: Initial commit
+    url: https://github.com/GavinHaLab/SV_WGS_analysis/commit/ee2e5c5d8f02286f63da8fa44d081245d2a3d2ef
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+- repo: GavinHaLab/ichorCNA
+  title: ichorCNA
+  owner: GavinHaLab
+  description: Estimating tumor fraction in cell-free DNA from ultra-low-pass whole
+    genome sequencing.
+  url: "/projects/ichorCNA/"
+  contributors:
+  - login: gavinha
+    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
+    url: https://github.com/gavinha
+  - login: jurhoades
+    avatar: https://avatars3.githubusercontent.com/u/15793246?v=4&s=50
+    url: https://github.com/jurhoades
+  commits:
+  - date: 2020-01-24 00:54:22.000000000 Z
+    message: incl. rep timing in snakemake
+    url: https://github.com/GavinHaLab/ichorCNA/commit/3217a74be7b64cbd55a000a4e5d0231b14d59b72
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2020-01-14 03:33:35.000000000 Z
+    message: plotting bias; using LNCaP RepTime
+    url: https://github.com/GavinHaLab/ichorCNA/commit/8fd518da3d0add519b0ffe8048110e58d9b801bf
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2020-01-09 20:30:54.000000000 Z
+    message: bug fix - fit plots
+    url: https://github.com/GavinHaLab/ichorCNA/commit/a0dc3ab83d3b0d71137e47ccfb7487a97762cabd
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2020-01-08 05:11:37.000000000 Z
+    message: rep timing correction first commit
+    url: https://github.com/GavinHaLab/ichorCNA/commit/7c2a318542d0eb7975cfde3aa177194e3cf8928c
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-12-19 06:37:24.000000000 Z
+    message: Merge remote-tracking branch 'upstream/master'
+    url: https://github.com/GavinHaLab/ichorCNA/commit/d8ebf5517d223a7172acf8f07d75809bd6906fb7
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+- repo: GavinHaLab/mutect2_snakemake
+  title: mutect2_snakemake
+  owner: GavinHaLab
+  description: 'A snakemake to run Mutect2 on analysis-ready bams, following GATK
+    best practices. '
+  url: "/projects/mutect2_snakemake/"
+  contributors:
+  - login: annahoge
+    avatar: https://avatars0.githubusercontent.com/u/36393555?v=4&s=50
+    url: https://github.com/annahoge
+  commits:
+  - date: 2020-01-17 21:41:34.000000000 Z
+    message: Update README.md
+    url: https://github.com/GavinHaLab/mutect2_snakemake/commit/f69a40ed01d2451c5a611c7af79f51eae8dd01b4
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2020-01-17 21:38:20.000000000 Z
+    message: Create .placeholder.txt
+    url: https://github.com/GavinHaLab/mutect2_snakemake/commit/dd2622a09f762baf6f535d1b1cb47d865b709322
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2020-01-17 21:38:00.000000000 Z
+    message: Create .placeholder.txt
+    url: https://github.com/GavinHaLab/mutect2_snakemake/commit/597e8f5d2731856c30d272dbed1d9d676fcd30d6
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2020-01-17 21:37:26.000000000 Z
+    message: Add files via upload
+    url: https://github.com/GavinHaLab/mutect2_snakemake/commit/badf8a1efb57192e9927e97169224dbda485cb09
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2020-01-17 21:36:13.000000000 Z
+    message: Initial commit
+    url: https://github.com/GavinHaLab/mutect2_snakemake/commit/c29fec4bda080254e849dcad4f74feab9c04d00d
+    author_login: annahoge
+    author_url: https://github.com/annahoge
 - repo: gavinha/TitanCNA
   title: TitanCNA
   owner: gavinha
@@ -15,106 +128,83 @@
   - login: dtenenba
     avatar: https://avatars0.githubusercontent.com/u/2286826?v=4&s=50
     url: https://github.com/dtenenba
+  - login: annahoge
+    avatar: https://avatars0.githubusercontent.com/u/36393555?v=4&s=50
+    url: https://github.com/annahoge
   - login: hpages
     avatar: https://avatars1.githubusercontent.com/u/8810451?v=4&s=50
     url: https://github.com/hpages
-  - login: chapmanb
-    avatar: https://avatars1.githubusercontent.com/u/39391?v=4&s=50
-    url: https://github.com/chapmanb
   commits:
-  - date: 2018-11-29 21:37:40.000000000 Z
+  - date: 2019-12-19 06:41:12.000000000 Z
     message: |-
-      version bump and biocViews update
-      Added ImmunoOncology to biocViews per request by Bioconductor core team.
-      Bumped version to v1.21.1 development version to match Bioconductor versioning scheme
-    url: https://github.com/gavinha/TitanCNA/commit/60408ca0949fe1203844f549e35ffff1127eba00
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2018-11-29 21:10:09.000000000 Z
-    message: |-
-      fix scat (sdbw Tong version) and correct homd events
-      The scatter (scat* version) component of the Sdbw validity index was computed incorrectly - smaller clusters were given more favorable weighting. Now this is has changed to do the opposite:
-      scat.Ci[i] <- ((N-ni) / N) * (var.Ci/var.D)
-      Fixes #43. Thanks to @alashkov83 for pointing out this mistake.
+      Merge pull request #82 from annahoge/patch-1
 
-      correctIntegerCN now also readjusts HOMD calls based on tumor purity and ploidy corrected log ratios. The effect is similar to re-adjusting high-level amplification but for homozygous deletions.
-    url: https://github.com/gavinha/TitanCNA/commit/2a7e268352322c089cf092ff43cbc3a250f36e1b
+      Made cp recursive.
+    url: https://github.com/gavinha/TitanCNA/commit/c4f94ee10e74e83869c9585501a3dacfee3464cc
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-11-15 17:46:47.000000000 Z
+  - date: 2019-11-21 16:07:20.000000000 Z
+    message: Made cp recursive.
+    url: https://github.com/gavinha/TitanCNA/commit/81737302e33d28c4312d4375956d7a37b49d1035
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-11-07 20:46:22.000000000 Z
     message: |-
-      libdir arg issue
-      fixes #44 where conditional to check for libdir used & instead of &&.
-      credit to @fpbarthel
-    url: https://github.com/gavinha/TitanCNA/commit/e214ca3f426f82939067b521fed9f7bf2a710dd8
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2018-11-15 17:43:58.000000000 Z
-    message: |-
-      Merge pull request #45 from chapmanb/cytoband-dataframe
+      Merge pull request #81 from annahoge/patch-1
 
-      hg38 plots: data frame fix for cytoband
-    url: https://github.com/gavinha/TitanCNA/commit/7c1a0e7ff478da9171e763eef7c3f5f0224c4d93
+      Patch 1
+    url: https://github.com/gavinha/TitanCNA/commit/97413f0288ca8c47f63140b0387bb92b6ee8a424
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-11-12 10:37:28.000000000 Z
-    message: |-
-      hg38 plots: data frame fix for cytoband
-
-      The fixes for genes and cytoband chromosome naming (https://github.com/gavinha/TitanCNA/commit/8fb529d6b9e19084a756da3917243ed6b53c13c6)
-      changed the conversion of the cytoband object into a data frame, which
-      causes plotIdiogram.hg38 to be unhappy:
-      ```
-      Error in ESC[38;5;5m[.data.tableESC[0m(cytoband, cytoband[, "chrom"] == chromosome, ) :
-        i is invalid type (matrix). Perhaps in future a 2 column matrix could return a list of elements of DT (in the spirit of A[B] in FAQ 2.14). Please report to data.table issue tracker if you'd like this, or add your comments to FR #657.
-      Calls: plotIdiogram.hg38 -> [ -> [.data.table
-      ```
-      This adds the conversion back in after the chromosome handling.
-    url: https://github.com/gavinha/TitanCNA/commit/5e029de933dc62209d577ca83426333cc899fbd6
-    author_login: chapmanb
-    author_url: https://github.com/chapmanb
-- repo: gavinha/TitanCNA_10X_snakemake
-  title: TitanCNA_10X_snakemake
-  owner: gavinha
-  description: Snakemake workflow for 10X Genomics WGS analysis using TitanCNA
-  url: "/projects/TitanCNA_10X_snakemake/"
+  - date: 2019-11-07 20:28:39.000000000 Z
+    message: changed symlinks to cp in copyOptSolution
+    url: https://github.com/gavinha/TitanCNA/commit/3c0fcb41e41c41233b7204d9ae2cd3fe119761d0
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-11-07 20:17:06.000000000 Z
+    message: Update ichorCNA.snakefile
+    url: https://github.com/gavinha/TitanCNA/commit/1ea011ed4ca4114ebd3a7d31cbacfa2e98628232
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+- repo: GavinHaLab/ichorCNA_offtarget
+  title: ichorCNA_offtarget
+  owner: GavinHaLab
+  description: Estimating tumor fraction by exploiting the off-target reads from targeted
+    DNA sequencing.
+  url: "/projects/ichorCNA_offtarget/"
   contributors:
-  - login: gavinha
-    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
-    url: https://github.com/gavinha
+  - login: annahoge
+    avatar: https://avatars0.githubusercontent.com/u/36393555?v=4&s=50
+    url: https://github.com/annahoge
   commits:
-  - date: 2018-10-29 23:28:45.000000000 Z
-    message: |-
-      correct CN for low purity samples
-      Adjusted CN correction for samples to as low as 0.05 purity (0.2 previously).
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/ba8ca730ccfa9580ff58c5fe3d37159809e6ee37
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2018-10-10 22:19:50.000000000 Z
-    message: fixed corrected_copy_number for combined titan and ichor results
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/a5ad26f5b11e49e697bb9c9bda249aeda8c5ae94
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2018-09-27 23:01:34.000000000 Z
-    message: seqlevels bug fi
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/7dfeaa9a91ad1584222e85fba964a9eb8f0e9a77
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2018-09-27 21:03:52.000000000 Z
-    message: chr naming fix
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/9d36ea0127c1d54025dc246c1c540ef981513ca8
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2018-09-24 22:53:09.000000000 Z
-    message: |-
-      fix bug for NCBI plotting
-      In line 266, grep("chr", chr) changed to grepl("chr", chr)
-    url: https://github.com/gavinha/TitanCNA_10X_snakemake/commit/a50e6fa5f97486fefe06e4a81600ae7212e064ca
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-- repo: gavinha/SV_10X_analysis
+  - date: 2019-11-20 00:48:06.000000000 Z
+    message: Update README.md
+    url: https://github.com/GavinHaLab/ichorCNA_offtarget/commit/4f074c8f051d7b2d8f153ce203de7fe8ca69dd12
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-11-20 00:42:01.000000000 Z
+    message: Update config.yaml
+    url: https://github.com/GavinHaLab/ichorCNA_offtarget/commit/2b26f5f757306fb5ecc8ee4be98c08687f38443b
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-11-20 00:39:26.000000000 Z
+    message: Update README.md
+    url: https://github.com/GavinHaLab/ichorCNA_offtarget/commit/4f259617461ccfa9b0e7128ebf57642d56795c2a
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-11-20 00:36:07.000000000 Z
+    message: Update ichorCNA_offtarget.R
+    url: https://github.com/GavinHaLab/ichorCNA_offtarget/commit/85c9a376c7cd36a7791205eb0e3177996a27c0ba
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+  - date: 2019-11-20 00:26:16.000000000 Z
+    message: Update README.md
+    url: https://github.com/GavinHaLab/ichorCNA_offtarget/commit/f4ed831b7189851a7233bea40d6d0609f6e6b9aa
+    author_login: annahoge
+    author_url: https://github.com/annahoge
+- repo: GavinHaLab/SV_10X_analysis
   title: SV_10X_analysis
-  owner: gavinha
+  owner: GavinHaLab
   description: Structural variation analysis of 10X Genomics linked-read data
   url: "/projects/SV_10X_analysis/"
   contributors:
@@ -122,72 +212,65 @@
     avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
     url: https://github.com/gavinha
   commits:
-  - date: 2018-10-17 21:57:50.000000000 Z
-    message: |-
-      combine Long Ranger SV calls
-      - added into the snakemake pipeline to also extract Long Ranger SV calls
-      - updated bugs with combining CN/SV and classifying SV events
-      - fixed bug in plotting
-      - updated cluster resources required
-    url: https://github.com/gavinha/SV_10X_analysis/commit/d210bd713e3daa011852c32f5417ad4d9e7f4703
+  - date: 2019-10-18 21:46:09.000000000 Z
+    message: add combine GROCSVS analysis
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/c47882cf04f76976d2b99644bb6c0241f6ea7aee
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-10 22:36:46.000000000 Z
-    message: Merge branch 'master' of github.com:gavinha/SV_10X_analysis
-    url: https://github.com/gavinha/SV_10X_analysis/commit/d062b1dbdc868cc84b0d96cfdd1eca586efe5585
+  - date: 2019-05-15 17:39:08.000000000 Z
+    message: custom zoom plots, readme docs
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/9ebc4ffd2a424a3eb9dd15d17dc02fb9d759f5c9
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-10 22:35:02.000000000 Z
-    message: bxrescue mem and time resource update
-    url: https://github.com/gavinha/SV_10X_analysis/commit/62c3d948e14f7195ef9aa0a74378957c94005f4a
+  - date: 2019-05-15 00:12:07.000000000 Z
+    message: minor changes to zoom plotting
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/6955dee169a681b719f7d07b1e589f625cf2f0b5
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-07 19:03:13.000000000 Z
-    message: formatting
-    url: https://github.com/gavinha/SV_10X_analysis/commit/7a1d8b20f6403a24f391c608d754db0c87468ea1
+  - date: 2019-05-14 23:54:30.000000000 Z
+    message: typos
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/ea93a3d275cd342707016d5087ea743f7f2964b9
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-07 18:58:40.000000000 Z
-    message: initial commit
-    url: https://github.com/gavinha/SV_10X_analysis/commit/8d8df71a117e040c48f2be2ee0fe93741debef0f
+  - date: 2019-05-14 23:52:27.000000000 Z
+    message: fix conflicts
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/d1d200d9333b21b12251432095194b87a687dd87
     author_login: gavinha
     author_url: https://github.com/gavinha
-- repo: broadinstitute/ichorCNA
-  title: ichorCNA
-  owner: broadinstitute
-  description: Estimating tumor fraction in cell-free DNA from ultra-low-pass whole
-    genome sequencing.
-  url: "/projects/ichorCNA/"
+- repo: GavinHaLab/TitanCNA_10X_snakemake
+  title: TitanCNA_10X_snakemake
+  owner: GavinHaLab
+  description: Snakemake workflow for 10X Genomics WGS analysis using TitanCNA
+  url: "/projects/TitanCNA_10X_snakemake/"
   contributors:
   - login: gavinha
     avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
     url: https://github.com/gavinha
-  - login: jurhoades
-    avatar: https://avatars3.githubusercontent.com/u/15793246?v=4&s=50
-    url: https://github.com/jurhoades
   commits:
-  - date: 2018-09-26 20:42:32.000000000 Z
-    message: cytoband coords for hg38
-    url: https://github.com/broadinstitute/ichorCNA/commit/4260c64e3be6d36772aa253b4ef8bc306a63eb26
+  - date: 2019-04-18 19:21:42.000000000 Z
+    message: load seqinfo from BSgenome.Hsapiens
+    url: https://github.com/GavinHaLab/TitanCNA_10X_snakemake/commit/2f660f374ebdf04765285b51b92e03298b0e159f
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-10 19:11:59.000000000 Z
-    message: 'hg19 gc map files for 10kb/50kb #35 [ci skip]'
-    url: https://github.com/broadinstitute/ichorCNA/commit/1d54a1fd4d8bd88aa0217791482be65bfe599db5
+  - date: 2019-04-17 17:32:59.000000000 Z
+    message: |-
+      diploid strength added to config.yaml
+      Set TitanCNA_diploidStrength to 0 for no effect (default); use 1-3 for increasing multiplier for estimating diploid parameters.
+    url: https://github.com/GavinHaLab/TitanCNA_10X_snakemake/commit/df3d74df87221cde859db65cce70ab288d83fef5
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-03 00:45:08.000000000 Z
-    message: read_counter use binSize wildcard in log [ci skip]
-    url: https://github.com/broadinstitute/ichorCNA/commit/f2dc65795ac32887aa9ff9152cabf62f96f6ea3e
+  - date: 2019-04-15 21:54:56.000000000 Z
+    message: fixed partition time specification with quotes
+    url: https://github.com/GavinHaLab/TitanCNA_10X_snakemake/commit/7a2d575f251847b39569aae6944883fc7b647a3e
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-01 21:25:18.000000000 Z
-    message: 'update for hg38 and chr naming style #10'
-    url: https://github.com/broadinstitute/ichorCNA/commit/ccd357fae6036d080cbedd16d323f30f0543322a
+  - date: 2019-03-28 17:30:56.000000000 Z
+    message: add code for counting molecule-based coverage using MI tag
+    url: https://github.com/GavinHaLab/TitanCNA_10X_snakemake/commit/97141329dffd496e10d600d8a54d36245e5409db
     author_login: gavinha
     author_url: https://github.com/gavinha
-  - date: 2018-08-01 20:06:00.000000000 Z
-    message: fixes bug where genomeStyle was undefined
-    url: https://github.com/broadinstitute/ichorCNA/commit/108b0bb5d2c52da9f6b87bb06292cb3703da061f
-    author_login: jurhoades
-    author_url: https://github.com/jurhoades
+  - date: 2019-01-03 02:00:30.000000000 Z
+    message: update instructions for cluster usage
+    url: https://github.com/GavinHaLab/TitanCNA_10X_snakemake/commit/0726dd598463995a82c88d7d93667e26b75865f8
+    author_login: gavinha
+    author_url: https://github.com/gavinha
