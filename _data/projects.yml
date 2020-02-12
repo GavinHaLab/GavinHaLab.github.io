@@ -1,4 +1,39 @@
 ---
+- repo: GavinHaLab/SV_10X_analysis
+  title: SV_10X_analysis
+  owner: GavinHaLab
+  description: Structural variation analysis of 10X Genomics linked-read data
+  url: "/projects/SV_10X_analysis/"
+  contributors:
+  - login: gavinha
+    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
+    url: https://github.com/gavinha
+  commits:
+  - date: 2020-02-12 17:25:50.000000000 Z
+    message: remove sym link
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/d275f78349807236f6ee9b5f289e70ccdb0220b9
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-10-18 21:46:09.000000000 Z
+    message: add combine GROCSVS analysis
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/c47882cf04f76976d2b99644bb6c0241f6ea7aee
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-05-15 17:39:08.000000000 Z
+    message: custom zoom plots, readme docs
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/9ebc4ffd2a424a3eb9dd15d17dc02fb9d759f5c9
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-05-15 00:12:07.000000000 Z
+    message: minor changes to zoom plotting
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/6955dee169a681b719f7d07b1e589f625cf2f0b5
+    author_login: gavinha
+    author_url: https://github.com/gavinha
+  - date: 2019-05-14 23:54:30.000000000 Z
+    message: typos
+    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/ea93a3d275cd342707016d5087ea743f7f2964b9
+    author_login: gavinha
+    author_url: https://github.com/gavinha
 - repo: GavinHaLab/SV_WGS_analysis
   title: SV_WGS_analysis
   owner: GavinHaLab
@@ -202,41 +237,6 @@
     url: https://github.com/GavinHaLab/ichorCNA_offtarget/commit/f4ed831b7189851a7233bea40d6d0609f6e6b9aa
     author_login: annahoge
     author_url: https://github.com/annahoge
-- repo: GavinHaLab/SV_10X_analysis
-  title: SV_10X_analysis
-  owner: GavinHaLab
-  description: Structural variation analysis of 10X Genomics linked-read data
-  url: "/projects/SV_10X_analysis/"
-  contributors:
-  - login: gavinha
-    avatar: https://avatars1.githubusercontent.com/u/9221688?v=4&s=50
-    url: https://github.com/gavinha
-  commits:
-  - date: 2019-10-18 21:46:09.000000000 Z
-    message: add combine GROCSVS analysis
-    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/c47882cf04f76976d2b99644bb6c0241f6ea7aee
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2019-05-15 17:39:08.000000000 Z
-    message: custom zoom plots, readme docs
-    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/9ebc4ffd2a424a3eb9dd15d17dc02fb9d759f5c9
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2019-05-15 00:12:07.000000000 Z
-    message: minor changes to zoom plotting
-    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/6955dee169a681b719f7d07b1e589f625cf2f0b5
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2019-05-14 23:54:30.000000000 Z
-    message: typos
-    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/ea93a3d275cd342707016d5087ea743f7f2964b9
-    author_login: gavinha
-    author_url: https://github.com/gavinha
-  - date: 2019-05-14 23:52:27.000000000 Z
-    message: fix conflicts
-    url: https://github.com/GavinHaLab/SV_10X_analysis/commit/d1d200d9333b21b12251432095194b87a687dd87
-    author_login: gavinha
-    author_url: https://github.com/gavinha
 - repo: GavinHaLab/TitanCNA_10X_snakemake
   title: TitanCNA_10X_snakemake
   owner: GavinHaLab
