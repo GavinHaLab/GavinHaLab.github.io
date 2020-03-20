@@ -2,7 +2,7 @@
 layout: paper
 title: "Association of Cell-Free DNA Tumor Fraction and Somatic Copy Number Alterations With Survival in Metastatic Triple-Negative Breast Cancer"
 image: /images/papers/Stover-survival.png
-authors: Daniel G. Stover*, Heather A. Parsons*, <u>Gavin Ha*</u>, Samuel S. Freeman, William T. Barry, Hao Guo, Atish D. Choudhury, Gregory Gydush, Sarah C. Reed, Justin Rhoades, Denisse Rotem, Melissa E. Hughes, Deborah A. Dillon, Ann H. Partridge, NikhilWagle, Ian E. Krop, Gad Getz, Todd R. Golub, J. Christopher Love, Eric P.Winer, Sara M. Tolaney, Nancy U. Lin, and Viktor A. Adalsteinsson.
+authors: Daniel G. Stover*, Heather A. Parsons*, <u><b>Gavin Ha*</u></b>, Samuel S. Freeman, William T. Barry, Hao Guo, Atish D. Choudhury, Gregory Gydush, Sarah C. Reed, Justin Rhoades, Denisse Rotem, Melissa E. Hughes, Deborah A. Dillon, Ann H. Partridge, NikhilWagle, Ian E. Krop, Gad Getz, Todd R. Golub, J. Christopher Love, Eric P.Winer, Sara M. Tolaney, Nancy U. Lin, and Viktor A. Adalsteinsson.
 year: 2018
 authorshort: Stover SG*, Parsons HA*, <strong>Ha G*</strong>, et al. 
 journal: J Clin Oncol.

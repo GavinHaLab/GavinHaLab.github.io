@@ -2,9 +2,9 @@
 layout: paper
 title: "Structural Alterations Driving Castration-Resistant Prostate Cancer Revealed by Linked-Read Genome Sequencing"
 image: /images/papers/Viswanathan-AR-enhancer.png
-authors: Srinivas R. Viswanathan*, <u>Gavin Ha*</u>, Andreas M. Hoff*, Jeremiah A. Wala, Jian Carrot-Zhang, Christopher W. Whelan, Nicholas J. Haradhvala, Samuel S. Freeman, Sarah C. Reed, Justin Rhoades, Paz Polak, Michelle Cipicchio, Stephanie A. Wankowicz, Alicia Wong, Tushar Kamath, Zhenwei Zhang, Gregory J. Gydush, Denisse Rotem, PCF/SU2C International Prostate Cancer Dream Team, J. Christopher Love, Gad Getz, Stacey Gabriel, Cheng-Zhong Zhang, Scott M. Dehm, Peter S. Nelson, Eliezer M. Van Allen, Atish D. Choudhury, Viktor A. Adalsteinsson, Rameen Beroukhim, Mary-Ellen Taplin, Matthew Meyerson.
+authors: Srinivas R. Viswanathan*, <u><b>Gavin Ha*</b></u>, Andreas M. Hoff*, Jeremiah A. Wala, Jian Carrot-Zhang, Christopher W. Whelan, Nicholas J. Haradhvala, Samuel S. Freeman, Sarah C. Reed, Justin Rhoades, Paz Polak, Michelle Cipicchio, Stephanie A. Wankowicz, Alicia Wong, Tushar Kamath, Zhenwei Zhang, Gregory J. Gydush, Denisse Rotem, PCF/SU2C International Prostate Cancer Dream Team, J. Christopher Love, Gad Getz, Stacey Gabriel, Cheng-Zhong Zhang, Scott M. Dehm, Peter S. Nelson, Eliezer M. Van Allen, Atish D. Choudhury, Viktor A. Adalsteinsson, Rameen Beroukhim, Mary-Ellen Taplin, Matthew Meyerson.
 year: 2018
-authorshort: Viswanathan S*, <strong>Ha G*</strong>, Hoff A*, et al.
+authorshort: Viswanathan S*, <strong>Ha G</strong>*, Hoff A*, et al.
 journal: Cell
 vol: 174
 page: 433-447

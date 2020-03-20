@@ -102,7 +102,14 @@
 						{% endif %}
 						<a href="/projects/">Software</a>
 						</li>
-						{% if page.categories.fist == 'misc' %}
+						{% if page.categories.first == 'teaching' %}
+						<li class="active">
+						{% else %}
+						<li>
+						{% endif %}
+						<a href="/teaching/">Teaching</a>
+						</li>
+						{% if page.categories.first == 'misc' %}
 						<li class="active">
 						{% endif %}
 						<li>
