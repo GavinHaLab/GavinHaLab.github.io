@@ -1,0 +1,33 @@
+---
+layout: default
+title: Ha Lab - Teaching
+categories:
+ - teaching
+category: teaching
+---
+
+<div class="title">
+	Courses
+</div>
+<div class="hugespacer"></div>
+
+
+{% for post in site.categories.teaching %}
+
+    {% cycle 'add rows': '<div class="row">', nil, nil %}
+		<div class="col-md-6 postbox">
+			<div class="head media-heading">
+				<a href="{{ post.url }}" class="off">{{ post.course }}</a>
+			</div>
+			<div class="smallhead media-heading">
+				<a href="{{ post.url }}" class="off">{{ post.name }}</a>
+			<div class="smallhead">		    	
+		    	{{ post.semester }} {{ post.year }}
+				@ {{ post.location }}
+		    </div>
+			</div>
+			<div class="hugespacer"></div>
+        </div>
+    {% cycle 'close rows': nil, nil, '</div>' %}
+{% endfor %}
+{% cycle 'close rows': nil, '</div>', '</div>' %}
