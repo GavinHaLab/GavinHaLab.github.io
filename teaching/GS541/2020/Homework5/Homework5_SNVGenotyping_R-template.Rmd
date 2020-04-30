@@ -278,7 +278,7 @@ logP
 ### 3.1 Implement the full EM algorithm (Points: 10)
 Implement the full EM algorithm for inferring the responsibilities and learning the binomial mixture model parameters in a Bayesian framework.
 
-Refer to Lecture 2 slide 17 for the EM algorithm. Run the EM algorithm until convergence, compute.log.posterior. Convergence is acheived when the log posterior changes by less than a user-defined valued, $\epsilon = 10^{-2}$.
+Refer to Lecture 2 Slide 11 for the EM algorithm. Run the EM algorithm until convergence, compute.log.posterior. Convergence is acheived when the log posterior changes by less than a user-defined valued, $\epsilon = 10^{-2}$.
 
 i. Print out the converged parameters:
 
