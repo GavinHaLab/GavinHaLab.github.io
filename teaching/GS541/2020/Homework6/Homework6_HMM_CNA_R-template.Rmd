@@ -1,0 +1,277 @@
+---
+title: 'Homework 6: Continuous HMM for profiling copy number alterations'
+subtitle: 'GENOME 541: Cancer Genomics Module'
+author: "FirstName LastName"
+date: "5/7/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Please submit the following files:
+
+  1. The code as an R Markdown (`Homework6_code_FirstName-LastName.Rmd`) or Python Jupyter Notebook (`Homework6_code_FirstName-LastName.ipynb`) file. 
+  2. The exported PDF (`Homework6_code_FirstName-LastName.pdf`) of the code and output. 
+
+
+# 0. Setup the libraries and input data
+### 0.1 Install libraries
+```{r, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("HMMcopy")
+```
+
+### 0.2 Load libraries
+```{r, message=FALSE, warning=FALSE, results="hide"}
+library(HMMcopy)
+```
+
+### 0.3 Load the input data 
+Load the input data from `Homework6_log2ratios_chr1.txt`. This file contains $T$ bins (1Mb) where each bin $t$ has a read count (`readCount`) and a corrected $\log_2$ ratio (`log2Ratio`). The column `log2Ratio` is the data, $x_{1:T}$, that we will use for this assignment. 
+```{r countfile, echo=TRUE}
+LogRatios <- read.delim("Homework6_log2ratios_chr1.txt", as.is = TRUE)
+x <- as.matrix(LogRatios$log2Ratio) # input data
+copyNumberStates <- c(1,2,3,4,5) 
+K <- length(copyNumberStates) # number of states
+```
+
+### 0.4. Initialize model parameters and hyperparameters.
+Initialize parameters and hyperparameters for copy number states, $\{1, 2, 3, 4, 5\}$
+
+```{r}
+##### initial values for model parameters #####
+pi.init <- c(0.1, 0.6, 0.1, 0.1, 0.1) # initial setting for pi (initial state distribution)
+mu.init <- log2(c(copyNumberStates) / 2) # inital setting for Gaussian mean 
+var.init <- rep(var(x), times = K) # initial setting for Gaussian variance
+
+A.init <- matrix(0, K, K) # initial setting for matrix of transition probabilities
+for (i in 1:K) {
+  A.init[i, ] <- (1 - 0.99999) / (K - 1) # transition to different state
+  A.init[i, i] <- 0.99999  # self-transition probability
+}
+
+##### hyper-parameters for prior model #####
+deltaPi.hyper <- c(2, 6, 2, 2, 2) # hyperparameter for Dirichlet prior on pi parameter
+
+mMu.hyper <- mu.init # hyperparameter for Gaussian prior on mu parameter
+sMu.hyper <- var.init # hyperparameter for Gaussian variance on mu parameter
+
+# hyperparameters for Inverse Gamma prior on variance parameter
+betaVar.hyper <- c(1,1,1,1,1) 
+alphaVar.hyper <- betaVar.hyper/ (apply(x, 2, var, na.rm = TRUE) / sqrt(K)) 
+
+# hyperparameters for Dirichlet prior on the transition matrix
+dirCounts <- 100000
+deltaA.hyper <- A.init * dirCounts
+```
+
+
+
+\pagebreak
+# 1. Compute the Gaussian Emission Probabilities
+  
+#### 1.1. Define a function to compute the likelihood probabilities.
+
+```{r}
+compute.gauss.lik <- function(){
+  
+}
+```
+
+
+#### 1.2. Compute the Gaussian likelihood 
+Print the first 3 columns (i.e. for data points $x_{1,\ldots,3}$ and all states $k$) of probabiliities for the observed likelihood. 
+
+```{r}
+# use function from 1.1
+```
+
+
+
+
+\pagebreak
+# 2. Implement functions for EM algorithm
+
+### 2.1. Compute the responsibilities in the E-Step
+
+Print out the log likelihood and the first 3 columns of the responsibility matrix ($\gamma(Z_{1:3})$). 
+
+```{r}
+# use .Call("forward_backward", piZ, A, obs.lik, PACKAGE = "HMMcopy")
+```
+
+
+
+
+
+### 2.2. Updating the initial state distribution parameter $\pi_{1:K}$ in the M-Step
+#### 2.2.1. Write a function to update the initial state distribution parameter
+
+```{r, eval=FALSE}
+update.pi <- function(){
+
+}
+```
+
+#### 2.2.2. Compute $\hat{\pi}$ for the first iteration of EM
+Print out the values of $\hat{\pi}_{1:K}$. 
+
+```{r}
+# use function from 2.2.1
+```
+
+
+
+
+
+### 2.3. Updating the Gaussian mean parameter $\mu_{1:K}$ in the M-Step
+#### 2.3.1. Write a function to update Gaussian mean parameter
+
+```{r}
+update.mu <- function(){
+ 
+}
+```
+
+#### 2.3.2. Compute $\hat{\mu}$ for the first iteration of EM
+Print out the values of $\hat{\mu}_{1:K}$.
+
+```{r}
+# use function from 2.3.1
+```
+
+
+
+
+
+### 2.4. Updating the Gaussian variance parameter $\sigma^{2}_{1:K}$ in the M-Step
+#### 2.4.1. Write a function to update Gaussian variance parameter
+
+```{r}
+update.var <- function(){
+ 
+}
+```
+
+
+#### 2.4.2. Compute $\hat{\sigma}^{2}$ for the first iteration of EM
+Print out the values of $\hat{\sigma}^{2}_{1:K}$.
+
+```{r}
+# use function from 2.4.1
+```
+
+
+
+
+### 2.5. Updating the transition probabilities $\boldsymbol{A}$ in the M-Step
+#### 2.5.1. Write a function to update the transition probabilities
+
+```{r}
+update.A <- function(){
+ 
+}
+```
+
+
+#### 2.5.2. Compute $\boldsymbol{\hat{A}}$ for the first iteration of EM
+Print out the values of $\hat{\sigma}^{2}_{1:K}$.
+
+```{r}
+# use function from 2.5.1
+```
+
+
+
+
+### 2.6. Compute the log posterior 
+#### 2.6.1. Define the function, `compute.log.posterior`, to compute the log posterior distribution.
+
+```{r}
+compute.log.posterior <- function(){
+  
+}
+```
+
+
+#### 2.6.2. Compute the log posterior for the input data
+Print out the log posterior for the first iteration of EM.
+
+```{r}
+# use function from 2.6.1
+```
+
+
+
+
+
+
+\pagebreak
+# 3. Learn the HMM Parameters and Predict the Copy Number Segments.
+### 3.1. Implement and run the EM algorithm to infer the copy number states and learn the parameters.
+Implement the full EM algorithm for inferring the responsibilities and estimating the HMM parameters in a Bayesian framework. 
+
+```{r}
+# Implement EM here
+```
+
+
+### 3.2. Determine the copy number segments using the Viterbi algorithm
+
+Run Viterbi algorithm to obtain the sequence of copy number states using the converged parameters and Gaussian likelihood (from the final EM iteration) computed in Section 3.1 as input. 
+
+Print out a table of the copy number segments by combining the output from the Viterbi algorithm with the original input file. 
+
+```{r}
+# run .Call("viterbi", log(piZ), log(A), log(obs.lik), PACKAGE = "HMMcopy")$path
+# create table of segments
+```
+
+\pagebreak
+## 4. Estimate Power for Mutation Detection
+
+### 4.1. Implement the function to calculate power.
+Implement a function to calculate the theoretical mutation detection power (sensitivity).
+ 
+```{r}
+computePower <- function(){
+  
+}
+```
+
+For all following questions, use copy number $cn=2$ and multiplicity $M=1$.
+
+### 4.2. What is the power for depth N=40 and tumor fraction $\alpha=0.2$. 
+
+```{r}
+# use the function from 4.1
+```
+
+### 4.3. Plot a graph of the power estimates (y-axis) for a range of tumor fractions (x-axis).
+Compute the power for tumor fraction $\alpha=\left\{ 0.0,...,1.0\right\}$  at $0.1$ increments and depth $N=40$. Plot the curve.
+
+Note that this type of plot informs the power for detecting a mutation based on a range of heterogeneity (i.e. tumor fraction) values.
+
+```{r}
+
+```
+
+### 4.4. Plot a graph of the power (y-axis) required for a range of read depths (x-axis).
+Compute the power for read depths of $N=\left\{ 0,\ ...,\ 100\right\}$ at $1$ increments when $\alpha=0.2$ and for $\alpha=0.5$; show one curve for each tumor fraction $\alpha$ value. 
+
+```{r}
+
+```
+
+### 4.5. What is the minimum depth required for tumor fraction $\alpha=0.1$ and desired power$\ge0.8$? 
+For deciding the depth of sequencing, here, we assume 80% power is sufficient but one can choose to increase it for specific applications. 
+
+```{r}
+
+```
