@@ -5,8 +5,8 @@ authors: Parsons HA, Rhoades J, Reed S, Gydush G, Ram P, Exman P, Xiong K, Lo CC
 year: 2020
 authorshort: Parsons et al.
 journal: Clinical Cancer Research
-vol: 
-page: pii:clincanres.3005.2019
+vol: 26
+page: 2556-2564
 doi: 10.1158/1078-0432.CCR-19-3005
 ---
 
