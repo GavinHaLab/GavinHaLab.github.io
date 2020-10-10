@@ -5,7 +5,7 @@ degree: Ph.D.
 position: Postdoctoral Fellow in Berger Lab
 position2: (Co-mentored)
 handle: smoorthi
-image: /images/people/Sitapriya_Moorthi.jpg
+image: /images/people/Sitapriya-Moorthi.jpg
 email: smoorthi@fredhutch.org
 ---
 

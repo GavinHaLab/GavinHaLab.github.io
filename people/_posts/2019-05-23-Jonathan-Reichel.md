@@ -5,7 +5,7 @@ degree: Ph.D.
 position: Research Scientist 
 position2: (Lead Cell-free DNA Scientist for the BBI)
 handle: jreichel
-image: /images/people/Jonathan-Reichel.png
+image: /images/people/Jonathan-Reichel.jpg
 email: jbreiche@fredhutch.org
 ---
 
