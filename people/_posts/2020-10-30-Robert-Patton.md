@@ -5,7 +5,7 @@ degree: Ph.D.
 position: Postdoctoral Fellow
 position2: (Co-mentored by Peter Nelson)
 handle: rpatton
-image: /images/people/NoPhoto_compBrain_RP.png
+image: /images/people/Robert-Patton.png
 email: rpatton@fredhutch.org
 ---
 
