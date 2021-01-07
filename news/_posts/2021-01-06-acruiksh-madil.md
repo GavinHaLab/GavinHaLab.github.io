@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Eden and Adil joins the lab. 
+title: Eden and Adil join the lab. 
 shorttitle: Welcome, Eden and Adil!
 author: Gavin Ha
 image: 
