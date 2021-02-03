@@ -18,13 +18,14 @@ categories:
 {% for people in site.categories.people reversed %}
 		{% if people.alumni != true %}
     {% cycle 'add rows': '<div class="row">', '', '' %}
-		<div class="col-md-4 peoplebox">
+		<div class="col-sm-4 peoplebox">
 			<div class="media">
   				<a class="pull-left" href="{{ people.url }}">
     				<img width=160 class="media-object" src="{{ people.image }}">
   				</a>
+        <br>
  			 	<div class="media-body">
-    				<div class="bighead media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+    				<div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
     				<p class="note">{{ people.position }}</p>
     				<p class="note">{{ people.position2 }}</p>
   				</div>
