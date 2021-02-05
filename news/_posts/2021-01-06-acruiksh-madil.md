@@ -3,7 +3,7 @@ layout: post
 title: Eden and Adil join the lab. 
 shorttitle: Welcome, Eden and Adil!
 author: Gavin Ha
-image: 
+image: /images/news/eden-adil-01.png
 ---
 
 A warm welcome to [Eden Cruikshank](/people/Eden-Cruikshank/) and [Mohamed Adil](/people/Mohamed-Adil/)
