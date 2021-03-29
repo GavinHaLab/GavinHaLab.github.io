@@ -5,7 +5,7 @@ position: Graduate Rotation Student
 handle: acruiksh
 image: /images/people/Eden-Cruikshank.jpg
 email: acruiksh@fredhutch.org
-alumni: false
+alumni: true
 ---
 
 I am currently a first year graduate student with the Molecular and Cellular Biology program at the University of Washington. I graduated from the University of North Florida with a BS in Biomedical Sciences. 
