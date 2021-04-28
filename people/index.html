@@ -51,7 +51,7 @@ categories:
 {% for people in site.categories.people reversed %}
 	{% if people.alumni == true %}
     {% cycle 'add rows 2': '<div class="row">', nil, nil %}
-		<div class="col-md-4 peoplebox">
+		<div class="col-sm-8 peoplebox">
 			<div class="media">
   				<!--
   				<a class="pull-left" href="{{ people.url }}">
@@ -61,6 +61,9 @@ categories:
  			 	<div class="media-body">
     				<div class="head media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
     				<p class="note">{{ people.position }}</p>
+            {% if people.newposition %}
+              <p class="note">Current Position: {{ people.newposition }}</p>
+            {% endif %}
   				</div>
 			</div>
 			<div class="bigspacer"></div>
