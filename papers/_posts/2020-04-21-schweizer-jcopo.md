@@ -8,6 +8,8 @@ journal: JCO Precision Oncology
 vol: 4
 page: 382-392
 doi: 10.1200/PO.19.00383
+image: /images/papers/Schweizer-2021-JCOPO-01.png
+featured: true
 ---
 
 # Abstract

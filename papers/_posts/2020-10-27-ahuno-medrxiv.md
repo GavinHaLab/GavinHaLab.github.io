@@ -1,13 +1,15 @@
 ---
 layout: paper
 title: "Circulating tumor DNA is readily detectable among Ghanaian breast cancer patients supporting non-invasive cancer genomic studies in Africa"
-authors: <u><b>Ahuno ST</b></u>, Doebley A-L, Ahearn TU, Yarney J, Titiloye N, Hamel N, Adjei E, Clegg-Lamptey J-N, Edusei L, Awuah B, Song X, Vanderpuye V, Abubakar M, Duggan M, Stover D, Nyarko K, Bartlet JM, Aitpillah F, Ansong D, Gardner KL, Boateng FA, Bowcock AM, Caldas C, Foulkes WD, Wiafe S, Wiafe-Addai B, Garcia-Closas M, Kwarteng A, <u><b>Ha G*</b></u>, Figueroa JD*, Polak P*.
+authors: <u><b>Ahuno ST</b></u>, <u><b>Doebley A-L</b></u>, Ahearn TU, Yarney J, Titiloye N, Hamel N, Adjei E, Clegg-Lamptey J-N, Edusei L, Awuah B, Song X, Vanderpuye V, Abubakar M, Duggan M, Stover D, Nyarko K, Bartlet JM, Aitpillah F, Ansong D, Gardner KL, Boateng FA, Bowcock AM, Caldas C, Foulkes WD, Wiafe S, Wiafe-Addai B, Garcia-Closas M, Kwarteng A, <u><b>Ha G*</b></u>, Figueroa JD*, Polak P*.
 year: 2020
 authorshort: Ahuno et al.
 journal: medRxiv 
 vol: 
 page: Oct 27
 doi: 10.1101/2020.10.25.20217133
+image: /images/papers/Ahuno-2021-npgPO.png
+featured: true
 ---
 
 # Abstract

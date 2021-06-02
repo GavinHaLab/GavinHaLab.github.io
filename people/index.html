@@ -26,8 +26,11 @@ categories:
         <br>
  			 	<div class="media-body">
     				<div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
-    				<p class="note">{{ people.position }}</p>
+    				<p class="smallhead">{{ people.position }}</p>
     				<p class="note">{{ people.position2 }}</p>
+            <!-- {% if people.joined %}
+              <p class="note">Joined {{ people.joined }}</p>
+            {% endif %} -->
   				</div>
 			</div>
 			<div class="bigspacer"></div>
@@ -61,6 +64,9 @@ categories:
  			 	<div class="media-body">
     				<div class="head media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
     				<p class="note">{{ people.position }}</p>
+            {% if people.left %}
+              <p class="note">Joined {{ people.joined }} - {{ people.left }}</p>
+            {% endif %}
             {% if people.newposition %}
               <p class="note">Current Position: {{ people.newposition }}</p>
             {% endif %}
