@@ -15,10 +15,13 @@ categories:
 
 <div class="bigspacer"></div>
 <div>
+
+{% assign people_by_lastname = site.categories.people | sort: 'title' %}
+
 {% for people in site.categories.people reversed %}
 		{% if people.alumni != true %}
     {% cycle 'add rows': '<div class="row">', '', '' %}
-		<div class="col-sm-4 peoplebox">
+    <div class="col-sm-4 peoplebox">
 			<div class="media">
   				<a class="pull-left" href="{{ people.url }}">
     				<img width=160 class="media-object" src="{{ people.image }}">
@@ -51,7 +54,8 @@ categories:
 
 <div class="bigspacer"></div>
 
-{% for people in site.categories.people reversed %}
+{% assign people_by_lastname = site.categories.people | sort: 'title' %}
+{% for people in people_by_lastname %}
 	{% if people.alumni == true %}
     {% cycle 'add rows 2': '<div class="row">', nil, nil %}
 		<div class="col-sm-8 peoplebox">
