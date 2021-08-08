@@ -4,9 +4,11 @@ title: Robert Patton
 degree: Ph.D.
 position: Postdoctoral Fellow
 position2: (Co-mentored by Peter Nelson)
+category: Postdoc
 handle: rpatton
 image: /images/people/Robert-Patton.png
 email: rpatton@fredhutch.org
+linkedin: robert-patton-865564b7
 ---
 
 I am currently a Postdoctoral Research Fellow at Fred Hutch working in the Computational Biology Program. I joined Dr. Gavin Ha’s Lab in October 2020, with co-mentorship under Dr. Peter Nelson. My aim is to develop my skills in computational biology and bioinformatics while transitioning into more translational research with cancer therapies.

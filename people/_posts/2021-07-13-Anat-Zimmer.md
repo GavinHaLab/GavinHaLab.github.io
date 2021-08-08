@@ -6,6 +6,7 @@ category: Postdoc
 handle: azimmer
 image: /images/people/Anat-Zimmer-2.jpg
 email: azimmer@fredhutch.org
+linkedin: anat-zimmer
 alumni: false
 ---
 

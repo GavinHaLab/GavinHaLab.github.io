@@ -5,7 +5,7 @@ position: Masters Rotation Student
 handle: madil
 image: /images/people/Aditya_Sriram.jpg
 email: 
-alumni: false
+alumni: true
 ---
 
 I am currently a first-year Masters student in the Genetic Epidemiology program at the University of Washington. I graduated with a B.S. in Genetics and Genomics from the University of California, Davis. 

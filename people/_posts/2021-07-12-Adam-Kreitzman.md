@@ -2,6 +2,7 @@
 layout: people
 title: Adam Kreitzman
 position: Undergraduate Research Assistant
+category: Visitor
 handle: akreitzm
 image: /images/people/Adam-Kreitzman.jpg
 email: akreitzm@fredhutch.org

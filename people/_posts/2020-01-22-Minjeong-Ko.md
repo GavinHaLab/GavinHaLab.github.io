@@ -2,9 +2,11 @@
 layout: people
 title: Minjeong Ko
 position: Bioinformatics Analyst
+category: Staff
 handle: mko
 image: /images/people/Minjeong-Ko.jpg
 email: mko@fredhutch.org
+linkedin: minjeong-ko-145b6a29
 ---
 
 I have two master’s degrees in Life Science from Ewha Womans University and in Computer Science from the University of Toronto, where I studied machine learning in computational biology lab under the supervision of Dr. Fritz Roth. 

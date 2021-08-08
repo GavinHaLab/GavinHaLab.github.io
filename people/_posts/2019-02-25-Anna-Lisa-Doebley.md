@@ -2,6 +2,7 @@
 layout: people
 title: Anna-Lisa Doebley
 position: Graduate Student
+category: Student
 handle: gavinha
 image: /images/people/Doebley_Anna-Lisa.jpg
 ---
