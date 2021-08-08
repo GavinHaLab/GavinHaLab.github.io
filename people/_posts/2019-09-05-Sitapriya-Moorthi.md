@@ -3,7 +3,7 @@ layout: people
 title: Sitapriya Moorthi
 degree: Ph.D.
 position: Postdoctoral Fellow in Berger Lab
-position2: (Co-mentored)
+position2: Fellow in Berger Lab
 category: Postdoc
 handle: smoorthi
 image: /images/people/Sitapriya-Moorthi.jpg

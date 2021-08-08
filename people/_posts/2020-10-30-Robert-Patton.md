@@ -3,7 +3,7 @@ layout: people
 title: Robert Patton
 degree: Ph.D.
 position: Postdoctoral Fellow
-position2: (Co-mentored by Peter Nelson)
+position2: Joint with Nelson Lab
 category: Postdoc
 handle: rpatton
 image: /images/people/Robert-Patton.png

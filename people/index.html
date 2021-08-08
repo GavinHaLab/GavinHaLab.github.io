@@ -16,11 +16,9 @@ categories:
 <div class="bigspacer"></div>
 <div>
 
-{% assign people_by_lastname = site.categories.people | sort: 'title' %}
-
-{% for people in site.categories.people reversed %}
-		{% if people.alumni != true %}
-    {% cycle 'add rows': '<div class="row">', '', '' %}
+{% for people in site.categories.people %}
+		{% if people.category == 'PI' %}
+    {% cycle 'add rows': '<div class="row">' %}
     <div class="col-sm-4 peoplebox">
 			<div class="media">
   				<a class="pull-left" href="{{ people.url }}">
@@ -30,14 +28,162 @@ categories:
  			 	<div class="media-body">
     				<div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
     				<p class="smallhead">{{ people.position }}</p>
-    				<p class="note">{{ people.position2 }}</p>
-            <!-- {% if people.joined %}
-              <p class="note">Joined {{ people.joined }}</p>
-            {% endif %} -->
-  				</div>
+  			</div>
 			</div>
 			<div class="bigspacer"></div>
 			<div class="bigspacer"></div>
+    </div>
+    {% cycle 'close rows': '</div>' %}
+    {% endif %}
+{% endfor %}
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="title">
+      Scientific Staff
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+<div>
+
+{% assign people_by_lastname = site.categories.people | sort: 'title' | reverse %}
+{% for people in people_by_lastname %}
+    {% if people.alumni != true and people.category == 'Staff' %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
+    <div class="col-sm-4 peoplebox">
+      <div class="media" style="text-align: left;">
+          <a class="pull-left" href="{{ people.url }}">
+            <img width=160 class="media-object" src="{{ people.image }}">
+          </a>
+        <br>
+        <div class="media-body">
+            <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+            <p class="smallhead">{{ people.position }}</p>
+            <p class="note">{{ people.position2 }}</p>
+            {% if people.joined %}
+              <p class="note">Joined {{ people.joined }}</p>
+            {% endif %}
+          </div>
+      </div>
+      <div class="bigspacer"></div>
+      <div class="bigspacer"></div>
+        </div>
+    {% cycle 'close rows': '', '', '</div>' %}
+    {% endif %}
+{% endfor %}
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="title">
+      Postdoctoral Fellows
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+<div>
+
+{% assign people_by_lastname = site.categories.people | sort: 'title' %}
+{% for people in people_by_lastname %}
+    {% if people.alumni != true and people.category == 'Postdoc' %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
+    <div class="col-sm-4 peoplebox">
+      <div class="media">
+          <a class="pull-left" href="{{ people.url }}">
+            <img width=160 class="media-object" src="{{ people.image }}">
+          </a>
+        <br>
+        <div class="media-body">
+            <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+            <!-- <p class="smallhead">{{ people.position }}</p> -->
+            <p class="smallhead">{{ people.position2 }}</p>
+            {% if people.joined %}
+              <p class="note">Joined {{ people.joined }}</p>
+            {% endif %}
+          </div>
+      </div>
+      <div class="bigspacer"></div>
+      <div class="bigspacer"></div>
+        </div>
+    {% cycle 'close rows': '', '', '</div>' %}
+    {% endif %}
+{% endfor %}
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="title">
+      Graduate Students
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+<div>
+
+{% assign people_by_lastname = site.categories.people | sort: 'title' %}
+{% for people in people_by_lastname %}
+    {% if people.alumni != true and people.category == 'Student' %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
+    <div class="col-sm-4 peoplebox">
+      <div class="media">
+          <a class="pull-left" href="{{ people.url }}">
+            <img width=160 class="media-object" src="{{ people.image }}">
+          </a>
+        <br>
+        <div class="media-body">
+            <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+            <p class="smallhead">{{ people.position }}</p>
+            <p class="note">{{ people.position2 }}</p>
+            {% if people.joined %}
+              <p class="note">Joined {{ people.joined }}</p>
+            {% endif %}
+          </div>
+      </div>
+      <div class="bigspacer"></div>
+      <div class="bigspacer"></div>
+        </div>
+    {% cycle 'close rows': '', '', '</div>' %}
+    {% endif %}
+{% endfor %}
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="title">
+      Visitors/Interns
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+<div>
+
+{% assign people_by_lastname = site.categories.people | sort: 'title' %}
+{% for people in people_by_lastname %}
+    {% if people.alumni != true and people.category == 'Visitor' %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
+    <div class="col-sm-4 peoplebox">
+      <div class="media">
+          <a class="pull-left" href="{{ people.url }}">
+            <img width=160 class="media-object" src="{{ people.image }}">
+          </a>
+        <br>
+        <div class="media-body">
+            <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+            <p class="smallhead">{{ people.position }}</p>
+            <p class="note">{{ people.position2 }}</p>
+            {% if people.joined %}
+              <p class="note">Joined {{ people.joined }}</p>
+            {% endif %}
+          </div>
+      </div>
+      <div class="bigspacer"></div>
+      <div class="bigspacer"></div>
         </div>
     {% cycle 'close rows': '', '', '</div>' %}
     {% endif %}

@@ -1,7 +1,7 @@
 ---
 layout: people
 title: Adam Kreitzman
-position: Undergraduate Research Assistant
+position: Undergrad Research Assistant
 category: Visitor
 handle: akreitzm
 image: /images/people/Adam-Kreitzman.jpg
