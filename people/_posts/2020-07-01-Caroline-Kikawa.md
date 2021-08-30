@@ -4,6 +4,8 @@ title: Caroline Kikawa
 email: ckikawa@fredhutch.org
 position: Graduate Rotation Student
 handle: ckikawa
+category: RotationStudent
+joined: Summer 2020
 image: /images/people/Caroline-Kikawa.jpg
 alumni: true
 ---

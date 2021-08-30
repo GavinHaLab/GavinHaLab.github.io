@@ -3,6 +3,8 @@ layout: people
 title: Eliza Barkan
 position: Graduate Rotation Student
 handle: ebarkan
+category: RotationStudent
+joined: Spring 2019
 alumni: true
 image: /images/people/Eliza_Barkan.jpg
 ---

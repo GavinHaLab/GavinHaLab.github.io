@@ -3,6 +3,8 @@ layout: people
 title: Yuzhen Liu
 position: Graduate Rotation Student
 handle: yliu234
+category: RotationStudent
+joined: Spring 2020
 image: /images/people/Yuzhen-Liu.jpeg
 alumni: true
 ---

@@ -14,7 +14,6 @@ categories:
 </div>
 
 <div class="bigspacer"></div>
-<div>
 
 {% for people in site.categories.people %}
 		{% if people.category == 'PI' %}
@@ -36,7 +35,6 @@ categories:
     {% cycle 'close rows': '</div>' %}
     {% endif %}
 {% endfor %}
-</div>
 
 <div class="row">
   <div class="col-md-12">
@@ -47,7 +45,6 @@ categories:
 </div>
 
 <div class="bigspacer"></div>
-<div>
 
 {% assign people_by_lastname = site.categories.people | sort: 'title' | reverse %}
 {% for people in people_by_lastname %}
@@ -74,7 +71,7 @@ categories:
     {% cycle 'close rows': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-</div>
+
 
 <div class="row">
   <div class="col-md-12">
@@ -85,7 +82,7 @@ categories:
 </div>
 
 <div class="bigspacer"></div>
-<div>
+
 
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
@@ -112,7 +109,7 @@ categories:
     {% cycle 'close rows': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-</div>
+
 
 <div class="row">
   <div class="col-md-12">
@@ -161,7 +158,6 @@ categories:
 </div>
 
 <div class="bigspacer"></div>
-<div>
 
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
@@ -188,7 +184,13 @@ categories:
     {% cycle 'close rows': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-</div>
+
+
+
+
+<!-- ALUMNI -->
+
+
 
 <div class="row">
 	<div class="col-md-12">
@@ -200,11 +202,13 @@ categories:
 
 <div class="bigspacer"></div>
 
+<!-- Other past members -->
+<div>
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
-{% for people in people_by_lastname %}
-	{% if people.alumni == true %}
-    {% cycle 'add rows 2': '<div class="row">', nil, nil %}
-		<div class="col-sm-8 peoplebox">
+{% for people in site.categories.people reversed %}
+	{% if people.alumni == true and people.category != 'RotationStudent' %}
+    {% cycle 'add rows 3': '<div class="row">', '', '' %}
+		<div class="col-sm-4 peoplebox">
 			<div class="media">
   				<!--
   				<a class="pull-left" href="{{ people.url }}">
@@ -213,18 +217,58 @@ categories:
   				-->
  			 	<div class="media-body">
     				<div class="head media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
-    				<p class="note">{{ people.position }}</p>
+    				<p class="smallhead">{{ people.position }}</p>
             {% if people.left %}
-              <p class="note">Joined {{ people.joined }} - {{ people.left }}</p>
+              <p class="note">{{ people.joined }} - {{ people.left }}</p>
             {% endif %}
             {% if people.newposition %}
               <p class="note">Current Position: {{ people.newposition }}</p>
             {% endif %}
-  				</div>
+  			</div>
 			</div>
 			<div class="bigspacer"></div>
-        </div>
-    {% cycle 'close rows 2': nil, nil, '</div>' %}
+    </div>
+    {% cycle 'close rows 3': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-{% cycle 'close rows 2': nil, '</div>', '</div>' %}
+</div>
+
+<!-- Rotation Students -->
+<div class="row">
+  <div class="col-md-12">
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+
+{% for people in site.categories.people %}
+  {% if people.alumni == true and people.category == 'RotationStudent'%}
+    {% cycle 'add rows 2': '<div class="row">', '', '' %}
+    <div class="col-sm-4 peoplebox">
+      <div class="media">
+          <!--
+          <a class="pull-left" href="{{ people.url }}">
+            <img width=160 class="media-object" src="{{ people.image }}">
+          </a>
+          -->
+        <div class="media-body">
+            <div class="head media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+            <p class="note">{{ people.position }}</p>
+            {% if people.joined %}
+              <p class="note">{{ people.joined }}
+            {% endif %}
+            {% if people.left %}
+              - {{ people.left }}
+            {% endif %}
+            </p>
+            {% if people.newposition %}
+              <p class="note">Current Position: {{ people.newposition }}</p>
+            {% endif %}
+        </div>
+      </div>
+      <div class="bigspacer"></div>
+    </div>
+    {% cycle 'close rows 2': '', '', '</div>' %}
+  {% endif %}
+{% endfor %}
+

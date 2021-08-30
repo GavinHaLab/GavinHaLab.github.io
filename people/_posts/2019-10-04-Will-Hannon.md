@@ -3,6 +3,8 @@ layout: people
 title: William Hannon
 position: Graduate Rotation Student
 handle: whannon
+category: RotationStudent
+joined: Fall 2019
 email: wwh22@uw.edu
 image: /images/people/William-Hannon.jpg
 alumni: true

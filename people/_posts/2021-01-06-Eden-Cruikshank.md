@@ -3,6 +3,8 @@ layout: people
 title: Eden Cruikshank
 position: Graduate Rotation Student
 handle: acruiksh
+category: RotationStudent
+joined: Winter 2021
 image: /images/people/Eden-Cruikshank.jpg
 email: acruiksh@fredhutch.org
 alumni: true

@@ -3,6 +3,8 @@ layout: people
 title: Magdalena Russell
 position: Graduate Rotation Student
 handle: magruss
+category: RotationStudent
+joined: Fall 2019
 email: magruss@uw.edu
 image: /images/people/Maggie-Russell.jpg
 alumni: true

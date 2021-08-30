@@ -4,6 +4,9 @@ title: Kelsey Luu
 email: kluu2@fredhutch.org
 position: Bioinformatics Intern
 handle: kluu2
+category: Intern
+joined: October 2020
+left: March 2021
 image: /images/people/Kelsey-Luu.jpg
 alumni: true
 ---

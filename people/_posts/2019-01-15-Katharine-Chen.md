@@ -2,6 +2,8 @@
 layout: people
 title: Katharine Chen
 position: Graduate Rotation Student
+category: RotationStudent
+joined: Winter 2019
 handle: kychen
 email: kychen@fredhutch.org
 linkedin: katharine-chen-50024877
