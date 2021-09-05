@@ -1,6 +1,6 @@
 ---
 layout: people
-title: Eden Cruikshank
+title: A Eden Cruikshank
 position: Graduate Rotation Student
 handle: acruiksh
 category: RotationStudent
