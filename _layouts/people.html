@@ -134,28 +134,20 @@ layout: default
 		{% endfor %}
 		{% endif %}
 
-		{% for project in site.data.projects %}
-			{% for contributor in project.contributors %}
-				{% if contributor.login == people.github %}
-					{% assign projectsq = true %}
-				{% endif %}
-			{% endfor %}
+		{% for project in site.categories.projects %}
+		{% if project.authors contains fullname or project.authors contains lastfirstinitial %}
+		{% assign projectsq = true %}
+		{% endif %}
 		{% endfor %}
 
 		{% if projectsq == true %}
 		<div class="bigspacer"></div>
-		<div class="head">Projects</div>
+		<div class="head">Software & Code</div>
 		<div class="spacer"></div>
-		{% for project in site.data.projects %}
-			{% assign present = false %}
-			{% for contributor in project.contributors %}
-				{% if contributor.login == people.github %}
-					{% assign present = true %}
-				{% endif %}
-			{% endfor %}
-			{% if present == true %}
-				<p><a href="{{ project.url }}" class="off">{{ project.title }} - {{ project.description }}</a>
-			{% endif %}
+		{% for project in site.categories.projects %}
+		{% if project.authors contains fullname or project.authors contains lastfirstinitial %}
+		<p><a href="{{ project.github }}" class="off" target="_blank">{{ project.title }}</a>
+		{% endif %}
 		{% endfor %}
 		{% endif %}
 
