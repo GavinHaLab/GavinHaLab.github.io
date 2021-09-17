@@ -14,4 +14,4 @@ featured: true
 
 # Abstract
 
-Circulating tumor DNA (ctDNA) sequencing studies could provide novel insights into the molecular pathology of cancer in sub-Saharan Africa. ctDNA was readily detected in 15 blood samples collected in Ghana at the time of suspected breast cancer. Genomic alterations previously associated with unfavorable prognostic outcomes were observed in the majority of patients. This supports the use of liquid biopsies for diagnosis, surveillance and clinical management of breast cancer in Ghana.
+Circulating tumor DNA (ctDNA) sequencing studies could provide novel insights into the molecular pathology of cancer in sub-Saharan Africa. In 15 patient plasma samples collected at the time of diagnosis as part of the Ghana Breast Health Study and unselected for tumor grade and subtype, ctDNA was detected in a majority of patients based on whole- genome sequencing at high (30×) and low (0.1×) depths. Breast cancer driver copy number alterations were observed in the majority of patients.
