@@ -1,7 +1,7 @@
 ---
 layout: people
 title: Abigail Thorpe
-position: Graduate Rotation Student
+position: Graduate Student
 category: Student
 handle: athorpe
 image: /images/people/Abigail-Thorpe.jpg
