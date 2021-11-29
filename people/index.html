@@ -185,7 +185,41 @@ categories:
 {% endfor %}
 
 
+<div class="row">
+  <div class="col-md-12">
+    <div class="title">
+      Research Administrator
+    </div>
+  </div>
+</div>
 
+<div class="bigspacer"></div>
+
+{% assign people_by_lastname = site.categories.people | sort: 'title' %}
+{% for people in people_by_lastname %}
+    {% if people.alumni != true and people.category == 'Admin' %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
+    <div class="col-sm-4 peoplebox">
+      <div class="media">
+          <a class="pull-left" href="{{ people.url }}">
+            <img width=160 class="media-object" src="{{ people.image }}">
+          </a>
+        <br>
+        <div class="media-body">
+            <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+            <p class="smallhead">{{ people.position }}</p>
+            <p class="note">{{ people.position2 }}</p>
+            {% if people.joined %}
+              <p class="note">Joined {{ people.joined }}</p>
+            {% endif %}
+          </div>
+      </div>
+      <div class="bigspacer"></div>
+      <div class="bigspacer"></div>
+        </div>
+    {% cycle 'close rows': '', '', </div>' %}
+    {% endif %}
+{% endfor %}
 
 <!-- ALUMNI -->
 

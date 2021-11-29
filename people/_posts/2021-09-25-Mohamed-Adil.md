@@ -1,15 +1,12 @@
 ---
 layout: people
 title: Mohamed Adil
-position: Masters Student
+position: Graduate Student
 category: Student
 handle: madil
 image: /images/people/Mohamed-Adil.jpg
 email: madil@fredhutch.org
-alumni: true
-joined: January 2021
-left: September 2021
-newposition: PhD student in Unversity of Washington M3D Program
+alumni: false
 ---
 
 I am a Master student in the [Department of Laboratory Medicine & Pathology](http://depts.washington.edu/labweb/Education/Master/) at the University of Washington. 
