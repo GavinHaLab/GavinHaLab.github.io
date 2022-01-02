@@ -15,9 +15,10 @@ categories:
 
 <div class="bigspacer"></div>
 
+
 {% for people in site.categories.people %}
 		{% if people.position == 'Principal Investigator' %}
-    {% cycle 'add rows': '<div class="row">' %}
+    {% cycle 'add rows 1': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
 			<div class="media">
   				<a class="pull-left" href="{{ people.url }}">
@@ -32,9 +33,11 @@ categories:
 			<div class="bigspacer"></div>
 			<div class="bigspacer"></div>
     </div>
-    {% cycle 'close rows': '</div>' %}
-    {% endif %}
+    {% cycle 'close rows 1': '', '', '</div>' %}
+  {% endif %}
 {% endfor %}
+{% cycle 'close rows 1': '', '</div>', '</div>' %}
+
 
 <div class="row">
   <div class="col-lg-12 col-md-12 col-xs-12">
@@ -46,10 +49,11 @@ categories:
 
 <div class="bigspacer"></div>
 
+
 {% assign people_by_lastname = site.categories.people | sort: 'title' | reverse %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Staff' %}
-    {% cycle 'add rows': '<div class="row">', '', '' %}
+    {% cycle 'add rows 2': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media" style="text-align: left;">
           <a class="pull-left" href="{{ people.url }}">
@@ -68,9 +72,11 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows': '', '', '</div>' %}
+    {% cycle 'close rows 2': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
+{% cycle 'close rows 2': '', '</div>', '</div>' %}
+
 
 
 <div class="row">
@@ -87,7 +93,7 @@ categories:
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Postdoc' %}
-    {% cycle 'add rows': '<div class="row">', '', '' %}
+    {% cycle 'add rows 3': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <a class="pull-left" href="{{ people.url }}">
@@ -106,9 +112,12 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows': '', '', '</div>' %}
+    {% cycle 'close rows 3': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
+{% cycle 'close rows 3': '', '</div>', '</div>' %}
+
+
 
 <div class="row">
   <div class="col-lg-12 col-md-12 col-xs-12">
@@ -119,12 +128,11 @@ categories:
 </div>
 
 <div class="bigspacer"></div>
-<div>
 
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Student' %}
-    {% cycle 'add rows': '<div class="row">', '', '' %}
+    {% cycle 'add rows 4': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <a class="pull-left" href="{{ people.url }}">
@@ -143,10 +151,10 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows': '', '', '</div>' %}
+    {% cycle 'close rows 4': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-</div>
+{% cycle 'close rows 4': '', '</div>', '</div>' %}
 
 <div class="row">
   <div class="col-md-12">
@@ -161,7 +169,7 @@ categories:
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Visitor' %}
-    {% cycle 'add rows': '<div class="row">', '', '' %}
+    {% cycle 'add rows 5': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <a class="pull-left" href="{{ people.url }}">
@@ -180,9 +188,10 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows': '', '', </div>' %}
+    {% cycle 'close rows 5': '', '', </div>' %}
     {% endif %}
 {% endfor %}
+{% cycle 'close rows 5': '', '</div>', '</div>' %}
 
 
 <div class="row">
@@ -198,7 +207,7 @@ categories:
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Admin' %}
-    {% cycle 'add rows': '<div class="row">', '', '' %}
+    {% cycle 'add rows 6': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <a class="pull-left" href="{{ people.url }}">
@@ -217,9 +226,10 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows': '', '', </div>' %}
+    {% cycle 'close rows 6': '', '', </div>' %}
     {% endif %}
 {% endfor %}
+{% cycle 'close rows 6': '', '</div>', '</div>' %}
 
 <!-- ALUMNI -->
 
@@ -236,35 +246,37 @@ categories:
 <div class="bigspacer"></div>
 
 <!-- Other past members -->
-<div>
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in site.categories.people reversed %}
-	{% if people.alumni == true and people.position != 'Graduate Rotation Student' %}
-    {% cycle 'add rows 3': '<div class="row">', '', '' %}
-		<div class="col-sm-4 peoplebox">
-			<div class="media">
-  				<!--
-  				<a class="pull-left" href="{{ people.url }}">
-    				<img width=160 class="media-object" src="{{ people.image }}">
-  				</a>
-  				-->
- 			 	<div class="media-body">
-    				<div class="head media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
-    				<p class="smallhead">{{ people.position }}</p>
-            {% if people.left %}
-              <p class="note">{{ people.joined }} - {{ people.left }}</p>
-            {% endif %}
-            {% if people.newposition %}
-              <p class="note">Current Position: {{ people.newposition }}</p>
-            {% endif %}
-  			</div>
-			</div>
-			<div class="bigspacer"></div>
-    </div>
-    {% cycle 'close rows 3': '', '', '</div>' %}
-    {% endif %}
+	{% if people.alumni == true %} 
+    {% unless people.position contains 'Rotation' %}
+      {% cycle 'add rows 7': '<div class="row">', '', '' %}
+      <div class="col-sm-4 peoplebox">
+        <div class="media">
+            <!--
+            <a class="pull-left" href="{{ people.url }}">
+              <img width=160 class="media-object" src="{{ people.image }}">
+            </a>
+            -->
+          <div class="media-body">
+              <div class="head media-heading"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
+              <p class="smallhead">{{ people.position }}</p>
+              {% if people.left %}
+                <p class="note">{{ people.joined }} - {{ people.left }}</p>
+              {% endif %}
+              {% if people.newposition %}
+                <p class="note">Current Position: {{ people.newposition }}</p>
+              {% endif %}
+          </div>
+        </div>
+        <div class="bigspacer"></div>
+      </div>
+      {% cycle 'close rows 7': '', '', '</div>' %}
+    {% endunless %}
+  {% endif %}
 {% endfor %}
-</div>
+{% cycle 'close rows 7': '', '</div>', '</div>' %}
+
 
 <!-- Rotation Students -->
 <div class="row">
@@ -275,8 +287,8 @@ categories:
 <div class="bigspacer"></div>
 
 {% for people in site.categories.people %}
-  {% if people.alumni == true and people.position == 'Graduate Rotation Student' %}
-    {% cycle 'add rows 2': '<div class="row">', '', '' %}
+  {% if people.alumni == true and people.position contains 'Rotation' %}
+    {% cycle 'add rows 8': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <!--
@@ -301,7 +313,7 @@ categories:
       </div>
       <div class="bigspacer"></div>
     </div>
-    {% cycle 'close rows 2': '', '', '</div>' %}
+    {% cycle 'close rows 8': '', '', '</div>' %}
   {% endif %}
 {% endfor %}
-
+{% cycle 'close rows 8': '', '</div>', '</div>' %}
