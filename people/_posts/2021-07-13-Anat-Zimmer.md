@@ -3,6 +3,7 @@ layout: people
 title: Anat Zimmer
 position: Postdoctoral Fellow
 category: Postdoc
+joined: July 2021
 handle: azimmer
 image: /images/people/Anat-Zimmer-2.jpg
 email: azimmer@fredhutch.org

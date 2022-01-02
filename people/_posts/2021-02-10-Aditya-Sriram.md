@@ -3,7 +3,7 @@ layout: people
 title: Aditya Sriram
 position: Masters Rotation Student
 handle: asriram
-category: RotationStudent
+category: alumni
 joined: Winter 2021
 image: /images/people/Aditya_Sriram.jpg
 email: 

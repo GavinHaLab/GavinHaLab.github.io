@@ -4,6 +4,7 @@ title: Pushpa Itagi
 position: Postdoctoral Fellow
 position2: Joint with Hsieh Lab
 category: Postdoc
+joined: August 2021
 handle: pitagi
 image: /images/people/Pushpa-Itagi.jpg
 email: pitagi@fredhutch.org

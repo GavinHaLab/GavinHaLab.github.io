@@ -5,6 +5,7 @@ degree: Ph.D.
 position: Postdoctoral Fellow
 position2: Joint with Nelson Lab
 category: Postdoc
+joined: October 2020
 handle: rpatton
 image: /images/people/Robert-Patton.png
 email: rpatton@fredhutch.org

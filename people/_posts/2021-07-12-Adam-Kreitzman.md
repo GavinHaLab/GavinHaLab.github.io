@@ -4,6 +4,7 @@ title: Adam Kreitzman
 position: Undergrad Research Assistant
 category: Visitor
 handle: akreitzm
+joined: August 2021
 image: /images/people/Adam-Kreitzman.jpg
 email: akreitzm@fredhutch.org
 alumni: false

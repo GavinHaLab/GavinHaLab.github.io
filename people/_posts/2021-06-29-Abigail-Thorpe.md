@@ -3,6 +3,7 @@ layout: people
 title: Abigail Thorpe
 position: Graduate Student
 category: Student
+joined: September 2021
 handle: athorpe
 image: /images/people/Abigail-Thorpe.jpg
 email: 

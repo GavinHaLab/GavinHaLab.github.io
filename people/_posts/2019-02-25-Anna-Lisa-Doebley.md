@@ -3,7 +3,8 @@ layout: people
 title: Anna-Lisa Doebley
 position: Graduate Student
 category: Student
-handle: gavinha
+joined: March 2019
+handle: adoebley
 image: /images/people/Doebley_Anna-Lisa.jpg
 ---
 

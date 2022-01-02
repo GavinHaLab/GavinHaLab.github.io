@@ -4,7 +4,7 @@ title: Hanna Liao
 email: hliao@fredhutch.org
 position: Graduate Rotation Student
 handle: hliao
-category: RotationStudent
+category: alumni
 joined: Fall 2020
 image: /images/people/Hanna-Liao.jpg
 alumni: true

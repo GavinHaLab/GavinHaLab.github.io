@@ -3,6 +3,7 @@ layout: people
 title: Minjeong Ko
 position: Bioinformatics Analyst
 category: Staff
+joined: January 2020
 handle: mko
 image: /images/people/Minjeong-Ko.jpg
 email: mko@fredhutch.org

@@ -60,9 +60,9 @@ categories:
             <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
             <p class="smallhead">{{ people.position }}</p>
             <p class="note">{{ people.position2 }}</p>
-            {% if people.joined %}
+            <!-- {% if people.joined %}
               <p class="note">Joined {{ people.joined }}</p>
-            {% endif %}
+            {% endif %} -->
           </div>
       </div>
       <div class="bigspacer"></div>
@@ -98,9 +98,9 @@ categories:
             <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
             <!-- <p class="smallhead">{{ people.position }}</p> -->
             <p class="smallhead">{{ people.position2 }}</p>
-            {% if people.joined %}
+            <!-- {% if people.joined %}
               <p class="note">Joined {{ people.joined }}</p>
-            {% endif %}
+            {% endif %} -->
           </div>
       </div>
       <div class="bigspacer"></div>
@@ -135,9 +135,9 @@ categories:
             <div class="bighead media-heading-people"><a href="{{ people.url }}" class="off">{{ people.title }}</a></div>
             <p class="smallhead">{{ people.position }}</p>
             <p class="note">{{ people.position2 }}</p>
-            {% if people.joined %}
+            <!-- {% if people.joined %}
               <p class="note">Joined {{ people.joined }}</p>
-            {% endif %}
+            {% endif %} -->
           </div>
       </div>
       <div class="bigspacer"></div>
@@ -151,7 +151,7 @@ categories:
 <div class="row">
   <div class="col-md-12">
     <div class="title">
-      Visitors/Interns
+      Undergrads/Visitors/Interns
     </div>
   </div>
 </div>
@@ -239,7 +239,7 @@ categories:
 <div>
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in site.categories.people reversed %}
-	{% if people.alumni == true and people.category != 'RotationStudent' %}
+	{% if people.alumni == true and people.position != 'Graduate Rotation Student' %}
     {% cycle 'add rows 3': '<div class="row">', '', '' %}
 		<div class="col-sm-4 peoplebox">
 			<div class="media">
@@ -275,7 +275,7 @@ categories:
 <div class="bigspacer"></div>
 
 {% for people in site.categories.people %}
-  {% if people.alumni == true and people.category == 'RotationStudent'%}
+  {% if people.alumni == true and people.position == 'Graduate Rotation Student' %}
     {% cycle 'add rows 2': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">

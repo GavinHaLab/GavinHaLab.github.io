@@ -2,7 +2,7 @@
 layout: people
 title: Mohamed Adil
 position: Masters Student
-category: Student
+category: alumni
 handle: madil
 image: /images/people/Mohamed-Adil.jpg
 email: madil@fredhutch.org

@@ -3,7 +3,7 @@ layout: people
 title: Patricia Galipeau
 position: Research Project Manager
 category: Staff
-order: 1
+joined: July 2021
 handle: pgal
 image: /images/people/Patricia-Galipeau.jpg
 email: pgal@fredhutch.org

@@ -3,11 +3,11 @@ layout: people
 title: A Eden Cruikshank
 position: Graduate Rotation Student
 handle: acruiksh
-category: alumni
-joined: Winter 2021
+category: Student
+joined: January 2022
 image: /images/people/Eden-Cruikshank.jpg
 email: acruiksh@fredhutch.org
-alumni: true
+alumni: false
 ---
 
 I am currently a first year graduate student with the Molecular and Cellular Biology program at the University of Washington. I graduated from the University of North Florida with a BS in Biomedical Sciences. 

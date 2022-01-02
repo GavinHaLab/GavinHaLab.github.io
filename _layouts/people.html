@@ -18,6 +18,14 @@ layout: default
 				<div class="smallhead">
 					{{ people.position }}
 				</div>
+				<p>
+				{% if people.joined %}
+					{% unless people.left %}
+						<p class="note">Joined {{ people.joined }}</p>
+					{% elsif people.left %}
+						<p class="note">{{ people.joined }} - {{ people.left }}</p>
+					{% endunless %}	
+				{% endif %}
 			</div>
 		</div>
 	</div>
