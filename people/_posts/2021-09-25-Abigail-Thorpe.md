@@ -1,13 +1,13 @@
 ---
 layout: people
 title: Abigail Thorpe
-position: Graduate Rotation Student
-category: alumni
-joined: Summer 2021
+position: Graduate Student
+category: Student
+joined: September 2021
 handle: athorpe
 image: /images/people/Abigail-Thorpe.jpg
-email: 
-alumni: true
+email: athorpe@fredhutch.org
+alumni: false
 ---
 
 I am a graduate student in the Genome Sciences department at the University of Washington. I have a BS in Biomedical Engineering from the George Washington University in Washington, DC. As an undergraduate student, I interned in Dr. John Tsang’s group in the NIAID Laboratory of Immune System Biology, where I developed software to support flu vaccine studies. For my senior design project, I worked under Dr. Guillermo Gutierrez at GW Hospital and used respiratory rate data from mechanical ventilators to monitor intubated patients.

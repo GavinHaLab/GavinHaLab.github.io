@@ -5,6 +5,7 @@ position: Graduate Student
 category: Student
 joined: March 2019
 handle: adoebley
+email: adoebley@fredhutch.org
 image: /images/people/Doebley_Anna-Lisa.jpg
 ---
 

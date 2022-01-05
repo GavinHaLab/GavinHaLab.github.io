@@ -1,7 +1,7 @@
 ---
 layout: people
 title: A Eden Cruikshank
-position: Graduate Rotation Student
+position: Graduate Student
 handle: acruiksh
 category: Student
 joined: January 2022
