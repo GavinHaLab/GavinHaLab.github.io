@@ -7,7 +7,7 @@ joined: Winter 2022
 handle: hcolegro
 image: /images/people/Hunnter-Colegrove.jpg
 email: hcolegro@fredhutch.org
-alumni: false
+alumni: true
 ---
 
  
