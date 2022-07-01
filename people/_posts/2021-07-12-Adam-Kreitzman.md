@@ -1,8 +1,8 @@
 ---
 layout: people
 title: Adam Kreitzman
-position: Undergrad Research Assistant
-category: Visitor
+position: Junior Bioinformatics Analyst
+category: Staff
 handle: akreitzm
 joined: August 2021
 image: /images/people/Adam-Kreitzman.jpg
