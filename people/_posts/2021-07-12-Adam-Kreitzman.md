@@ -10,4 +10,8 @@ email: akreitzm@fredhutch.org
 alumni: false
 ---
 
-I am an undergraduate student at the [University of California, San Diego](https://ucsd.edu/){:target="_blank"} where I am double-majoring in Data Science and Mathematics with a specialization in Probability and Statistics. I look forward to exploring the fascinating cross-section of biology and machine learning in the Ha lab, specifically using computational methods to improve cancer detection through cell-free DNA.
+I recently graduated from the University of California, San Diego with a double major in Data Science and Mathematics with a specialization in Probability and Statistics, and I will be joining the fall 2022 cohort of the Masters in Information and Data Science at the University of California, Berkeley.
+
+My work in the lab specializes in novel deep-learning methods for detecting copy-number changes along the DNA to create cancer diagnostics and tumor fraction predictors.
+
+In my free time, I love playing volleyball, playing with my puppy and watching the 49ers and Warriors bring championships to the Bay Area.
