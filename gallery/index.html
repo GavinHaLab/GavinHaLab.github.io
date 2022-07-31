@@ -1,0 +1,36 @@
+---
+layout: default
+title: Ha Lab - Lab Fun
+categories:
+ - gallery
+category: gallery
+---
+
+<div class="title">
+	Ha Lab Events and Random Fun
+</div>
+<div class="hugespacer"></div>
+
+
+{% for post in site.categories.gallery %}
+
+    {% cycle 'add rows': '<div class="row">', nisl, nil %}
+		<div class="col-md-6 postbox">
+            <a href="{{ post.url }}">
+                <img class="center" width=260 class="media-object" src="{{ post.thumbnailimage }}">
+              </a>
+			<div class="head media-heading">
+				<a href="{{ post.url }}" class="off">{{ post.title }}</a>
+			</div>
+			<div class="smallhead media-heading">
+				<a href="{{ post.url }}" class="off">{{ post.desc }}</a>
+			<div class="smallhead">		    	
+		    	{{ post.month }} {{ post.day }}, {{ post.year }}
+				@ {{ post.location }}
+		    </div>
+			</div>
+			<div class="hugespacer"></div>
+        </div>
+    {% cycle 'close rows': nil, nil, '</div>' %}
+{% endfor %}
+{% cycle 'close rows': nil, '</div>', '</div>' %}

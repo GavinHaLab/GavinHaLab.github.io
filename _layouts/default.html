@@ -109,6 +109,13 @@
 						{% endif %}
 						<a href="/teaching/">Teaching</a>
 						</li>
+						{% if page.categories.first == 'gallery' %}
+						<li class="active">
+						{% else %}
+						<li>
+						{% endif %}
+						<a href="/gallery/">Gallery</a>
+						</li>
 						{% if page.categories.first == 'misc' %}
 						<li class="active">
 						{% endif %}

@@ -1,7 +1,7 @@
 ---
 layout: people
 title: Adam Kreitzman
-position: Junior Bioinformatics Analyst
+position: Graduate Research Associate
 category: Staff
 handle: akreitzm
 joined: August 2021

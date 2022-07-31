@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="hugespacer"></div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="title">
+			{{ page.title }}
+		</div>	
+	</div>
+</div>	
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-12">	
+		<div class="post">
+            <div class="head media-heading">{{ page.shortdesc }} @ {{ page.location }}</div>
+            <div class="smallhead">{{ page.month }} {{ page.day }}, {{ page.year }}</div>
+            <p>
+                <div class=""note">{{ page.longdesc }}</div>
+            </p>
+			{{ content }}
+		</div>	
+	</div>			
+	<div class="col-md-2"></div>
+</div>	
+
+
+
+
