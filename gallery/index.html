@@ -14,7 +14,7 @@ category: gallery
 
 {% for post in site.categories.gallery %}
 
-    {% cycle 'add rows': '<div class="row">', nisl, nil %}
+    {% cycle 'add rows': '<div class="row">', nil, nil %}
 		<div class="col-md-6 postbox">
             <a href="{{ post.url }}">
                 <img class="center" width=260 class="media-object" src="{{ post.thumbnailimage }}">
