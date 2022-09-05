@@ -1,7 +1,7 @@
 ---
 layout: people
 title: Adam Kreitzman
-position: Graduate Research Associate
+position: Graduate Research Assistant
 category: Staff
 handle: akreitzm
 joined: August 2021
