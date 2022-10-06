@@ -7,7 +7,7 @@ joined: Summer 2022
 handle: bvemuri
 image: /images/people/Bhargav-Vemuri.jpg
 email: bvemuri@fredhutch.org
-alumni: false
+alumni: true
 ---
 
 I am a PhD student in Biomedical and Health Informatics at UW rotating in the Ha Lab this summer. Before moving to Seattle, I received a BS in Medical Sciences and MPH in Biostatistics from the University of Cincinnati.

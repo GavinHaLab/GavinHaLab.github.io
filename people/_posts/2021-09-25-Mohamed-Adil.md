@@ -2,6 +2,7 @@
 layout: people
 title: Mohamed Adil
 position: Graduate Student
+position2: Co-advised by Michael Haffner
 category: Student
 handle: madil
 image: /images/people/Mohamed-Adil.jpg
