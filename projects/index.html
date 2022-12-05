@@ -23,7 +23,7 @@ categories:
 </div>
 <div class="bigspacer"></div>
 
-{% assign sorted_projects = site.categories.projects | sort_natural: 'title' %}
+{% assign sorted_projects = site.categories.projects %}
 {% for project in sorted_projects %}
 	{% if project.category == 'software' %}
 	    {% cycle 'add rows': '<div class="row">', '' %}
@@ -62,7 +62,7 @@ categories:
 </div>
 <div class="bigspacer"></div>
 
-{% assign sorted_projects = site.categories.projects | sort_natural: 'title' %}
+{% assign sorted_projects = site.categories.projects %}
 {% for project in sorted_projects %}
 	{% if project.category == 'pipeline' %}
 	    {% cycle 'add rows': '<div class="row">', '', '' %}
