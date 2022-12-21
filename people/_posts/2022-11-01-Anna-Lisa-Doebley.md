@@ -1,15 +1,13 @@
 ---
 layout: people
 title: Anna-Lisa Doebley
-position: Graduate Student
-category: Student
-joined: March 2019
-left: October 2022
+position: Postdoctoral Fellow
+category: Postdoc
+joined: November 2022
 handle: adoebley
 email: adoebley@fredhutch.org
 image: /images/people/Doebley_Anna-Lisa.jpg
-alumni: true
-newposition: Postdoc in Ha Lab
+alumni: false
 ---
 
 I am a student in the MSTP program at the University of Washington. I got my bachelor’s degree from the University of Wisconsin – Madison where I majored in Genetics and minored in Painting. While at the University of Wisconsin, I did research in Dr. Akihiro Ikeda’s lab where I studied the genetic causes of corneal neovascularization (a cancer like phenotype in the mouse eye) and retinal degeneration (which is similar to macular degeneration in humans). During my undergraduate studies, I also spent time at UNC Chapel Hill where I worked in Dr. Shawn Ahmed’s lab and studied aging using mortal germline mutants in C. elegans. These research experiences lead me to pursue an MD-PhD so that I could continue working on genetic research and help bridge the gap between research and the clinic.
