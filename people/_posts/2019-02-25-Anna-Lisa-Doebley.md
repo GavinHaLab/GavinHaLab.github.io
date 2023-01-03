@@ -5,6 +5,7 @@ position: Graduate Student
 category: Student
 joined: March 2019
 left: October 2022
+leftdate: 2022-10-31
 handle: adoebley
 email: adoebley@fredhutch.org
 image: /images/people/Doebley_Anna-Lisa.jpg

@@ -5,6 +5,7 @@ position: Bioinformatics Analyst
 category: Staff
 joined: January 2020
 left: July 2022
+leftdate: 2022-07-31
 handle: mko
 image: /images/people/Minjeong-Ko.jpg
 email: mko@fredhutch.org

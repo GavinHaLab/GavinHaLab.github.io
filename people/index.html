@@ -207,7 +207,7 @@ categories:
 {% assign people_by_lastname = site.categories.people | sort: 'title' | reverse %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Collaborator' %}
-    {% cycle 'add rows 2': '<div class="row">', '', '' %}
+    {% cycle 'add rows 6': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media" style="text-align: left;">
           <a class="pull-left" href="{{ people.url }}">
@@ -226,10 +226,10 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows 2': '', '', '</div>' %}
+    {% cycle 'close rows 6': '', '', '</div>' %}
     {% endif %}
 {% endfor %}
-{% cycle 'close rows 2': '', '</div>', '</div>' %}
+{% cycle 'close rows 6': '', '</div>', '</div>' %}
 
 <div class="row">
   <div class="col-md-12">
@@ -244,7 +244,7 @@ categories:
 {% assign people_by_lastname = site.categories.people | sort: 'title' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Admin' %}
-    {% cycle 'add rows 6': '<div class="row">', '', '' %}
+    {% cycle 'add rows 7': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <a class="pull-left" href="{{ people.url }}">
@@ -263,10 +263,10 @@ categories:
       <div class="bigspacer"></div>
       <div class="bigspacer"></div>
         </div>
-    {% cycle 'close rows 6': '', '', </div>' %}
+    {% cycle 'close rows 7': '', '', </div>' %}
     {% endif %}
 {% endfor %}
-{% cycle 'close rows 6': '', '</div>', '</div>' %}
+{% cycle 'close rows 7': '', '</div>', '</div>' %}
 
 <!-- ALUMNI -->
 
@@ -283,11 +283,11 @@ categories:
 <div class="bigspacer"></div>
 
 <!-- Other past members -->
-{% assign people_by_lastname = site.categories.people | sort: 'title' %}
-{% for people in site.categories.people reversed %}
+{% assign people_by_left = site.categories.people | sort: 'leftdate' | reverse %}
+{% for people in people_by_left %} 
 	{% if people.alumni == true %} 
     {% unless people.position contains 'Rotation' %}
-      {% cycle 'add rows 7': '<div class="row">', '', '' %}
+      {% cycle 'add rows 8': '<div class="row">', '', '' %}
       <div class="col-sm-4 peoplebox">
         <div class="media">
             <!--
@@ -308,11 +308,11 @@ categories:
         </div>
         <div class="bigspacer"></div>
       </div>
-      {% cycle 'close rows 7': '', '', '</div>' %}
+      {% cycle 'close rows 8': '', '', '</div>' %}
     {% endunless %}
   {% endif %}
 {% endfor %}
-{% cycle 'close rows 7': '', '</div>', '</div>' %}
+{% cycle 'close rows 8': '', '</div>', '</div>' %}
 
 
 <!-- Rotation Students -->
@@ -325,7 +325,7 @@ categories:
 
 {% for people in site.categories.people %}
   {% if people.alumni == true and people.position contains 'Rotation' %}
-    {% cycle 'add rows 8': '<div class="row">', '', '' %}
+    {% cycle 'add rows 9': '<div class="row">', '', '' %}
     <div class="col-sm-4 peoplebox">
       <div class="media">
           <!--
@@ -350,7 +350,7 @@ categories:
       </div>
       <div class="bigspacer"></div>
     </div>
-    {% cycle 'close rows 8': '', '', '</div>' %}
+    {% cycle 'close rows 9': '', '', '</div>' %}
   {% endif %}
 {% endfor %}
-{% cycle 'close rows 8': '', '</div>', '</div>' %}
+{% cycle 'close rows 9': '', '</div>', '</div>' %}
