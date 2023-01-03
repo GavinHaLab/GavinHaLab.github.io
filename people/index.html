@@ -283,7 +283,7 @@ categories:
 <div class="bigspacer"></div>
 
 <!-- Other past members -->
-{% assign people_by_left = site.categories.people | sort: 'leftdate' | reverse %}
+{% assign people_by_left = site.categories.people | reverse %}
 {% for people in people_by_left %} 
 	{% if people.alumni == true %} 
     {% unless people.position contains 'Rotation' %}
