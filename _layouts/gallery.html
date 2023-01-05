@@ -17,10 +17,16 @@ layout: default
 <div class="row">
 	<div class="col-md-12">	
 		<div class="post">
+			{% if page.location %}
             <div class="head media-heading">{{ page.shortdesc }} @ {{ page.location }}</div>
+			{% endif %}
+			{% if page.month %}
             <div class="smallhead">{{ page.month }} {{ page.day }}, {{ page.year }}</div>
+			{% endif %}
             <p>
-                <div class="note">{{ page.longdesc }}</div>
+				{% if page.longdesc %}
+                <div class="smallhead">{{ page.longdesc }}</div>
+				{% endif %}
             </p>
 			{{ content }}
 		</div>	

@@ -12,25 +12,32 @@ category: gallery
 <div class="hugespacer"></div>
 
 
-{% for post in site.categories.gallery %}
+{% assign post_list = site.categories.gallery | reverse %}
+{% for post in post_list %}
 
-    {% cycle 'add rows': '<div class="row">', nil, nil %}
+    {% cycle 'add rows': '<div class="row">', '', '' %}
 		<div class="col-md-6 postbox">
             <a href="{{ post.url }}">
                 <img class="center" width=260 class="media-object" src="{{ post.thumbnailimage }}">
               </a>
+			{% if post.title %}
 			<div class="head media-heading">
 				<a href="{{ post.url }}" class="off">{{ post.title }}</a>
 			</div>
+			{% endif %}
 			<div class="smallhead media-heading">
+				{% if post.desc %}
 				<a href="{{ post.url }}" class="off">{{ post.desc }}</a>
+				{% endif %}
+			{% if post.month %}
 			<div class="smallhead">		    	
 		    	{{ post.month }} {{ post.day }}, {{ post.year }}
 				@ {{ post.location }}
 		    </div>
+			{% endif %}
 			</div>
 			<div class="hugespacer"></div>
         </div>
-    {% cycle 'close rows': nil, nil, '</div>' %}
+    {% cycle 'close rows': '', '', '</div>' %}
 {% endfor %}
-{% cycle 'close rows': nil, '</div>', '</div>' %}
+{% cycle 'close rows': '', '</div>', '</div>' %}
