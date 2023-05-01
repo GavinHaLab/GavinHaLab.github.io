@@ -11,6 +11,7 @@ image: /images/people/Minjeong-Ko.jpg
 email: mko@fredhutch.org
 linkedin: minjeong-ko-145b6a29
 alumni: true
+newposition: Engineer at Quest Diagnostics
 ---
 
 I have two master’s degrees in Life Science from Ewha Womans University and in Computer Science from the University of Toronto, where I studied machine learning in computational biology lab under the supervision of Dr. Fritz Roth. 

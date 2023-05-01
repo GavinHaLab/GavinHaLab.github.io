@@ -7,7 +7,7 @@ joined: Winter 2023
 handle: kfeldman
 image: /images/people/Katherine-Feldmann.jpg
 email: kfeldman@fredhutch.org
-alumni: false
+alumni: true
 ---
 
 I am a first year PhD student in the Molecular and Cellular Biology program at the University of Washington. As an undergraduate and MA student at the University of Colorado Boulder, I studied Ecology and Evolutionary Biology. For my graduate research, I developed computational biology skills by analyzing whole-genome sequences to identify patterns of introgression between hybridizing chickadee species. After conducting research at the University of Colorado Boulder, I worked at a biotechnology company using microarray printing to develop potency assays for vaccine development. With a passion for computational biology, I am broadly interested in deepening my understanding of genetics and genomics by answering disease-related questions using genomic variants.

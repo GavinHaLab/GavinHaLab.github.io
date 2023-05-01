@@ -10,6 +10,7 @@ handle: athorpe
 image: /images/people/Abigail-Thorpe.jpg
 email: athorpe@fredhutch.org
 alumni: true
+newposition: Analyst at BiNGS, Mount Sinai, Tisch Cancer Institute
 ---
 
 I am a graduate student in the Genome Sciences department at the University of Washington. I have a BS in Biomedical Engineering from the George Washington University in Washington, DC. As an undergraduate student, I interned in Dr. John Tsang’s group in the NIAID Laboratory of Immune System Biology, where I developed software to support flu vaccine studies. For my senior design project, I worked under Dr. Guillermo Gutierrez at GW Hospital and used respiratory rate data from mechanical ventilators to monitor intubated patients.
