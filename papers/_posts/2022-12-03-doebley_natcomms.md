@@ -1,7 +1,7 @@
 ---
 layout: paper
 title: "A framework for clinical cancer subtyping from nucleosome profiling of cell-free DNA"
-authors: <b><u>Doebley A-L</u></b>, Minjeong Ko, Hanna Liao, A. Eden Cruikshank, Katheryn Santos, Caroline Kikawa, Joseph B. Hiatt, Robert D. Patton, Navonil De Sarkar, Katharine A. Collier, Anna C. H. Hoge, Katharine Chen, Anat Zimmer, Zachary T. Weber, Mohamed Adil, Jonathan B. Reichel, Paz Polak, Viktor A. Adalsteinsson, Peter S. Nelson, David MacPherson, Heather A. Parsons, Daniel G. Stover, <b><u>Gavin Ha</u></b>.
+authors: <b><u>Anna-Lisa Doebley</u></b>, Minjeong Ko, Hanna Liao, A. Eden Cruikshank, Katheryn Santos, Caroline Kikawa, Joseph B. Hiatt, Robert D. Patton, Navonil De Sarkar, Katharine A. Collier, Anna C. H. Hoge, Katharine Chen, Anat Zimmer, Zachary T. Weber, Mohamed Adil, Jonathan B. Reichel, Paz Polak, Viktor A. Adalsteinsson, Peter S. Nelson, David MacPherson, Heather A. Parsons, Daniel G. Stover, <b><u>Gavin Ha</u></b>.
 year: 2022
 authorshort: Doebley et al.
 journal: Nature Communications
