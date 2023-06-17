@@ -7,7 +7,7 @@ joined: Spring 2023
 handle: yhuang2
 image: /images/people/Sarah-Huang.jpg
 email: yhuang2@fredhutch.org
-alumni: false
+alumni: true
 ---
 
 I am currently a first-year graduate student in the Molecular and Cellular Biology program at the University of Washington. I graduated from the University of Washington with a BS in Biochemistry and a BA in Psychology.
