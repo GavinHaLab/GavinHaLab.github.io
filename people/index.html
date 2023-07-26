@@ -50,7 +50,7 @@ categories:
 <div class="bigspacer"></div>
 
 
-{% assign people_by_lastname = site.categories.people | sort: 'title' | reverse %}
+{% assign people_by_lastname = site.categories.people | sort: 'order' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Staff' %}
     {% cycle 'add rows 2': '<div class="row">', '', '' %}
