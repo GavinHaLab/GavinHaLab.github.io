@@ -12,13 +12,13 @@ category: gallery
 <div class="hugespacer"></div>
 
 
-{% assign post_list = site.categories.gallery | reverse %}
+{% assign post_list = site.categories.gallery %}
 {% for post in post_list %}
 
     {% cycle 'add rows': '<div class="row">', '', '' %}
-		<div class="col-md-6 postbox">
+		<div class="col-md-4 postbox">
             <a href="{{ post.url }}">
-                <img class="center" width=260 class="media-object" src="{{ post.thumbnailimage }}">
+                <img class="center" width=260 height="180" class="media-object" src="{{ post.thumbnailimage }}">
               </a>
 			{% if post.title %}
 			<div class="head media-heading">
