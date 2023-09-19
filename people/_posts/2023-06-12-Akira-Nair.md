@@ -3,11 +3,12 @@ layout: people
 title: Akira Nair
 position: Undergraduate Research Intern (SURP)
 category: Visitor
-joined: Summer 2023
+joined: June 2023
+left: August 2023
 handle: anair3
 image: /images/people/Akira-Nair.jpg
 email: anair3@fredhutch.org
-alumni: false
+alumni: true
 newposition: 
 ---
 
