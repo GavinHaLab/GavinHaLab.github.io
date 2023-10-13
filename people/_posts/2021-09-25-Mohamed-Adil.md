@@ -4,6 +4,7 @@ title: Mohamed Adil
 position: Graduate Student
 position2: Co-advised by Michael Haffner
 category: Student
+joined: September 2021
 handle: madil
 image: /images/people/Mohamed-Adil.jpg
 email: madil@fredhutch.org
