@@ -5,11 +5,12 @@ degree: Ph.D.
 position: Staff Scientist
 position2: Joint with Berger Lab
 joined: May 2019
+left: November 2023
 category: Staff
 handle: smoorthi
 image: /images/people/Sitapriya-Moorthi.jpg
 email: smoorthi@fredhutch.org
-order: 5
+alumni: true
 ---
 
 I am a post-doctoral research fellow in [Dr. Alice Berger’s lab](https://research.fhcrc.org/berger/en.html?_ga=2.117290063.897171873.1567703700-1382117265.1550796936){:target="_blank"}, Human Biology division. I am currently working on understanding the genomic landscape of lung-adenocarcinoma in patients with no history of smoking. To pursue this work, I received the [Translational Data Science Integrated Research Center](https://www.fredhutch.org/en/research/institutes-networks-ircs/translational-data-science-integrated-research-center.html){:target="_blank"} post-doctoral fellowship award, for which [Dr. Gavin Ha](/people/Gavin-Ha/){:target="_blank"} is my co-mentor. This project is founded on the samples curated by the Women’s Health Initiative study and hopes to identify novel mutations within this cohort of patients that could potentially be targeted. 
