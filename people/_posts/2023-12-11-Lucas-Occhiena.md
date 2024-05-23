@@ -5,9 +5,10 @@ position: Research Technician
 category: Staff
 handle: locchien
 joined: December 2023
+left: May 2024
 image: /images/people/Lucas-Occhiena.jpg
 email: locchien@fredhutch.org
-alumni: false
+alumni: true
 order: 6
 ---
 
