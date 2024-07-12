@@ -4,11 +4,12 @@ title: Anat Zimmer
 position: Postdoctoral Fellow
 category: Postdoc
 joined: July 2021
+left: July 2024
 handle: azimmer
 image: /images/people/Anat-Zimmer-2.jpg
 email: azimmer@fredhutch.org
 linkedin: anat-zimmer
-alumni: false
+alumni: true
 ---
 
 I started my academic career with a BSc in computer science and biology at the Hebrew University of Jerusalem. In addition to my coursework, I worked for Intel Corporation, and in a molecular-biology lab, studying the ubiquitin system in yeast. Next, I perused a master’s degree (MSc) at the Weizmann institute in the lab of Prof. Uri Alon, in the Department of Molecular Cell Biology, where I characterized the proteomic response of cancer cells to four anti-cancer drugs provided by Merck-Serono pharmaceutical company. I have developed an image analysis software using machine learning to reveal bimodal protein dynamics in single cells in response to an HSP90 inhibitor. I continued in Uri Alon’s lab for my PhD and developed a computational model that predicts the effect of drug cocktails on cancer and bacteria cells. The model uses minimal number of measurements of the effects of single and pairs of drugs to accurately predict the effect of three and four drugs in a cocktail. This approach dramatically reduces the number of experiments needed for finding effective drug cocktails from a set of drugs, and paves the way towards personalized drug cocktail design to treat cancer and infectious diseases. During my PhD studies, I was also involved with formal and informal education. I taught a MATLAB and data analysis course for undergrads students at the Weizmann institute, along with an advanced light microscopy course, and participated in many activities with the nonscientific community to share my scientific knowledge with them.
