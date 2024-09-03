@@ -7,7 +7,7 @@ joined: Summer 2024
 handle: akreitma
 image: /images/people/Allie-Kreitman-01.jpg
 email: akreitma@fredhutch.org
-alumni: false
+alumni: true
 ---
 
 I am a PhD rotation student in the UW MD/PhD program, conducting research with the Ha lab. My focus is on utilizing genomics to explore the mechanisms of how metastasis are seeded. 

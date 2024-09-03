@@ -8,8 +8,8 @@ handle: myang2
 image: /images/people/Michael-Yang.jpg
 email: myang2@fredhutch.org
 linkedin: yang-michael
-alumni: false
-order: 3
+alumni: true
+newposition: Law school at USC
 ---
 
 I am currently a Bioinformatics Analyst in the Ha Lab at Fred Hutch. I recently graduated from Columbia University with a master’s in Biomedical Engineering, specializing in bioinformatics and data science. Before that, I graduated from the University of California, Berkeley with a degree in Bioengineering and a minor in Electrical Engineering and Computer Science. I joined Dr. Gavin Ha’s Lab in December 2022.
