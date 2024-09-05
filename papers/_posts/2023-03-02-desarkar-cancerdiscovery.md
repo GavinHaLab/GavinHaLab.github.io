@@ -10,6 +10,12 @@ page: 632-653
 doi: 10.1158/2159-8290.CD-22-0692
 image: /images/papers/DeSarkar-keraon-01.png
 featured: true
+media1: Fred Hutch Science Spotlight
+media1url: https://www.fredhutch.org/en/news/spotlight/2023/04/hb-desarkar-cancerdiscov.html
+media2: Hutch News
+media2url: https://www.fredhutch.org/en/news/center-news/2023/01/ha-nelson-computational-tool-ctdna-epigenetics.html
+media3: UroToday Video Lecture
+media3url: https://www.urotoday.com/video-lectures/prostate-cancer/video/3291-nucleosome-patterns-in-circulating-tumor-dna-reveal-transcriptional-regulation-of-advanced-prostate-cancer-phenotypes-gavin-ha.html
 ---
 
 # Abstract

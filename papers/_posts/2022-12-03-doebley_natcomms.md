@@ -10,6 +10,8 @@ page: 7475
 doi: 10.1038/s41467-022-35076-w
 image: /images/papers/Doebley-2021-medRxiv.png
 featured: true
+media1: Hutch News
+media1url: https://www.fredhutch.org/en/news/center-news/2023/01/ha-nelson-computational-tool-ctdna-epigenetics.html
 ---
 
 # Abstract

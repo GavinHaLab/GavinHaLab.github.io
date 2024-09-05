@@ -10,6 +10,8 @@ page: eadk2082
 doi: 10.1126/sciadv.adk2082
 image: /images/papers/Hiatt-SCLCpheno-seq.png
 featured: true
+media1: Hutch News
+media1url: https://www.fredhutch.org/en/news/center-news/2024/04/sclc-liquid-biopsy-subtype-macpherson-ha.html
 ---
 
 # Abstract

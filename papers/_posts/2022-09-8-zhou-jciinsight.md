@@ -10,6 +10,8 @@ page: e161370
 doi: 10.1172/jci.insight.161370
 image: /images/papers/Zhou_JCIinsight.png
 featured: true
+media1: Fred Hutch Science Spotlight
+media1url: https://www.fredhutch.org/en/news/spotlight/2022/11/phs-zhou-jciinsight.html
 ---
 
 # Abstract
