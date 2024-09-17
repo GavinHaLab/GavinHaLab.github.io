@@ -5,9 +5,9 @@ authors:  Rickles-Young M, Tinoco G, Tsuji J, Pollock S, Haynam M, Lefebvre H, G
 year: 2024
 authorshort: Rickles- et al.
 journal: J Mol Diagn.
-vol: 
-page: 
-doi: 110.1016/j.jmoldx.2024.01.014
+vol: 26
+page: 413-422
+doi: 10.1016/j.jmoldx.2024.01.014
 image: 
 featured: false
 ---
