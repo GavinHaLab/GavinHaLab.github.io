@@ -4,11 +4,13 @@ title: Addison Gage
 position: Undergraduate Research Intern
 category: Visitor
 joined: May 2023
-#left: August 2023
+left: January 2024
+
 handle: agage1
 image: /images/people/Addison-Gage.jpg
 email: agage1@fredhutch.org
 alumni: true
+date: 2024-01-30
 newposition: 
 ---
 

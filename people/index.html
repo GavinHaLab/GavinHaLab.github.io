@@ -159,7 +159,7 @@ categories:
 <div class="row">
   <div class="col-md-12">
     <div class="title">
-      Undergrads/Visitors/Interns
+      <!-- Undergrads/Visitors/Interns -->
     </div>
   </div>
 </div>
@@ -283,7 +283,7 @@ categories:
 <div class="bigspacer"></div>
 
 <!-- Other past members -->
-{% assign people_by_left = site.categories.people | reverse %}
+{% assign people_by_left = site.categories.people | sort: 'date' | reverse %}
 {% for people in people_by_left %} 
 	{% if people.alumni == true %} 
     {% unless people.position contains 'Rotation' %}
@@ -318,6 +318,9 @@ categories:
 <!-- Rotation Students -->
 <div class="row">
   <div class="col-md-12">
+    <div class="title">
+			Past graduate rotation students
+		</div>
   </div>
 </div>
 

@@ -9,6 +9,7 @@ left: July 2023
 image: /images/people/Erin-Kawelo-01.jpg
 email: ekawleo@fredhutch.org
 alumni: true
+date: 2023-07-01
 newposition: Research Analyst II at A-Alpha Bio
 ---
 

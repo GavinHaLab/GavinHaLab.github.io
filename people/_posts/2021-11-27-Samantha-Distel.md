@@ -1,6 +1,6 @@
 ---
 layout: people
-title: Samantha Distel
+title: Samantha Smallwood
 position: Research Administrator
 category: Admin
 handle: sdistel

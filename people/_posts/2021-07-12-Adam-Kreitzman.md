@@ -9,6 +9,7 @@ left: February 2023
 image: /images/people/Adam-Kreitzman.jpg
 email: akreitzm@fredhutch.org
 alumni: true
+date: 2023-02-15
 newposition: Student in UC Berkeley's Master of Information and Data Science Program
 ---
 

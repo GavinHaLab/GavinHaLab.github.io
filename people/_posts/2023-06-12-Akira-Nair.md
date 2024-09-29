@@ -9,6 +9,7 @@ handle: anair3
 image: /images/people/Akira-Nair.jpg
 email: anair3@fredhutch.org
 alumni: true
+date: 2023-08-30
 newposition: Graduate student at UPenn Genomics and Computational Biology Program
 ---
 

@@ -5,11 +5,11 @@ position: Graduate Student
 category: Student
 joined: March 2019
 left: October 2022
-leftdate: 2022-10-31
 handle: adoebley
 email: adoebley@fredhutch.org
 image: /images/people/Doebley_Anna-Lisa.jpg
 alumni: true
+date: 2023-03-31
 newposition: Postdoc in Ha Lab (November 2022 - March 2023); returned to UW Medical School
 ---
 

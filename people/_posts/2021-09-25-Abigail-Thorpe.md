@@ -10,6 +10,7 @@ handle: athorpe
 image: /images/people/Abigail-Thorpe.jpg
 email: athorpe@fredhutch.org
 alumni: true
+date: 2022-12-30
 newposition: Analyst at BiNGS, Mount Sinai, Tisch Cancer Institute
 ---
 

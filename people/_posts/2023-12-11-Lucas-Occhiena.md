@@ -9,6 +9,7 @@ left: May 2024
 image: /images/people/Lucas-Occhiena.jpg
 email: locchien@fredhutch.org
 alumni: true
+date: 2024-05-02
 order: 6
 ---
 

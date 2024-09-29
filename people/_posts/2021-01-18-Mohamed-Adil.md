@@ -9,7 +9,7 @@ email: madil@fredhutch.org
 alumni: true
 joined: January 2021
 left: September 2021
-leftdate: 2021-09-15
+date: 2021-09-15
 newposition: PhD student in Unversity of Washington M3D Program
 ---
 

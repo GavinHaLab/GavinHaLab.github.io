@@ -7,7 +7,7 @@ handle: kluu2
 category: alumni
 joined: October 2020
 left: March 2021
-leftdate: 2021-03-31
+date: 2021-03-31
 image: /images/people/Kelsey-Luu.jpg
 alumni: true
 ---

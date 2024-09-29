@@ -4,11 +4,13 @@ title: Michael Yang
 position: Bioinformatics Analyst
 category: Staff
 joined: December 2022
+left: August 2024
 handle: myang2
 image: /images/people/Michael-Yang.jpg
 email: myang2@fredhutch.org
 linkedin: yang-michael
 alumni: true
+date: 2024-08-30
 newposition: Law school at USC
 ---
 
