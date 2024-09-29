@@ -1,7 +1,7 @@
 ---
 layout: people
 title: Pooja Chandra
-position: Bioinformatics Analyst
+position: Bioinformatics Analyst II
 category: Staff
 joined: March 2024
 handle: pchandra

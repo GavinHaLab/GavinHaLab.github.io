@@ -1,7 +1,7 @@
 ---
 layout: people
 title: Thomas Persse
-position: Bioinformatics Analyst
+position: Bioinformatics Analyst II
 category: Staff
 joined: July 2023
 handle: tpersse
