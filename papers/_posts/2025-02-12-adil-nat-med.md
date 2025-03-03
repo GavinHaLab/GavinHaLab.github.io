@@ -12,8 +12,10 @@ image: /images/papers/Adil-PEARL.png
 featured: true
 media1: UW Medicine Newsroom
 media1url: https://newsroom.uw.edu/news-releases/new-blood-test-accurately-predicts-preeclampsia
-media2: Nature Medicine Research Briefing
-media2url: https://www.nature.com/articles/s41591-025-03536-7
+media2: GenomeWeb
+media2url: https://www.genomeweb.com/sequencing/cell-free-dna-analysis-predicts-preeclampsia-risk
+media3: Nature Medicine Research Briefing
+media3url: https://www.nature.com/articles/s41591-025-03536-7
 ---
 
 Preeclampsia is characterized by placental dysfunction and results in significant morbidity, but reliable early prediction remains challenging. We investigated whether clinically obtained prenatal cell-free DNA (cfDNA) screening (PDNAS) using whole-genome sequencing (WGS) data can be leveraged to predict preeclampsia risk early in pregnancy (≤16 weeks). Using 1,854 routinely collected clinical PDNAS samples (median, 12.1 weeks) with low-coverage (0.5×) WGS data, we developed a framework to quantify maternal and fetal tissue signatures using nucleosome accessibility, revealing early placental and endothelial dysfunction. These signatures informed a prediction model for preeclampsia risk, which achieved a validation performance of 0.85 area under the receiver operating characteristic curve (AUC) (81% sensitivity at 80% specificity) for preterm phenotypes several months prior to disease onset in a separate cohort of 831 consecutively collected samples, and subsequently confirmed in an external cohort of 141 samples (AUC 0.84, 79% sensitivity). We demonstrate that assessment of cfDNA nucleosome accessibility from early-pregnancy cfDNA sequence data enables the detection of early placental and endothelial-tissue aberrations and may aid in the determination of preeclampsia risk.
