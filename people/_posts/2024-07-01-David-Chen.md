@@ -1,7 +1,7 @@
 ---
 layout: people
 title: David Chen
-position: Affiliate Student Researcher
+position: Medical Student Researcher
 category: Collaborator
 joined: July 2024
 handle: dchen4
