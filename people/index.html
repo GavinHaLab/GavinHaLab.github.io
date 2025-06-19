@@ -159,7 +159,7 @@ categories:
 <div class="row">
   <div class="col-md-12">
     <div class="title">
-      <!-- Undergrads/Visitors/Interns -->
+      Visitors/Interns
     </div>
   </div>
 </div>
@@ -203,8 +203,7 @@ categories:
 
 <div class="bigspacer"></div>
 
-
-{% assign people_by_lastname = site.categories.people | sort: 'title' | reverse %}
+{% assign people_by_lastname = site.categories.people | sort: 'order' %}
 {% for people in people_by_lastname %}
     {% if people.alumni != true and people.category == 'Collaborator' %}
     {% cycle 'add rows 6': '<div class="row">', '', '' %}

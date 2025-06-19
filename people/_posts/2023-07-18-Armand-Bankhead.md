@@ -2,8 +2,8 @@
 layout: people
 title: Armand Bankhead
 position: Senior Staff Scientist
-position2: Joint with Nelson Lab
-category: Staff
+position2: Nelson Lab & Precision Oncology
+category: Collaborator
 joined: July 2023
 handle: abankhea
 image: /images/people/Armand-Bankhead.jpg
@@ -11,7 +11,7 @@ email: abankhea@fredhutch.org
 linkedin: armandbankhead
 scholar: ntXPev4AAAAJ&hl
 alumni: false
-order: 2
+order: 1
 ---
 
 

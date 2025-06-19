@@ -8,6 +8,7 @@ handle: dchen4
 image: /images/people/David-Chen-01.jpg
 email: dchen4@fredhutch.org
 alumni: false
+order: 2
 ---
 
 I am a medical student at the University of Washington School of Medicine. I graduated from Duke University with a bachelor's in biology and computer science. While in college, I pursued research in the topics of developmental biology, genetics, innate immunity, and viral epidemiology. I also have software engineering experience in web app development and cloud infrastructure.

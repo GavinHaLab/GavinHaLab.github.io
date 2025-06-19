@@ -5,10 +5,12 @@ position: Master's Student
 position2: Genomics Research Training for Data Scientists
 category: Student
 joined: September 2023
+left: March 2025
 handle: snguyen3
 image: /images/people/Sarah-Nguyen.jpg
 email: snguyen3@fredhutch.org
-alumni: false
+alumni: true
+date: 2025-03-30
 ---
 
 I am a Master student pursuing my degree in Data Science at the University of Washington.

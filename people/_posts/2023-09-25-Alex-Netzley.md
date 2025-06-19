@@ -5,10 +5,12 @@ position: Master's Student
 position2: Genomics Research Training for Data Scientists
 category: Student
 joined: September 2023
+left: March 2025
 handle: anetzley
 image: /images/people/Alex-Netzley.jpg
 email: anetzley@fredhutch.org
-alumni: false
+alumni: true
+date: 2025-03-30
 ---
 
 I am a 1st year Master’s student studying Data Science at the University of Washington, working as a research assistant in the Ha Lab as part of the Genomics Research Training for Data Scientists (GRTDS) program. I graduated from the University of Michigan with a BSE in Mechanical Engineering and a minor in Statistics.

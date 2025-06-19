@@ -3,7 +3,7 @@ layout: people
 title: Nikhil Patkar
 position: Visiting Scientist
 position2:
-category: Staff
+category: Visitor
 joined: April 2025
 handle: npatkar2
 image: /images/people/Nikhil-Patkar.jpg
