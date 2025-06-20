@@ -2,6 +2,7 @@
 layout: paper
 title: "DNA-based copy number analysis confirms genomic evolution of PDX models"
 authors: <u><b>Anna C. H. Hoge</u></b>*, Michal Getz*, Anat Zimmer, Minjeong Ko, Linoy Raz, Rameen Beroukhim, Todd R. Golub, <u><b>Gavin Ha</u></b><sup>+</sup> & Uri Ben David<sup>+</sup>
+authorsLab: Anna Hoge, Anat Zimmer, Minjeong Ko, Gavin Ha
 year: 2022
 authorshort: Hoge et al.
 journal: npj Precision Oncology

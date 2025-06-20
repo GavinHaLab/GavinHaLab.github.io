@@ -2,6 +2,7 @@
 layout: paper
 title: "The genomic landscape of lung cancer in never-smokers from the Women's Health Initiative"
 authors: <u>Sitapriya Moorthi</u>, Amy Paguirigan, Pushpa Itagi, Minjeong Ko, Mary Pettinger, Anna C Hoge, Anwesha Nag, Neil A Patel, Feinan Wu, Cassie Sather, Kevin M Levine, Matthew P Fitzgibbon, Aaron R Thorner, Garnet L Anderson, <b><u>Gavin Ha</u><sup>+</sup></b>, Alice H Berger<sup>+</sup>.
+authorsLab: Sitapriya Moorthi, Pushpa Itagi, Minjeong Ko, Anna Hoge, Gavin Ha
 year: 2024
 authorshort: Moorthi et al.
 journal: JCI Insight

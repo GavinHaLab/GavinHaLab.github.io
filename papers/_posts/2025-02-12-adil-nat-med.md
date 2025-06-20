@@ -2,6 +2,7 @@
 layout: paper
 title: "Preeclampsia risk prediction from prenatal cell-free DNA screening"
 authors: <b><u>Mohamed Adil</b></u>, Teodora R Kolarova, Anna-Lisa Doebley, Leah A Chen, Cara L Tobey, Patricia Galipeau, Sam Rosen, Michael Yang, Brice Colbert, Robert D Patton, Thomas W Persse, Erin Kawelo, Jonathan B Reichel, Colin C Pritchard, Shreeram Akilesh, Christina M Lockwood, <b><u>Gavin Ha</b></u><sup>+</sup>, Raj Shree<sup>+</sup>.
+authorsLab: Mohamed Adil, Anna-Lisa Doebley, Patricia Galipeau, Michael Yang, Robert Patton, Thomas Persse, Erin Kawelo, Jonathan Reichel, Gavin Ha
 year: 2025
 authorshort: Adil et al.
 journal: Nature Medicine

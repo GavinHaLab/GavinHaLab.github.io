@@ -2,6 +2,7 @@
 layout: paper
 title: "CDK12-Mutated Prostate Cancer: Clinical Outcomes with Standard Therapies and Immune Checkpoint Blockade"
 authors: Schweizer MT*, <u><b>Ha G*</u></b>, Gulati R, Brown L, McKay RR, Dorff T, Hoge ACH, Reichel J, Vats P, Kilari D, Patel V, Oh WK, Chinnaiyan A, Pritchard CC, Armstrong AJ, Montgomery RB, Alva A
+authorsLab: Ha G, Hoge A, Reichel J
 year: 2020
 authorshort: Schweizer et al.
 journal: JCO Precision Oncology 

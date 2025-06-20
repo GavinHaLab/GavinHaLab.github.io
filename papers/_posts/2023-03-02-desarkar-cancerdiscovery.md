@@ -2,6 +2,7 @@
 layout: paper
 title: "Nucleosome patterns in circulating tumor DNA reveal transcriptional regulation of advanced prostate cancer phenotypes"
 authors:  Navonil De Sarkar*,  <b><u>Robert D. Patton*</u></b>,  Anna-Lisa Doebley,  Brian Hanratty, Mohamed Adil, Adam J. Kreitzman,  Jay F. Sarthy, Minjeong Ko, Sandipan Brahma,  Michael P. Meers,  Derek H. Janssens, Lisa A. Ang, Ilsa Coleman,  Arnab Bose, Ruth F. Dumpit,  Jared M. Lucas, Talina A. Nunez, Holly M. Nguyen,  Heather M. McClure,  Colin C. Pritchard,  Michael T. Schweizer,  Colm Morrissey,  Atish D. Choudhury,  Sylvan C. Baca,  Jacob E. Berchuck,  Matthew L. Freedman,  Kami Ahmad,  Michael C. Haffner,  Bruce Montgomery,  Eva Corey,  Steven Henikoff,  Peter S. Nelson<sup>+</sup>,  <b><u>Gavin Ha</u><sup>+</sup></b>.
+authorsLab: Robert Patton, Anna-Lisa Doebley, Mohamed Adil, Adam Kreitzman, Minjeong Ko, Gavin Ha
 year: 2023
 authorshort: De Sarkar et al.
 journal: Cancer Discovery 

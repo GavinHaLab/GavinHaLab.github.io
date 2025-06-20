@@ -129,7 +129,7 @@ layout: default
 		{% if paper.authors contains fullname or paper.authors contains lastfirstinitial %}
 			{% assign papersq = true %}
 		{% endif %}
-		{% if paper.authors contains firstname and paper.authors contains lastname %}
+		{% if paper.authorsLab contains fullname or paper.authorsLab contains lastfirstinitial %}
 			{% assign papersq = true %}
 		{% endif %}
 		{% endfor %}
@@ -139,11 +139,11 @@ layout: default
 		<div class="head">Papers</div>
 		<div class="spacer"></div>
 		{% for paper in site.categories.papers %}
-		{% if paper.authors contains fullname or paper.authors contains lastfirstinitial %}
-		<p><a href="{{ paper.url }}" class="off">{{ paper.title }}</a>
-		{% elsif paper.authors contains firstname and paper.authors contains lastname %}
-		<p><a href="{{ paper.url }}" class="off">{{ paper.title }}</a>
-		{% endif %}
+			{% if paper.authors contains fullname or paper.authors contains lastfirstinitial %}
+				<p><a href="{{ paper.url }}" class="off">{{ paper.title }}</a>
+			{% elsif paper.authorsLab contains fullname or paper.authorsLab contains lastfirstinitial %}
+				<p><a href="{{ paper.url }}" class="off">{{ paper.title }}</a>	
+			{% endif %}
 		{% endfor %}
 		{% endif %}
 

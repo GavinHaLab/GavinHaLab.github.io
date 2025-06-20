@@ -2,6 +2,7 @@
 layout: paper
 title: "Molecular phenotyping of small cell lung cancer using targeted cfDNA profiling of transcriptional regulatory regions"
 authors:  Joseph B. Hiatt, <b><u>Anna-Lisa Doebley*</u></b>, Henry U. Arnold, Mohamed Adil, Holly Sandborg, Thomas W. Persse, Minjeong Ko, Feinan Wu, Alvaro Quintanal Villalonga, Rafael Santana-Davila, Keith Eaton, Caroline Dive, Charles M. Rudin, Anish Thomas, A. McGarry Houghton, <b><u>Gavin Ha</u><sup>+</sup></b>, David MacPherson<sup>+</sup>.
+authorsLab: Anna-Lisa Doebley, Minjeong Ko, Mohamed Adil, Thomas Persse
 year: 2024
 authorshort: Hiatt et al.
 journal: Science Advances
