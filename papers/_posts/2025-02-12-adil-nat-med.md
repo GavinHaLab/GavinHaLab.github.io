@@ -6,8 +6,8 @@ authorsLab: Mohamed Adil, Anna-Lisa Doebley, Patricia Galipeau, Michael Yang, Ro
 year: 2025
 authorshort: Adil et al.
 journal: Nature Medicine
-vol: 
-page: Online ahead of print.
+vol: 31(4)
+page: 1312-1318
 doi: 10.1038/s41591-025-03509-w
 image: /images/papers/Adil-PEARL.png
 featured: true
