@@ -5,11 +5,12 @@ position: Visiting Scientist
 position2:
 category: Visitor
 joined: April 2025
+left: Sept 2025
 handle: npatkar2
 image: /images/people/Nikhil-Patkar.jpg
 email: npatkar2@fredhutch.org
 order: 5
-alumni: false
+alumni: true
 ---
 
 I am a Professor of Hematopathology at the [Tata Memorial Center in India](https://actrec.gov.in/dr-nikhil-patkar){:target="_blank"}. 
