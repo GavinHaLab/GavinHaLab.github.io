@@ -1,7 +1,8 @@
 ---
 layout: paper
 title: "Molecular consequences of acute versus chronic CDK12 loss in prostate carcinoma nominates distinct therapeutic strategies"
-authors: Sander Frank, Thomas Persse, Ilsa Coleman, Armand Bankhead III, Dapei Li, Navonil DeSarkar, Divin Wilson, Dmytro Rudoy, Manasvita Vashisth, Patty Galipeau, Michael Yang, Brian Hanratty, Ruth Dumpit, Colm Morrissey, Eva Corey, R Bruce Montgomery, Michael C Haffner, Colin Pritchard, Valera Vasioukhin, <b><u>Gavin Ha</b></u><sup>+</sup>, Peter S Nelson<sup>+</sup>.
+authors: Sander Frank, Thomas Persse, Ilsa Coleman, Armand Bankhead III, Dapei Li, Navonil DeSarkar, Divin Wilson, Dmytro Rudoy, Manasvita Vashisth, Patricia Galipeau, Michael Yang, Brian Hanratty, Ruth Dumpit, Colm Morrissey, Eva Corey, R Bruce Montgomery, Michael C Haffner, Colin Pritchard, Valera Vasioukhin, <b><u>Gavin Ha</b></u><sup>+</sup>, Peter S Nelson<sup>+</sup>.
+authorsLab: Thomas Persse, Manasvita Vashisth, Patricia Galipeau, Michael Yang, Gavin Ha, Armand Bankhead
 year: 2024
 authorshort: Frank et al.
 journal: eLife
