@@ -4,10 +4,12 @@ title: Weston Hanson
 position: Research Intern
 category: Visitor
 joined: June 2025
+left: June 2026
 handle: whanson
 image: /images/people/Weston-Hanson.jpg
 email: whanson@fredhutch.org
-alumni: false
+alumni: true
+date: 2026-06-29
 newposition: 
 ---
 

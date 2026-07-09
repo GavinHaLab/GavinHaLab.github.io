@@ -2,7 +2,7 @@
 layout: people
 title: Patricia Galipeau
 position: Research Project Manager
-category: Staff
+category: Collaborator
 joined: July 2021
 handle: pgal
 image: /images/people/Patricia-Galipeau.jpg
@@ -11,7 +11,7 @@ twitter: pattygalipeau
 linkedin: patriciagalipeau
 scholar: nkfOUiUAAAAJ
 alumni: false
-order: 1
+order: 0
 ---
 
 I am a Research Project Manager for the Ha Lab at Fred Hutch and I bring 25+ years of research, project, biospecimen, and laboratory management to the team. I lead assay development and wet lab operations, facilitate collaborations, and support our overall research program. I am excited by working in multi-disciplinary research teams in large, longitudinal (epi)genomics projects and bring experience in collection, management, and ethical use of annotated biospecimen in cancer research.  

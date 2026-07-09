@@ -1,16 +1,15 @@
 ---
 layout: people
 title: Mohamed Adil
-position: Graduate Student
-position2: Co-advised by Michael Haffner
-category: Student
-joined: September 2021
-left: March 2026
+position: Staff Scientist in Nelson Lab
+position2: 
+category: Collaborator
+joined: April 2026
 handle: madil
 image: /images/people/Mohamed-Adil.jpg
 email: madil@fredhutch.org
-alumni: true
-date: 2026-03-15
+alumni: false
+order: 1
 ---
 
 I am a Master student in the [Department of Laboratory Medicine & Pathology](http://depts.washington.edu/labweb/Education/Master/) at the University of Washington. 

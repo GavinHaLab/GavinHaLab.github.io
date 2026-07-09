@@ -5,10 +5,12 @@ position: Master's Student
 position2: Genomics Research Training for Data Scientists
 category: Student
 joined: September 2024
+left: March 2026
 handle: ivaldivi
 image: /images/people/Izzy-Valdivia.jpg
 email: ivaldivi@fredhutch.org
-alumni: false
+alumni: true
+date: 2026-03-16
 ---
 
 I am currently a Master student at University of Washington working towards a degree in Data Science.

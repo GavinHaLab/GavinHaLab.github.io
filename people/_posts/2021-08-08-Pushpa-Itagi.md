@@ -5,11 +5,14 @@ position: Postdoctoral Fellow
 position2: Joint with Hsieh Lab
 category: Postdoc
 joined: August 2021
+left: June 2026
 handle: pitagi
 image: /images/people/Pushpa-Itagi.jpg
 email: pitagi@fredhutch.org
 linkedin: pushpa-itagi
-alumni: false
+alumni: true
+date: 2026-06-10
+newposition: Senior Translational Scientist at Natera
 ---
 
 I am a post-Doctoral researcher co-mentored by Dr. Gavin Ha and Dr. Andrew Hsieh at the department of Computational Biology, Public Health Sciences division.

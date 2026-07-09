@@ -4,11 +4,13 @@ title: Manasvita Vashisth
 position: Postdoctoral Fellow
 category: Postdoc
 joined: June 2023
+left: March 2026
 handle: mvashist
 image: /images/people/Manasvita-Vashisth.jpg
 email: mvashist@fredhutch.org
 linkedin: manasvita-vashisth
-alumni: false
+alumni: true
+date: 2026-03-02
 ---
 
 I am a Postdoctoral Research Fellow in the Computational Biology Program at the Fred Hutchinson Cancer Center. I am interested in developing novel computational methods for analyzing cell free DNA and ctDNA for early cancer diagnosis and tracking tumor phenotype evolution in patients.
